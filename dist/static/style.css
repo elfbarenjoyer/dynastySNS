@@ -1,0 +1,220 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f1115;
+  color: #f3f4f6;
+  margin: 0;
+  padding: 0 0 40px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: #151a22;
+  border-bottom: 1px solid #232a36;
+}
+
+.site-header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.timestamp {
+  margin: 0;
+  color: #9aa3b2;
+  font-size: 12px;
+}
+
+nav a {
+  color: #c7d2fe;
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+main {
+  padding: 24px 32px;
+}
+
+.legend {
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.badge.top-ten {
+  background: #0f766e;
+  color: #e0f2f1;
+}
+
+.badge.non-keeper {
+  background: #1f2937;
+  color: #cbd5f5;
+}
+
+.team-card {
+  background: #151a22;
+  border: 1px solid #232a36;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.team-card h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #232a36;
+}
+
+tr.top-ten {
+  background: rgba(14, 116, 144, 0.25);
+}
+
+tr.non-keeper {
+  background: rgba(31, 41, 55, 0.25);
+}
+
+.subtitle {
+  color: #c7d2fe;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.free-agent-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.free-agent-list li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #232a36;
+}
+
+.player-name {
+  font-weight: 600;
+}
+
+.player-meta,
+.player-value {
+  color: #cbd5f5;
+}
+
+.tag {
+  margin-left: auto;
+  background: #4c1d95;
+  color: #e9d5ff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.muted {
+  color: #9aa3b2;
+}
+
+.power-hero {
+  background: #1b2230;
+  border: 1px solid #2a3342;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.power-hero h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.power-hero p {
+  margin: 0;
+  color: #cbd5f5;
+}
+
+.power-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.power-card {
+  background: #151a22;
+  border: 1px solid #232a36;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.power-rank {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.power-info h3 {
+  margin: 0 0 6px;
+}
+
+.power-score {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.power-bar {
+  width: 100%;
+  height: 10px;
+  background: #1f2937;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 10px 0 4px;
+}
+
+.power-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  border-radius: 999px;
+}
+
+.power-subtitle {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.rookie-row {
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.free-agent-row {
+  background: rgba(167, 139, 250, 0.12);
+}
+
