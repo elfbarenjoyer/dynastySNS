@@ -218,3 +218,67 @@ tr.non-keeper {
   background: rgba(167, 139, 250, 0.12);
 }
 
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .team-card {
+    padding: 14px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    border-bottom: 1px solid #232a36;
+    padding: 10px 0;
+  }
+
+  td {
+    padding: 6px 0;
+    border-bottom: none;
+  }
+
+  .free-agent-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tag {
+    margin-left: 0;
+  }
+
+  .power-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
