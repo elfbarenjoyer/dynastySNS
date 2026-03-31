@@ -240,6 +240,79 @@ tr.non-keeper {
   font-size: 12px;
 }
 
+.trade-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trade-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.trade-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: #cbd5f5;
+}
+
+.trade-label select {
+  min-width: 220px;
+  background: #0f1115;
+  color: #f8fafc;
+  border: 1px solid #232a36;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.trade-button {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.trade-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.trade-summary {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.trade-summary-card {
+  background: #0f1115;
+  border: 1px solid #232a36;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.trade-summary-card h4 {
+  margin: 0 0 8px;
+}
+
+.trade-total {
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.trade-delta {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
 .rookie-row {
   background: rgba(56, 189, 248, 0.12);
 }
