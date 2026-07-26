@@ -1,0 +1,38 @@
+{
+  "_published_signature": {
+    "dynastysns": 1788397200,
+    "kibbles_and_vicks": 1788476400,
+    "suckem_and_shedep": 1788483600,
+    "turn_down_for_watt": 1788312600
+  },
+  "dynastysns": {
+    "done": false,
+    "draft_time": 1788397200,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  },
+  "kibbles_and_vicks": {
+    "done": false,
+    "draft_time": 1788476400,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  },
+  "legendskeeper": {
+    "done": false,
+    "draft_time": null,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  },
+  "suckem_and_shedep": {
+    "done": false,
+    "draft_time": 1788483600,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  },
+  "top_tier": {
+    "done": false,
+    "draft_time": null,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  },
+  "turn_down_for_watt": {
+    "done": false,
+    "draft_time": 1788312600,
+    "last_checked_utc": "2026-07-26T23:00:14.527108+00:00"
+  }
+}
