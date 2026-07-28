@@ -26,7 +26,7 @@ jobs:
         env:
           YAHOO_OAUTH_TOKEN: ${{ secrets.YAHOO_OAUTH_TOKEN }}
         run: |
-          echo "$YAHOO_OAUTH_TOKEN" | base64 --decode > draft-calendar/yahoo_oauth.json
+          printf '%s' "$YAHOO_OAUTH_TOKEN" > draft-calendar/yahoo_oauth.json
           sudo apt-get update -y && sudo apt-get install -y jq
           if [ ! -s draft-calendar/yahoo_oauth.json ]; then
             echo "ERROR: oauth file is empty; check the secret value" >&2
