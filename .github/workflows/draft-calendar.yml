@@ -22,11 +22,21 @@ jobs:
       - name: Install dependencies
         run: pip install -r draft-calendar/requirements.txt
 
-      - name: Write OAuth token
+      - name: Write and validate Yahoo OAuth token
         env:
           YAHOO_OAUTH_TOKEN: ${{ secrets.YAHOO_OAUTH_TOKEN }}
         run: |
-          echo "$YAHOO_OAUTH_TOKEN" > draft-calendar/yahoo_oauth.json
+          printf '%s' "$YAHOO_OAUTH_TOKEN" > draft-calendar/yahoo_oauth.json
+          sudo apt-get update -y && sudo apt-get install -y jq
+          if [ ! -s draft-calendar/yahoo_oauth.json ]; then
+            echo "ERROR: oauth file is empty; check the secret value" >&2
+            exit 1
+          fi
+          if ! jq -e . draft-calendar/yahoo_oauth.json >/dev/null 2>&1; then
+            echo "ERROR: oauth file is not valid JSON; update the secret with the full oauth json" >&2
+            exit 1
+          fi
+          echo "Yahoo OAuth token written and validated"
 
       - name: Regenerate calendar feed
         run: python draft-calendar/export_draft_calendar.py

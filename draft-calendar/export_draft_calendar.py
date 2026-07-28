@@ -57,7 +57,17 @@ def main() -> None:
 
         league_id = league_cfg["league_id"]
         league = game.to_league(league_id)
-        settings = league.settings()
+        try:
+            settings = league.settings()
+        except RuntimeError as e:
+            message = str(e)
+            if isinstance(e.args[0], bytes):
+                message = e.args[0].decode('utf-8', errors='replace')
+            print(f"ERROR fetching {key} ({league_id}): {message}", flush=True)
+            if "not authorized" in message.lower():
+                print("Hint: The OAuth token may be expired or the account lacks access to this league.", flush=True)
+                print("Refresh the YAHOO_OAUTH_TOKEN secret with a valid oauth JSON.", flush=True)
+            raise
 
         draft_time = settings.get("draft_time")
         entry["draft_time"] = int(draft_time) if draft_time else None
