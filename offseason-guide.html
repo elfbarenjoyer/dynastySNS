@@ -1,1352 +1,1507 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="--accent: #c41e2a">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
     <title>SnSAllStars | Dynasty Dashboard</title>
-    
-    
-      <link rel="stylesheet" href="static/style.css" />
-    
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
+
     <header class="site-header">
-      <div>
-        <h1>SnSAllStars</h1>
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1><button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
         <p class="timestamp">
-          Updated: 2026-08-15 18:16 UTC
-          <span class="meta-tags">
-            <span class="badge-meta">Superflex</span>
-            <span class="badge-meta">Raw values</span>
-            <span class="badge-meta">Top 10 keepers</span>
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 10</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-08-16 23:15 UTC</b></span>
           </span>
         </p>
       </div>
-      <nav>
+      <nav id="site-nav">
         
-          <a href="index.html">Rosters</a>
-          <a href="free-agents.html">Potential Free Agents</a>
           
-            <a href="free-agent-interest.html">Who Wants Them</a>
+            <a
+              href="index.html"
+              class=""
+            >Rosters</a>
           
-          <a href="power-rankings.html">Power Rankings</a>
-          <a href="draft-board.html">Draft Board</a>
-          <a href="draft-pick-rankings.html">Draft Pick Rankings</a>
-          <a href="rankings-builder.html">Rankings Builder</a>
-          <a href="trade-evaluator.html">Trade Evaluator</a>
-          <a href="trade-proposer.html">Trade Proposer</a>
-          <a href="offseason-guide.html">Offseason Guide</a>
+        
+          
+            <a
+              href="free-agents.html"
+              class=""
+            >Free Agents</a>
+          
+        
+          
+            <a
+              href="free-agent-interest.html"
+              class=""
+            >Who Wants Them</a>
+          
+        
+          
+            <a
+              href="power-rankings.html"
+              class=""
+            >Power Rankings</a>
+          
+        
+          
+            <a
+              href="draft-board.html"
+              class=""
+            >Draft Board</a>
+          
+        
+          
+            <a
+              href="draft-pick-rankings.html"
+              class=""
+            >Pick Rankings</a>
+          
+        
+          
+            <a
+              href="rankings-builder.html"
+              class="nav-desktop-only"
+            >Rankings Builder</a>
+          
+        
+          
+            <a
+              href="trade-evaluator.html"
+              class=""
+            >Trade Evaluator</a>
+          
+        
+          
+            <a
+              href="offseason-guide.html"
+              class="on "
+            >Offseason Guide</a>
+          
         
       </nav>
     </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +279
+              <small>Parker Washington</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -364
+              <small>J.J. McCarthy</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
     <main>
       
   <section class="power-hero">
     <h2>Offseason Buyer Guide</h2>
     <p>
-      Discount each free agent by 12 picks from their projected draft slot.
+      What a rebuilding team should pay for each of the best players hitting the
+      pool, discounted by 12 picks from their projected draft slot.
     </p>
   </section>
 
   
     <section class="team-card">
       <h2>
-        Christian Watson (BN)
+        <span class="pos pos-wr">WR</span>
+        Christian Watson
         <span class="muted">Owner: aPukalypse Now</span>
       </h2>
-      <p class="muted">
-        Draft board value 3922
-        · Draft slot 9
-        · Discounted slot 21
-        · Discounted value 3363
+      <p class="sheet-note">
+        <span>Board value <b>3,878</b></span>
+        <span>Draft slot <b>9</b></span>
+        <span>Discounted slot <b>21</b></span>
+        <span>Target value <b>3,410</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R2 P8</span>
-                  
-                </td>
-                <td>3395</td>
-                <td>32</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R2 P4</span>
-                  
-                </td>
-                <td>3510</td>
-                <td>147</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R2 P2</span>
-                  
-                </td>
-                <td>3601</td>
-                <td>238</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R2 P8
+                  </td>
+                  <td class="num ktc">3,423</td>
+                  <td class="num col-delta player-meta">13</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R2 P4
+                  </td>
+                  <td class="num ktc">3,487</td>
+                  <td class="num col-delta player-meta">77</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R2 P2
+                  </td>
+                  <td class="num ktc">3,636</td>
+                  <td class="num col-delta player-meta">226</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Bryce Young (BN)
+        <span class="pos pos-qb">QB</span>
+        Bryce Young
         <span class="muted">Owner: aPukalypse Now</span>
       </h2>
-      <p class="muted">
-        Draft board value 3768
-        · Draft slot 11
-        · Discounted slot 23
-        · Discounted value 3324
+      <p class="sheet-note">
+        <span>Board value <b>3,740</b></span>
+        <span>Draft slot <b>11</b></span>
+        <span>Discounted slot <b>23</b></span>
+        <span>Target value <b>3,324</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R2 P8</span>
-                  
-                </td>
-                <td>3395</td>
-                <td>71</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R2 P4</span>
-                  
-                </td>
-                <td>3510</td>
-                <td>186</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R3 P2</span>
-                  
-                </td>
-                <td>3114</td>
-                <td>210</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R2 P8
+                  </td>
+                  <td class="num ktc">3,423</td>
+                  <td class="num col-delta player-meta">99</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R2 P4
+                  </td>
+                  <td class="num ktc">3,487</td>
+                  <td class="num col-delta player-meta">163</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P2
+                  </td>
+                  <td class="num ktc">3,129</td>
+                  <td class="num col-delta player-meta">195</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        D&#39;Andre Swift (RB)
+        <span class="pos pos-wr">WR</span>
+        Matthew Golden
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3672
-        · Draft slot 12
-        · Discounted slot 24
-        · Discounted value 3224
+      <p class="sheet-note">
+        <span>Board value <b>3,645</b></span>
+        <span>Draft slot <b>13</b></span>
+        <span>Discounted slot <b>25</b></span>
+        <span>Target value <b>3,179</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R2 P8</span>
-                  
-                </td>
-                <td>3395</td>
-                <td>171</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R3 P4</span>
-                  
-                </td>
-                <td>3091</td>
-                <td>133</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R3 P2</span>
-                  
-                </td>
-                <td>3114</td>
-                <td>110</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">183</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P4
+                  </td>
+                  <td class="num ktc">3,078</td>
+                  <td class="num col-delta player-meta">101</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P2
+                  </td>
+                  <td class="num ktc">3,129</td>
+                  <td class="num col-delta player-meta">50</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Matthew Golden (BN)
+        <span class="pos pos-wr">WR</span>
+        Michael Wilson
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3601
-        · Draft slot 14
-        · Discounted slot 26
-        · Discounted value 3114
+      <p class="sheet-note">
+        <span>Board value <b>3,636</b></span>
+        <span>Draft slot <b>14</b></span>
+        <span>Discounted slot <b>26</b></span>
+        <span>Target value <b>3,129</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>103</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R3 P4</span>
-                  
-                </td>
-                <td>3091</td>
-                <td>23</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R3 P2</span>
-                  
-                </td>
-                <td>3114</td>
-                <td>0</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">133</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P4
+                  </td>
+                  <td class="num ktc">3,078</td>
+                  <td class="num col-delta player-meta">51</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P2
+                  </td>
+                  <td class="num ktc">3,129</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Jayden Higgins (BN)
+        <span class="pos pos-wr">WR</span>
+        Jayden Higgins
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3511
-        · Draft slot 15
-        · Discounted slot 27
-        · Discounted value 3114
+      <p class="sheet-note">
+        <span>Board value <b>3,487</b></span>
+        <span>Draft slot <b>16</b></span>
+        <span>Discounted slot <b>28</b></span>
+        <span>Target value <b>3,078</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>103</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R3 P4</span>
-                  
-                </td>
-                <td>3091</td>
-                <td>23</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R3 P2</span>
-                  
-                </td>
-                <td>3114</td>
-                <td>0</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">82</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P4
+                  </td>
+                  <td class="num ktc">3,078</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P2
+                  </td>
+                  <td class="num ktc">3,129</td>
+                  <td class="num col-delta player-meta">51</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Kyle Monangai (BN)
+        <span class="pos pos-rb">RB</span>
+        Kyle Monangai
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3501
-        · Draft slot 17
-        · Discounted slot 29
-        · Discounted value 3077
+      <p class="sheet-note">
+        <span>Board value <b>3,473</b></span>
+        <span>Draft slot <b>17</b></span>
+        <span>Discounted slot <b>29</b></span>
+        <span>Target value <b>3,067</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>66</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R3 P4</span>
-                  
-                </td>
-                <td>3091</td>
-                <td>14</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R3 P2</span>
-                  
-                </td>
-                <td>3114</td>
-                <td>37</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">71</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P4
+                  </td>
+                  <td class="num ktc">3,078</td>
+                  <td class="num col-delta player-meta">11</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P2
+                  </td>
+                  <td class="num ktc">3,129</td>
+                  <td class="num col-delta player-meta">62</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Michael Pittman Jr. (BN)
+        <span class="pos pos-wr">WR</span>
+        Michael Pittman Jr.
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3361
-        · Draft slot 22
-        · Discounted slot 34
-        · Discounted value 2997
+      <p class="sheet-note">
+        <span>Board value <b>3,345</b></span>
+        <span>Draft slot <b>22</b></span>
+        <span>Discounted slot <b>34</b></span>
+        <span>Target value <b>2,987</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>14</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R3 P4</span>
-                  
-                </td>
-                <td>3091</td>
-                <td>94</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P1</span>
-                  
-                </td>
-                <td>2917</td>
-                <td>80</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">9</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P4
+                  </td>
+                  <td class="num ktc">3,078</td>
+                  <td class="num col-delta player-meta">91</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P1
+                  </td>
+                  <td class="num ktc">2,953</td>
+                  <td class="num col-delta player-meta">34</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Jalen Coker (BN)
+        <span class="pos pos-wr">WR</span>
+        Jalen Coker
         <span class="muted">Owner: Buckeye Air Raid</span>
       </h2>
-      <p class="muted">
-        Draft board value 3224
-        · Draft slot 24
-        · Discounted slot 36
-        · Discounted value 2963
+      <p class="sheet-note">
+        <span>Board value <b>3,245</b></span>
+        <span>Draft slot <b>24</b></span>
+        <span>Discounted slot <b>36</b></span>
+        <span>Target value <b>2,967</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>48</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>95</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P1</span>
-                  
-                </td>
-                <td>2917</td>
-                <td>46</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">29</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">100</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P1
+                  </td>
+                  <td class="num ktc">2,953</td>
+                  <td class="num col-delta player-meta">14</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Dalton Kincaid (BN)
+        <span class="pos pos-te">TE</span>
+        Dalton Kincaid
         <span class="muted">Owner: aPukalypse Now</span>
       </h2>
-      <p class="muted">
-        Draft board value 3171
-        · Draft slot 25
-        · Discounted slot 37
-        · Discounted value 2917
+      <p class="sheet-note">
+        <span>Board value <b>3,179</b></span>
+        <span>Draft slot <b>25</b></span>
+        <span>Discounted slot <b>37</b></span>
+        <span>Target value <b>2,953</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R3 P8</span>
-                  
-                </td>
-                <td>3011</td>
-                <td>94</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>49</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P1</span>
-                  
-                </td>
-                <td>2917</td>
-                <td>0</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R3 P8
+                  </td>
+                  <td class="num ktc">2,996</td>
+                  <td class="num col-delta player-meta">43</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">86</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P1
+                  </td>
+                  <td class="num ktc">2,953</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Romeo Doubs (BN)
-        <span class="muted">Owner: Gronkamole and Chips</span>
-      </h2>
-      <p class="muted">
-        Draft board value 3114
-        · Draft slot 27
-        · Discounted slot 39
-        · Discounted value 2889
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-            <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>69</td>
-              
-            </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>21</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P2</span>
-                  
-                </td>
-                <td>2894</td>
-                <td>5</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
-    </section>
-  
-    <section class="team-card">
-      <h2>
-        Rico Dowdle (W/R)
+        <span class="pos pos-rb">RB</span>
+        Rico Dowdle
         <span class="muted">Owner: aPukalypse Now</span>
       </h2>
-      <p class="muted">
-        Draft board value 3091
-        · Draft slot 28
-        · Discounted slot 40
-        · Discounted value 2868
+      <p class="sheet-note">
+        <span>Board value <b>3,129</b></span>
+        <span>Draft slot <b>26</b></span>
+        <span>Discounted slot <b>38</b></span>
+        <span>Target value <b>2,886</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>48</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>0</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P2</span>
-                  
-                </td>
-                <td>2894</td>
-                <td>26</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">58</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">19</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Courtland Sutton (WR)
+        <span class="pos pos-wr">WR</span>
+        Courtland Sutton
         <span class="muted">Owner: Mahomeboys</span>
       </h2>
-      <p class="muted">
-        Draft board value 3077
-        · Draft slot 29
-        · Discounted slot 41
-        · Discounted value 2862
+      <p class="sheet-note">
+        <span>Board value <b>3,078</b></span>
+        <span>Draft slot <b>28</b></span>
+        <span>Discounted slot <b>40</b></span>
+        <span>Target value <b>2,867</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>42</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>6</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P2</span>
-                  
-                </td>
-                <td>2894</td>
-                <td>32</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">39</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">19</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Brenton Strange (W/R/T)
+        <span class="pos pos-wr">WR</span>
+        Romeo Doubs
+        <span class="muted">Owner: Gronkamole and Chips</span>
+      </h2>
+      <p class="sheet-note">
+        <span>Board value <b>3,067</b></span>
+        <span>Draft slot <b>29</b></span>
+        <span>Discounted slot <b>41</b></span>
+        <span>Target value <b>2,854</b></span>
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">26</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">13</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">32</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-te">TE</span>
+        Brenton Strange
         <span class="muted">Owner: G.G.G</span>
       </h2>
-      <p class="muted">
-        Draft board value 3053
-        · Draft slot 31
-        · Discounted slot 43
-        · Discounted value 2823
+      <p class="sheet-note">
+        <span>Board value <b>3,014</b></span>
+        <span>Draft slot <b>31</b></span>
+        <span>Discounted slot <b>43</b></span>
+        <span>Target value <b>2,830</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>3</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>45</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P2</span>
-                  
-                </td>
-                <td>2894</td>
-                <td>71</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">2</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">37</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">56</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Jalen McMillan (BN)
+        <span class="pos pos-wr">WR</span>
+        Jalen McMillan
         <span class="muted">Owner: Buckeye Air Raid</span>
       </h2>
-      <p class="muted">
-        Draft board value 3011
-        · Draft slot 32
-        · Discounted slot 44
-        · Discounted value 2820
+      <p class="sheet-note">
+        <span>Board value <b>2,996</b></span>
+        <span>Draft slot <b>32</b></span>
+        <span>Discounted slot <b>44</b></span>
+        <span>Target value <b>2,828</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>0</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R4 P4</span>
-                  
-                </td>
-                <td>2868</td>
-                <td>48</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R4 P2</span>
-                  
-                </td>
-                <td>2894</td>
-                <td>74</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">39</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">58</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        J.K. Dobbins (IR)
+        <span class="pos pos-rb">RB</span>
+        J.K. Dobbins<span class="ir-flag" title="On injured reserve">IR</span>
         <span class="muted">Owner: Buckeye Air Raid</span>
       </h2>
-      <p class="muted">
-        Draft board value 2991
-        · Draft slot 35
-        · Discounted slot 47
-        · Discounted value 2731
+      <p class="sheet-note">
+        <span>Board value <b>2,995</b></span>
+        <span>Draft slot <b>33</b></span>
+        <span>Discounted slot <b>45</b></span>
+        <span>Target value <b>2,823</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R4 P8</span>
-                  
-                </td>
-                <td>2820</td>
-                <td>89</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>77</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>70</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P8
+                  </td>
+                  <td class="num ktc">2,828</td>
+                  <td class="num col-delta player-meta">5</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P4
+                  </td>
+                  <td class="num ktc">2,867</td>
+                  <td class="num col-delta player-meta">44</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R4 P2
+                  </td>
+                  <td class="num ktc">2,886</td>
+                  <td class="num col-delta player-meta">63</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Chris Godwin Jr. (BN)
+        <span class="pos pos-wr">WR</span>
+        Chris Godwin Jr.
         <span class="muted">Owner: OutForTheSeason</span>
       </h2>
-      <p class="muted">
-        Draft board value 2917
-        · Draft slot 37
-        · Discounted slot 49
-        · Discounted value 2683
+      <p class="sheet-note">
+        <span>Board value <b>2,953</b></span>
+        <span>Draft slot <b>37</b></span>
+        <span>Discounted slot <b>49</b></span>
+        <span>Target value <b>2,676</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R5 P8</span>
-                  
-                </td>
-                <td>2640</td>
-                <td>43</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>29</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>22</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P8
+                  </td>
+                  <td class="num ktc">2,635</td>
+                  <td class="num col-delta player-meta">41</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P4
+                  </td>
+                  <td class="num ktc">2,668</td>
+                  <td class="num col-delta player-meta">8</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P2
+                  </td>
+                  <td class="num ktc">2,672</td>
+                  <td class="num col-delta player-meta">4</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Jakobi Meyers (WR)
+        <span class="pos pos-wr">WR</span>
+        Jakobi Meyers
         <span class="muted">Owner: Gronkamole and Chips</span>
       </h2>
-      <p class="muted">
-        Draft board value 2862
-        · Draft slot 41
-        · Discounted slot 53
-        · Discounted value 2651
+      <p class="sheet-note">
+        <span>Board value <b>2,886</b></span>
+        <span>Draft slot <b>38</b></span>
+        <span>Discounted slot <b>50</b></span>
+        <span>Target value <b>2,672</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R5 P8</span>
-                  
-                </td>
-                <td>2640</td>
-                <td>11</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>3</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>10</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P8
+                  </td>
+                  <td class="num ktc">2,635</td>
+                  <td class="num col-delta player-meta">37</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P4
+                  </td>
+                  <td class="num ktc">2,668</td>
+                  <td class="num col-delta player-meta">4</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P2
+                  </td>
+                  <td class="num ktc">2,672</td>
+                  <td class="num col-delta player-meta">0</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Tony Pollard (W/R)
+        <span class="pos pos-rb">RB</span>
+        Tony Pollard
         <span class="muted">Owner: Gronkamole and Chips</span>
       </h2>
-      <p class="muted">
-        Draft board value 2837
-        · Draft slot 42
-        · Discounted slot 54
-        · Discounted value 2648
+      <p class="sheet-note">
+        <span>Board value <b>2,830</b></span>
+        <span>Draft slot <b>43</b></span>
+        <span>Discounted slot <b>55</b></span>
+        <span>Target value <b>2,642</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R5 P8</span>
-                  
-                </td>
-                <td>2640</td>
-                <td>8</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>6</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>13</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P8
+                  </td>
+                  <td class="num ktc">2,635</td>
+                  <td class="num col-delta player-meta">7</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P4
+                  </td>
+                  <td class="num ktc">2,668</td>
+                  <td class="num col-delta player-meta">26</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P2
+                  </td>
+                  <td class="num ktc">2,672</td>
+                  <td class="num col-delta player-meta">30</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Rachaad White (BN)
+        <span class="pos pos-rb">RB</span>
+        Rachaad White
         <span class="muted">Owner: OutForTheSeason</span>
       </h2>
-      <p class="muted">
-        Draft board value 2823
-        · Draft slot 43
-        · Discounted slot 55
-        · Discounted value 2644
+      <p class="sheet-note">
+        <span>Board value <b>2,823</b></span>
+        <span>Draft slot <b>45</b></span>
+        <span>Discounted slot <b>57</b></span>
+        <span>Target value <b>2,631</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R5 P8</span>
-                  
-                </td>
-                <td>2640</td>
-                <td>4</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>10</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>17</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P8
+                  </td>
+                  <td class="num ktc">2,635</td>
+                  <td class="num col-delta player-meta">4</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R6 P4
+                  </td>
+                  <td class="num ktc">2,601</td>
+                  <td class="num col-delta player-meta">30</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P2
+                  </td>
+                  <td class="num ktc">2,672</td>
+                  <td class="num col-delta player-meta">41</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <section class="team-card">
       <h2>
-        Woody Marks (RB)
+        <span class="pos pos-rb">RB</span>
+        Woody Marks
         <span class="muted">Owner: Buckeye Air Raid</span>
       </h2>
-      <p class="muted">
-        Draft board value 2731
-        · Draft slot 47
-        · Discounted slot 59
-        · Discounted value 2629
+      <p class="sheet-note">
+        <span>Board value <b>2,734</b></span>
+        <span>Draft slot <b>47</b></span>
+        <span>Discounted slot <b>59</b></span>
+        <span>Target value <b>2,624</b></span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Rebuilder</th>
-            <th>Offer</th>
-            <th>Offer Value</th>
-            <th>Diff</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <div class="table-wrap">
+        <table>
+          <thead>
             <tr>
-              <td>LoUdPaXx President</td>
-              
-                <td>
-                  
-                    <span>R5 P8</span>
-                  
-                </td>
-                <td>2640</td>
-                <td>11</td>
-              
+              <th>#</th>
+              <th>Rebuilder</th>
+              <th class="col-min">Offer</th>
+              <th class="num">Value</th>
+              <th class="num col-delta">Diff</th>
             </tr>
-          
-            <tr>
-              <td>LamarSZN</td>
-              
-                <td>
-                  
-                    <span>R5 P4</span>
-                  
-                </td>
-                <td>2654</td>
-                <td>25</td>
-              
-            </tr>
-          
-            <tr>
-              <td>Extended Warranty</td>
-              
-                <td>
-                  
-                    <span>R5 P2</span>
-                  
-                </td>
-                <td>2661</td>
-                <td>32</td>
-              
-            </tr>
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name">LoUdPaXx President</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P8
+                  </td>
+                  <td class="num ktc">2,635</td>
+                  <td class="num col-delta player-meta">11</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name">LamarSZN</td>
+                
+                  <td class="col-min pick-label">
+                    R6 P4
+                  </td>
+                  <td class="num ktc">2,601</td>
+                  <td class="num col-delta player-meta">23</td>
+                
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name">Extended Warranty</td>
+                
+                  <td class="col-min pick-label">
+                    R5 P2
+                  </td>
+                  <td class="num ktc">2,672</td>
+                  <td class="num col-delta player-meta">48</td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   
 
