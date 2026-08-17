@@ -410,6 +410,20 @@ tr.is-rule .player-name {
   padding: 1px 5px;
 }
 
+/* A date the league has not settled yet. Deliberately not the muted grey of a
+   rule tag -- an unset date is an open question, not a footnote. */
+.date-tbd {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+
 .rule-note {
   color: var(--dim);
   font-weight: 400;
