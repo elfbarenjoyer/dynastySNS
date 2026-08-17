@@ -288,6 +288,134 @@ nav a.on {
   font-weight: 700;
 }
 
+/* --------------------------------------------------- key dates: header bar */
+
+/* Second row of the header block, under the stat strip. Shares that card's
+   ground and border so the two read as one unit; the accent rule on the left
+   is what ties it to the League Info page it links to. */
+.upnext {
+  display: flex;
+  align-items: baseline;
+  gap: 8px 14px;
+  flex-wrap: wrap;
+  background: var(--card);
+  border-bottom: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 9px var(--pad);
+}
+
+.upnext[hidden] {
+  display: none;
+}
+
+.upnext-k {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+.upnext-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  min-width: 0;
+}
+
+.upnext-item {
+  font-family: var(--num);
+  font-size: 12.5px;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.upnext-item b {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.upnext-item i {
+  font-style: normal;
+  color: var(--dim);
+}
+
+/* Applied by the script in base.html once the reader's own clock has been
+   consulted. A lapsed date leaves the bar rather than being struck through --
+   the bar is for what is ahead; the page is where the history lives. */
+.upnext-item.is-past {
+  display: none;
+}
+
+.upnext-more {
+  margin-left: auto;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.upnext-more:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------- key dates: the page */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.date-cell {
+  font-family: var(--num);
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+tr.is-past .date-cell,
+tr.is-past .player-name {
+  text-decoration: line-through;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+/* A rule has no date to expire, so it is never struck through however old the
+   page is. */
+tr.is-rule .date-cell,
+tr.is-rule .player-name {
+  text-decoration: none;
+}
+
+.rule-tag {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--dim);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+
+.rule-note {
+  color: var(--dim);
+  font-weight: 400;
+  font-size: 12.5px;
+}
+
 /* ------------------------------------------------------------------- main */
 
 main {
@@ -590,11 +718,38 @@ tr.non-keeper .pos {
 
 .power-card {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr) auto;
+  /* Fourth column is the movement arrow. It collapses to zero width on sites
+     with no baseline yet, where the template omits it entirely. */
+  grid-template-columns: 30px minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 14px;
   padding: 9px 14px;
   border-bottom: 1px solid var(--hair);
+}
+
+/* Places gained or lost since the weekly baseline -- not a KTC delta. Given a
+   fixed width so the column of arrows reads as a column and does not shift as
+   single- and double-digit moves alternate. */
+.rank-move {
+  margin: 0;
+  min-width: 34px;
+  text-align: right;
+  font-family: var(--cond);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.rank-move-flat,
+.rank-move-new {
+  color: var(--faint);
+}
+
+.rank-move-new {
+  font-size: 10px;
+  letter-spacing: 0.08em;
 }
 
 .power-card:last-child {
@@ -1307,6 +1462,16 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
 
   .stat {
     border-bottom: 1px solid var(--hair);
+  }
+
+  /* Phones get the next date only. Four events wrapped to two lines pushed the
+     first roster too far down; anyone wanting the rest taps through. */
+  .upnext-item:not(.is-next) {
+    display: none;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
   /* The columns that come off. Position and change are the two the phone
