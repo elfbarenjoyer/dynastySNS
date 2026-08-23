@@ -410,6 +410,35 @@ tr.is-rule .player-name {
   padding: 1px 5px;
 }
 
+/* Kick-off time. Set apart from the date by a middot rather than a space so the
+   two read as separate facts, and kept lighter so the date still leads. */
+.time-at {
+  color: var(--dim);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.time-at::before {
+  content: "·";
+  margin: 0 5px;
+  color: var(--rule);
+}
+
+/* The zone is a label the league typed, never a conversion, so it is set back
+   further still -- it qualifies the time rather than being part of it. */
+.time-zone {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  color: var(--faint);
+}
+
+tr.is-past .time-at,
+tr.is-past .time-zone {
+  color: var(--faint);
+}
+
 /* A date the league has not settled yet. Deliberately not the muted grey of a
    rule tag -- an unset date is an open question, not a footnote. */
 .date-tbd {
