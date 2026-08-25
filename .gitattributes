@@ -1,0 +1,17 @@
+# Every page here is generated, and the export runs from two machines: macOS
+# writes LF, the Windows weekly sync writes CRLF. Without normalisation whichever
+# one published last rewrote every line of every file, burying a two-line pick
+# change under thousands of line-ending diffs. Normalise on the way into git so a
+# diff shows only what actually changed.
+* text=auto eol=lf
+
+# iCalendar mandates CRLF (RFC 5545 s3.1) and export_draft_calendar.py writes it
+# deliberately with newline="\r\n". GitHub Pages serves the committed bytes, so
+# the blob itself has to keep them -- `text eol=crlf` would still store LF and
+# serve LF. -text keeps git's hands off entirely.
+*.ics -text
+
+# Fonts are binary. A CRLF byte pair inside one is data, not a line ending, and
+# "normalising" it silently corrupts the file -- which is exactly how a byte went
+# missing from both Barlow faces before this file existed.
+*.woff2 binary
