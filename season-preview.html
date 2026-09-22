@@ -1,0 +1,1662 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1><button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-09-22 21:25 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+        
+        
+          
+            <a
+              href="index.html"
+              class=""
+            >Rosters</a>
+          
+        
+          
+            <a
+              href="free-agents.html"
+              class=""
+            >Free Agents</a>
+          
+        
+          
+            <a
+              href="free-agent-interest.html"
+              class=""
+            >Who Wants Them</a>
+          
+        
+          
+            <a
+              href="biweekly.html"
+              class=""
+            >Biweekly</a>
+          
+        
+          
+            <a
+              href="season-preview.html"
+              class="on "
+            >Season Preview</a>
+          
+        
+          
+            <a
+              href="power-rankings.html"
+              class=""
+            >Power Rankings</a>
+          
+        
+          
+            <a
+              href="draft-board.html"
+              class=""
+            >Draft Board</a>
+          
+        
+          
+            <a
+              href="draft-pick-rankings.html"
+              class=""
+            >Pick Rankings</a>
+          
+        
+          
+            <a
+              href="rankings-builder.html"
+              class="nav-desktop-only"
+            >Rankings Builder</a>
+          
+        
+          
+            <a
+              href="trade-evaluator.html"
+              class=""
+            >Trade Evaluator</a>
+          
+        
+          
+            <a
+              href="offseason-guide.html"
+              class=""
+            >Offseason Guide</a>
+          
+        
+          
+            <a
+              href="league-info.html"
+              class=""
+            >League Info</a>
+          
+        
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Jahmyr Gibbs</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1134
+              <small>MarShawn Lloyd</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1326
+              <small>Josh Jacobs</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <article class="sp">
+
+    <header class="sp-hero">
+      <p class="sp-kicker">
+        <span>2026 Season Preview</span>
+        <span class="sp-kicker-rule"></span>
+        <span>SnSAllStars</span>
+      </p>
+      <h2>Four teams have a plan. Eight have a roster.</h2>
+      <p class="sp-standfirst">Fourteen keepers is enough rope to hang yourself with, and this year most of the league used it to tie a knot in the middle. Of twelve rosters, exactly two are honestly built to win in 2026 and two are honestly built for later. The other eight are sitting on a pile of players nobody would describe as a direction — good enough to make the playoffs, not good enough to matter, too valuable to tear down. Here is how all twelve end up.</p>
+
+      <dl class="sp-facts">
+        
+          <div class="sp-fact">
+            <dt>Format</dt>
+            <dd>Superflex<small>Two QBs start. Every week. No exceptions.</small></dd>
+          </div>
+        
+          <div class="sp-fact">
+            <dt>Keepers</dt>
+            <dd>14<small>Your mistakes are load-bearing.</small></dd>
+          </div>
+        
+          <div class="sp-fact">
+            <dt>Paid places</dt>
+            <dd>3 of 12<small>$1,200 / $450 / $150</small></dd>
+          </div>
+        
+          <div class="sp-fact">
+            <dt>Trade deadline</dt>
+            <dd>Dec 9<small>Before the first Week 14 game.</small></dd>
+          </div>
+        
+      </dl>
+    </header>
+
+    
+    
+    <section class="sp-section">
+      <h3 class="sp-h3">The league in two questions</h3>
+      <p class="sp-intro">Can you win this year, and will you still be able to win in three? Those are different questions, and a keeper-14 league punishes you for confusing them. Plotted below: every roster&#39;s win-now strength against its dynasty strength, coloured by which way it leans.</p>
+
+      <figure class="team-card sp-figure">
+          
+          <div class="sp-chart sp-chart-wide">
+            <svg viewBox="0 0 760 446" role="img"
+                 aria-labelledby="sp-t-wide sp-d-wide">
+              <title id="sp-t-wide">Win-now strength against dynasty strength for all twelve teams</title>
+              <desc id="sp-d-wide">
+                A scatter plot of twelve rosters. Buckeye Air Raid and G.G.G sit highest on
+                both axes. Gronkamole and Chips and The Jackson 10 are strong now but weak in
+                dynasty value. Extended Warranty and Dirty Shorts lean to the future. Eight
+                teams cluster near the middle. Every figure is also in the table below.
+              </desc><rect x="395.0" y="44"
+                    width="305.0" height="173.0"
+                    fill="var(--wash)" />
+              <rect x="90" y="217.0"
+                    width="305.0" height="173.0"
+                    fill="var(--wash)" />
+
+              <rect x="90" y="44"
+                    width="610" height="346"
+                    fill="none" stroke="var(--rule)" stroke-width="1" />
+
+              <line x1="395.0" y1="44"
+                    x2="395.0" y2="390"
+                    stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4" />
+              <line x1="90" y1="217.0"
+                    x2="700" y2="217.0"
+                    stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4" />
+
+              
+              <g class="sp-quad">
+                <text x="98" y="57">BUILDING</text>
+                <text x="692" y="57" text-anchor="end">BUILT TO LAST</text>
+                <text x="98" y="382">NO DIRECTION</text>
+                <text x="692" y="382" text-anchor="end">WINDOW CLOSING</text>
+              </g>
+              
+
+              <g class="sp-axis">
+                <text x="90" y="410">&#8592; REBUILDING</text>
+                <text x="700" y="410" text-anchor="end">CONTENDING &#8594;</text>
+                
+                  <text x="395.0" y="428" text-anchor="middle" class="sp-axis-title">WIN-NOW STRENGTH</text>
+                
+                
+                  <text transform="translate(66,217.0) rotate(-90)" text-anchor="middle" class="sp-axis-title">DYNASTY STRENGTH &#8594;</text>
+                
+              </g>
+
+              <g>
+                
+                  <circle cx="639.0" cy="69.9" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="626.0" y="76.9"
+                        text-anchor="end" class="sp-point-label">Buckeye Air Raid</text>
+                
+                  <circle cx="608.5" cy="87.2" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="621.5" y="95.2"
+                        text-anchor="start" class="sp-point-label">G.G.G</text>
+                
+                  <circle cx="578.0" cy="121.8" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="591.0" y="125.8"
+                        text-anchor="start" class="sp-point-label">aPukalypse Now</text>
+                
+                  <circle cx="471.2" cy="113.2" r="7"
+                          class="sp-dot sp-tilt-future" /><text x="471.2" y="97.2"
+                        text-anchor="middle" class="sp-point-label">Dirty Shorts</text>
+                
+                  <circle cx="501.8" cy="147.8" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="514.8" y="151.8"
+                        text-anchor="start" class="sp-point-label">The Goonies</text>
+                
+                  <circle cx="151.0" cy="191.1" r="7"
+                          class="sp-dot sp-tilt-future" /><text x="164.0" y="195.1"
+                        text-anchor="start" class="sp-point-label">Extended Warranty</text>
+                
+                  <circle cx="417.9" cy="217.0" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="430.9" y="211.0"
+                        text-anchor="start" class="sp-point-label">Allen or Nothing</text>
+                
+                  <circle cx="303.5" cy="234.3" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="290.5" y="238.3"
+                        text-anchor="end" class="sp-point-label">Bo Knows Football</text>
+                
+                  <circle cx="356.9" cy="251.6" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="369.9" y="255.6"
+                        text-anchor="start" class="sp-point-label">LoUdPaXx President</text>
+                
+                  <circle cx="334.0" cy="286.2" r="7"
+                          class="sp-dot sp-tilt-balanced" /><text x="347.0" y="290.2"
+                        text-anchor="start" class="sp-point-label">OutForTheSeason</text>
+                
+                  <circle cx="555.1" cy="303.5" r="7"
+                          class="sp-dot sp-tilt-now" /><text x="568.1" y="307.5"
+                        text-anchor="start" class="sp-point-label">The Jackson 10</text>
+                
+                  <circle cx="532.2" cy="372.7" r="7"
+                          class="sp-dot sp-tilt-now" /><text x="519.2" y="376.7"
+                        text-anchor="end" class="sp-point-label">Gronkamole and Chips</text>
+                
+              </g>
+            </svg>
+          </div>
+        
+          
+          <div class="sp-chart sp-chart-compact">
+            <svg viewBox="0 0 392 322" role="img"
+                 aria-labelledby="sp-t-compact sp-d-compact">
+              <title id="sp-t-compact">Win-now strength against dynasty strength for all twelve teams</title>
+              <desc id="sp-d-compact">
+                A scatter plot of twelve rosters. Buckeye Air Raid and G.G.G sit highest on
+                both axes. Gronkamole and Chips and The Jackson 10 are strong now but weak in
+                dynasty value. Extended Warranty and Dirty Shorts lean to the future. Eight
+                teams cluster near the middle. Every figure is also in the table below.
+              </desc><rect x="200.0" y="22"
+                    width="186.0" height="129.0"
+                    fill="var(--wash)" />
+              <rect x="14" y="151.0"
+                    width="186.0" height="129.0"
+                    fill="var(--wash)" />
+
+              <rect x="14" y="22"
+                    width="372" height="258"
+                    fill="none" stroke="var(--rule)" stroke-width="1" />
+
+              <line x1="200.0" y1="22"
+                    x2="200.0" y2="280"
+                    stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4" />
+              <line x1="14" y1="151.0"
+                    x2="386" y2="151.0"
+                    stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4" />
+
+              
+
+              <g class="sp-axis">
+                <text x="14" y="300">&#8592; REBUILDING</text>
+                <text x="386" y="300" text-anchor="end">CONTENDING &#8594;</text>
+                
+                
+                  <text x="14" y="14" class="sp-axis-title">&#8593; DYNASTY STRENGTH</text>
+                
+              </g>
+
+              <g>
+                
+                  <circle cx="348.8" cy="41.3" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="339.8" y="35.3"
+                        text-anchor="end" class="sp-point-label">Buckeye Air Raid</text>
+                
+                  <circle cx="330.2" cy="54.2" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="321.2" y="57.2"
+                        text-anchor="end" class="sp-point-label">G.G.G</text>
+                
+                  <circle cx="311.6" cy="80.0" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="311.6" y="98.0"
+                        text-anchor="middle" class="sp-point-label">aPukalypse Now</text>
+                
+                  <circle cx="246.5" cy="73.6" r="5"
+                          class="sp-dot sp-tilt-future" /><text x="237.5" y="76.6"
+                        text-anchor="end" class="sp-point-label">Dirty Shorts</text>
+                
+                  <circle cx="265.1" cy="99.4" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="256.1" y="102.4"
+                        text-anchor="end" class="sp-point-label">The Goonies</text>
+                
+                  <circle cx="51.2" cy="131.7" r="5"
+                          class="sp-dot sp-tilt-future" /><text x="60.2" y="134.7"
+                        text-anchor="start" class="sp-point-label">Extended Warranty</text>
+                
+                  <circle cx="213.9" cy="151.0" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="213.9" y="138.0"
+                        text-anchor="middle" class="sp-point-label">Allen or Nothing</text>
+                
+                  <circle cx="144.2" cy="163.9" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="144.2" y="150.9"
+                        text-anchor="middle" class="sp-point-label">Bo Knows Football</text>
+                
+                  <circle cx="176.8" cy="176.8" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="185.8" y="179.8"
+                        text-anchor="start" class="sp-point-label">LoUdPaXx President</text>
+                
+                  <circle cx="162.8" cy="202.6" r="5"
+                          class="sp-dot sp-tilt-balanced" /><text x="171.8" y="205.6"
+                        text-anchor="start" class="sp-point-label">OutForTheSeason</text>
+                
+                  <circle cx="297.6" cy="215.5" r="5"
+                          class="sp-dot sp-tilt-now" /><text x="288.6" y="218.5"
+                        text-anchor="end" class="sp-point-label">The Jackson 10</text>
+                
+                  <circle cx="283.7" cy="267.1" r="5"
+                          class="sp-dot sp-tilt-now" /><text x="274.7" y="270.1"
+                        text-anchor="end" class="sp-point-label">Gronkamole and Chips</text>
+                
+              </g>
+            </svg>
+          </div>
+        
+
+
+        <div class="sp-legend">
+          
+            <span class="sp-legend-item">
+              <span class="sp-legend-dot sp-tilt-now"></span>Tilted to now
+            </span>
+          
+            <span class="sp-legend-item">
+              <span class="sp-legend-dot sp-tilt-balanced"></span>Balanced — or undecided
+            </span>
+          
+            <span class="sp-legend-item">
+              <span class="sp-legend-dot sp-tilt-future"></span>Tilted to the future
+            </span>
+          
+        </div>
+        <figcaption>Placement is a judgment call, informed by the hard numbers in the table below: KeepTradeCut superflex capital across each roster&#39;s 14 keepers, how much of it is locked in rookies who score nothing this year, and whether the team can actually fill two starting QB slots. Colour shows the gap between the two axes — how far a roster leans one way.</figcaption>
+      </figure>
+
+      <section class="team-card sp-table-card">
+        <h2>The numbers behind the plot · KTC superflex, keeper 14 only</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th class="num">Keeper capital</th>
+                <th class="num col-min">QB capital</th>
+                <th class="num">QB2</th>
+                <th class="num col-min">RB capital</th>
+                <th class="num col-min">WR capital</th>
+                <th class="num col-min">TE capital</th>
+                <th class="num">Rookie share</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>G.G.G
+                  </td>
+                  <td class="num ktc">75,150</td>
+                  <td class="num col-min">12,057</td>
+                  <td class="num">4,286</td>
+                  <td class="num col-min">21,767</td>
+                  <td class="num col-min">31,114</td>
+                  <td class="num col-min">10,212</td>
+                  <td class="num">9.0%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>Buckeye Air Raid
+                  </td>
+                  <td class="num ktc">73,768</td>
+                  <td class="num col-min">13,350</td>
+                  <td class="num">6,033</td>
+                  <td class="num col-min">17,498</td>
+                  <td class="num col-min">34,613</td>
+                  <td class="num col-min">8,307</td>
+                  <td class="num">14.8%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>aPukalypse Now
+                  </td>
+                  <td class="num ktc">72,474</td>
+                  <td class="num col-min">15,776</td>
+                  <td class="num">5,811</td>
+                  <td class="num col-min">16,778</td>
+                  <td class="num col-min">30,924</td>
+                  <td class="num col-min">8,996</td>
+                  <td class="num">14.0%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>The Goonies
+                  </td>
+                  <td class="num ktc">69,268</td>
+                  <td class="num col-min">17,183</td>
+                  <td class="num">4,575</td>
+                  <td class="num col-min">16,789</td>
+                  <td class="num col-min">30,976</td>
+                  <td class="num col-min">4,320</td>
+                  <td class="num">15.5%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-future"></span>Dirty Shorts
+                  </td>
+                  <td class="num ktc">64,912</td>
+                  <td class="num col-min">9,705</td>
+                  <td class="num">2,759</td>
+                  <td class="num col-min">24,878</td>
+                  <td class="num col-min">24,026</td>
+                  <td class="num col-min">6,303</td>
+                  <td class="num">8.6%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-now"></span>The Jackson 10
+                  </td>
+                  <td class="num ktc">62,538</td>
+                  <td class="num col-min">18,025</td>
+                  <td class="num">5,935</td>
+                  <td class="num col-min">12,267</td>
+                  <td class="num col-min">23,637</td>
+                  <td class="num col-min">8,609</td>
+                  <td class="num">4.8%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-now"></span>Gronkamole and Chips
+                  </td>
+                  <td class="num ktc">62,084</td>
+                  <td class="num col-min">12,796</td>
+                  <td class="num">3,791</td>
+                  <td class="num col-min">22,918</td>
+                  <td class="num col-min">21,347</td>
+                  <td class="num col-min">5,023</td>
+                  <td class="num">0.0%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>Allen or Nothing
+                  </td>
+                  <td class="num ktc">60,631</td>
+                  <td class="num col-min">15,021</td>
+                  <td class="num">5,061</td>
+                  <td class="num col-min">14,683</td>
+                  <td class="num col-min">26,056</td>
+                  <td class="num col-min">4,871</td>
+                  <td class="num">13.5%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>OutForTheSeason
+                  </td>
+                  <td class="num ktc">59,513</td>
+                  <td class="num col-min">13,090</td>
+                  <td class="num">4,458</td>
+                  <td class="num col-min">21,834</td>
+                  <td class="num col-min">21,277</td>
+                  <td class="num col-min">3,312</td>
+                  <td class="num">12.5%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>LoUdPaXx President
+                  </td>
+                  <td class="num ktc">58,630</td>
+                  <td class="num col-min">9,352</td>
+                  <td class="num">3,714</td>
+                  <td class="num col-min">16,245</td>
+                  <td class="num col-min">24,769</td>
+                  <td class="num col-min">8,264</td>
+                  <td class="num">6.2%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-balanced"></span>Bo Knows Football
+                  </td>
+                  <td class="num ktc">57,187</td>
+                  <td class="num col-min">10,619</td>
+                  <td class="num">4,566</td>
+                  <td class="num col-min">16,734</td>
+                  <td class="num col-min">20,925</td>
+                  <td class="num col-min">8,909</td>
+                  <td class="num">14.0%</td>
+                </tr>
+              
+                <tr>
+                  <td class="player-name">
+                    <span class="sp-tilt-chip sp-tilt-future"></span>Extended Warranty
+                  </td>
+                  <td class="num ktc">53,257</td>
+                  <td class="num col-min">15,239</td>
+                  <td class="num">5,237</td>
+                  <td class="num col-min">11,258</td>
+                  <td class="num col-min">18,782</td>
+                  <td class="num col-min">7,978</td>
+                  <td class="num">25.4%</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="sp-section">
+      <h3 class="sp-h3">All twelve, in order of finish</h3>
+
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank is-champ">01</span>
+            <span class="sp-team-name">
+              <h4>Buckeye Air Raid</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Contender</span>
+                
+                  <span class="sp-tag">Deepest WR room</span>
+                
+                  <span class="sp-tag">Best QB duo</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Every league has one team that gets good and then gets lucky. This is that team, and it is not close.</p>
+            
+              <p>Burrow and Hurts is the only superflex room in SnS that does not require a weekly act of faith. A QB2 worth 6,033 does not sound like a headline until you learn the league median is around 4,500 and the bottom of the table is starting Michael Penix Jr. Two starting slots, two quarterbacks you would happily start anywhere. Nobody else can say that.</p>
+            
+              <p>Then there is 34,613 in receiver capital, the most in the league, and it is not top-heavy the way Chase or Puka make a room top-heavy. London, Flowers, Waddle, Harrison, Addison, Burden — six names, every one of them a plausible WR2, which means bye weeks cost nothing and there is a trade chip at every price point from October onward.</p>
+            
+              <p>The honest knock: the backfield is a rookie and Omarion Hampton, and Harold Fannin Jr. is being asked to be the starting tight end on a title team. Both are fixable in November with the receiver surplus. Everyone else&#39;s problems are structural.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Wins the $1,200 unless the injury report turns personal. The scary part is that the roster is young enough to do it again in 2028.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">73,768</span><span class="sp-rail-rk">2nd</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Superflex QBs</dt>
+                  <dd>
+                    <span class="sp-rail-note">Burrow + Hurts — best QB2 in SnS at 6,033</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>WR capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">34,613</span><span class="sp-rail-rk">1st</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">14.8%</span>
+                    
+                      <span class="sp-meter"><i style="width: 59%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">A rookie RB1 and Fannin at tight end</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">02</span>
+            <span class="sp-team-name">
+              <h4>G.G.G</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Contender</span>
+                
+                  <span class="sp-tag">Most capital</span>
+                
+                  <span class="sp-tag">No spine</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">The best collection of players in the league, assembled by someone who forgot which format they were in.</p>
+            
+              <p>Top of the power rankings — though in SnS that just means top of the keeper-capital column, since the ranking is that column sorted and reprinted. The capital is real, though: Gibbs, Jefferson, McBride, McConkey, Garrett Wilson, DeVonta Smith. Elite at running back, elite at tight end, four receivers you would start on any roster here.</p>
+            
+              <p>Then the lineup asks for a second quarterback and Sam Darnold is standing there with his hands out. Twelve thousand and fifty-seven in QB capital — third-lowest in a league that starts two of them — split between a quarterback who has been about to break out for three consecutive seasons and one whose career is a Rorschach test. Every other team at the top of this page starts two quarterbacks they are happy about. This one starts one it is hopeful about and one it has to explain.</p>
+            
+              <p>The good news is that the fix is affordable: nobody in SnS has more spare receiver value to spend, and there are four teams below who would take a DeVonta Smith call.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Leads the league in points, finishes third in wins, loses a semi-final by nine, and spends the offseason insisting it was the best team. It was.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">75,150</span><span class="sp-rail-rk">1st</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Superflex QBs</dt>
+                  <dd>
+                    <span class="sp-rail-note">Caleb Williams + Darnold — 12,057 total, 10th</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>RB / TE anchors</dt>
+                  <dd>
+                    <span class="sp-rail-note">Gibbs 9,999 · McBride 7,298</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">9.0%</span>
+                    
+                      <span class="sp-meter"><i style="width: 35%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Two QB slots, one and a half quarterbacks</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">03</span>
+            <span class="sp-team-name">
+              <h4>aPukalypse Now</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Contender</span>
+                
+                  <span class="sp-tag">WR heavy</span>
+                
+                  <span class="sp-tag">QB agnostic</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Named the team after Puka Nacua and has been obligated to keep being right about it ever since. So far, so good.</p>
+            
+              <p>Puka, Nabers, A.J. Brown and Tee Higgins is 30,924 in receiver capital and four genuine every-week starters, and Tyler Warren is a real tight end at a position where half this league is starting a committee. On raw weekly ceiling this is a top-three roster and the age curve mostly cooperates — Nabers and Dart are 23, Puka and Warren are 25.</p>
+            
+              <p>The tax comes due at quarterback. Trevor Lawrence and Jaxson Dart, with Ty Simpson stashed behind them as a third lottery ticket: three quarterbacks, 15,776 in capital, and not one you would want starting a playoff game. This is a roster built by somebody who understands receivers at a deep level and treats quarterback as a rounding error — a defensible worldview in every format except the one they are playing.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Makes the money. Does not win it. Trades for a real quarterback in 2027 and immediately becomes the problem.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">72,474</span><span class="sp-rail-rk">3rd</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Superflex QBs</dt>
+                  <dd>
+                    <span class="sp-rail-note">Lawrence + Dart, Ty Simpson stashed</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>WR capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">30,924</span><span class="sp-rail-rk">3rd</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">14.0%</span>
+                    
+                      <span class="sp-meter"><i style="width: 55%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Three QBs, zero you would trust in December</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">04</span>
+            <span class="sp-team-name">
+              <h4>The Jackson 10</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag sp-tag-now">Tilted to now</span>
+                
+                  <span class="sp-tag">Most QB capital</span>
+                
+                  <span class="sp-tag">Oldest skill group</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">The most quarterback capital in the league, in a league with two quarterback slots.</p>
+            
+              <p>Eighteen thousand and twenty-five across Lamar, Mahomes and Baker Mayfield. Two of them start. The third — 4,559 of value — sits on the bench every Sunday as the most expensive handcuff in the sport. It is genuinely a great problem to have and it is still, unmistakably, a problem: that is a starting receiver&#39;s worth of value doing nothing.</p>
+            
+              <p>Behind the quarterbacks the roster reads like a reunion. Saquon, Mahomes, DJ Moore, Courtland Sutton, Chris Godwin, Dallas Goedert — all of them past the point where dynasty value goes up. The best receiver on the roster is Emeka Egbuka, who is also the only young one worth naming. Rookie capital is 4.8%, eleventh of twelve.</p>
+            
+              <p>Lamar and Achane will win a lot of weeks in 2026. The 2028 version of this roster is a rebuild that has not been informed yet.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Genuinely dangerous in a one-week playoff format. Push every chip in before the December 9 deadline, because there will be nothing to sell in the spring.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">62,538</span><span class="sp-rail-rk">6th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>QB capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">18,025</span><span class="sp-rail-rk">1st</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Best WR</dt>
+                  <dd>
+                    <span class="sp-rail-note">Emeka Egbuka, 6,186 — 3rd on the roster</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">4.8%</span>
+                    
+                      <span class="sp-meter"><i style="width: 19%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">4,559 of QB value benched every week</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">05</span>
+            <span class="sp-team-name">
+              <h4>Gronkamole and Chips</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag sp-tag-now">Tilted to now</span>
+                
+                  <span class="sp-tag">Zero rookies</span>
+                
+                  <span class="sp-tag">All in</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Zero. Not low — zero. The only roster in SnS without a single rookie among its fourteen keepers.</p>
+            
+              <p>Every other team in the league kept at least one. This one looked at the 2026 class and declined, entirely, on principle. What it kept instead is Christian McCaffrey, Derrick Henry, Matthew Stafford and 22,918 in running back capital — second-most in a league where running backs depreciate faster than anything else on the board.</p>
+            
+              <p>And it might work. Jaxon Smith-Njigba at 9,192 is the second-most valuable receiver in SnS. Tucker Kraft is a genuine tight end. Bucky Irving and TreVeyon Henderson are the young legs holding the whole structure up. A healthy McCaffrey and a healthy Henry is a top-three scoring team, and nobody in this league can match the floor of that backfield in November.</p>
+            
+              <p>But there is no plan B. No young core to pivot to, no stashed rookies, nothing to sell in a bad October. Malik Willis is the tenth-most valuable keeper on the roster, which tells you how thin the tail is. If this does not cash in 2026, the rebuild starts below sea level.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Title or ruin, and the roster knows it. Respect for the commitment; the exit is going to be brutal.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">62,084</span><span class="sp-rail-rk">7th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">0.0%</span>
+                    
+                      <span class="sp-meter"><i style="width: 1%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>RB capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">22,918</span><span class="sp-rail-rk">2nd</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Top asset</dt>
+                  <dd>
+                    <span class="sp-rail-note">Jaxon Smith-Njigba, 9,192 — 2nd-best WR in SnS</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">No plan B exists. Anywhere. At all.</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">06</span>
+            <span class="sp-team-name">
+              <h4>The Goonies</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Playoff team</span>
+                
+                  <span class="sp-tag">Most top-heavy</span>
+                
+                  <span class="sp-tag">Worst TE room</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Ja&#39;Marr Chase and Drake Maye is 18,890 of value in two players. Everything after that is a negotiation.</p>
+            
+              <p>The top three keepers are 37% of the roster, the most concentrated build in the league. When Chase and Maye go off, this team beats anyone on the page — that is a legitimate championship path in a format where one week decides everything.</p>
+            
+              <p>The trouble starts when the lineup card asks for a second receiver and the answer is Christian Watson or Alec Pierce, then asks for a tight end and the answer is Kyle Pitts. Still. In 2026. At 4,320, the worst tight end room in SnS by capital. Makai Lemon and Ja&#39;Kobi Lane are real future pieces who will not help in October, and Daniel Jones is a kept player on a contending roster, a sentence I have now read back to myself four times.</p>
+            
+              <p>Two acquisitions from serious, and 15.5% in rookie capital plus a genuine WR1 means it has the currency to go get them.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Makes the playoffs on Chase&#39;s back, loses a round to a deeper team, then wins the offseason.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">69,268</span><span class="sp-rail-rk">4th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Top-3 share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">37%</span><span class="sp-rail-rk">most</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>TE capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">4,320</span><span class="sp-rail-rk">11th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">15.5%</span>
+                    
+                      <span class="sp-meter"><i style="width: 61%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Kyle Pitts is still the plan at tight end</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">07</span>
+            <span class="sp-team-name">
+              <h4>Dirty Shorts</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag sp-tag-future">Tilted to the future</span>
+                
+                  <span class="sp-tag">Best young core</span>
+                
+                  <span class="sp-tag">Worst QB2</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">The best young roster nobody is worried about yet, currently starting Michael Penix Jr. in the superflex.</p>
+            
+              <p>Start with the good, because it is very good: Jeanty, Loveland, Brian Thomas Jr., Carnell Tate, Nico Collins, Chase Brown. In three years this is the best roster in SnS and it is not especially close. Everything here is young, ascending, and cheap to hold.</p>
+            
+              <p>Now the problem. A QB2 worth 2,759 — dead last in a twelve-team league that starts two quarterbacks every single week. The next-worst is Bryce Young at 3,714, and the league&#39;s best is more than double it. That is not a soft spot, it is a hole in the lineup card that opens every Sunday.</p>
+            
+              <p>Meanwhile 24,878 sits in running backs, the most in the league, spread across Jeanty, Chase Brown, Corum, Dowdle, Chris Rodriguez and Tank Bigsby. Six running backs and one quarterback, in a format that inverts exactly that priority. Ship three of those backs for a quarterback nobody wants to say out loud and this is a top-four team by Halloween.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Playoff bubble this year, everybody else&#39;s problem for the next four. The only thing standing between it and the top of this page is one phone call.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">64,912</span><span class="sp-rail-rk">5th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>QB2 value</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">2,759</span><span class="sp-rail-rk">12th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>RB capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">24,878</span><span class="sp-rail-rk">1st</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">8.6%</span>
+                    
+                      <span class="sp-meter"><i style="width: 34%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Six RBs and one QB, in superflex</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">08</span>
+            <span class="sp-team-name">
+              <h4>Allen or Nothing</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Bubble</span>
+                
+                  <span class="sp-tag">Single point of failure</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">The team name is a risk disclosure and it should be read as one.</p>
+            
+              <p>Josh Allen is 9,960 of a 60,631 roster. Sixteen percent of everything, in one player, the highest single-player concentration in SnS — and the top three keepers are 37% of the team. There is a version of this season where Allen finishes as the overall QB1 and this roster wins ten games, and there is a version where he misses three weeks in November and the whole thing is on the wire by Thanksgiving.</p>
+            
+              <p>Behind him it thins quickly and ages faster. Mike Evans, Mark Andrews, Aaron Jones and Dak Prescott are all on the wrong side of the curve, and the tight end room is 4,871 — second-worst in the league. Jonathan Taylor and Tetairoa McMillan are genuinely good, and Jordyn Tyson is the sharpest rookie bet on any roster here.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>7–7, in the hunt until Week 13, one hamstring away from a fire sale. The name was a warning label the whole time.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">60,631</span><span class="sp-rail-rk">8th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Josh Allen</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">16.4%</span><span class="sp-rail-rk">of roster</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>TE capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">4,871</span><span class="sp-rail-rk">10th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">13.5%</span>
+                    
+                      <span class="sp-meter"><i style="width: 53%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Aging everywhere Allen is not</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">09</span>
+            <span class="sp-team-name">
+              <h4>LoUdPaXx President</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Missing the playoffs</span>
+                
+                  <span class="sp-tag">Least QB capital</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Brock Bowers is the most valuable tight end in the league. Enjoy him, because the rest of this is difficult.</p>
+            
+              <p>At 8,264 Bowers is a genuine weekly advantage at the position where most of SnS is guessing, and he is 24. That is the good part and it is a real one.</p>
+            
+              <p>Now: nine thousand, three hundred and fifty-two. That is the total quarterback capital on a roster required to start two of them every week, and it is the lowest figure in the league. It buys Brock Purdy and Bryce Young. In a superflex format that is not a disadvantage, it is a structural weekly deficit of maybe fifteen points before the rest of the lineup gets a vote.</p>
+            
+              <p>Around them, Davante Adams and DK Metcalf are aging out, the backfield is Javonte Williams and Cam Skattebo doing their honest best, and Travis Hunter has fallen to 2,938 — once a can&#39;t-miss asset, now the twelfth-best keeper on a ninth-place roster.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Bowers wins four games by himself. That is the number. Four.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">58,630</span><span class="sp-rail-rk">10th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>QB capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">9,352</span><span class="sp-rail-rk">12th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Brock Bowers</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">8,264</span><span class="sp-rail-rk">TE1 in SnS</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">6.2%</span>
+                    
+                      <span class="sp-meter"><i style="width: 24%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Purdy and Bryce Young. In superflex.</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">10</span>
+            <span class="sp-team-name">
+              <h4>OutForTheSeason</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Two stars</span>
+                
+                  <span class="sp-tag">Steepest cliff</span>
+                
+                  <span class="sp-tag">Worst TE room</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Bijan Robinson and CeeDee Lamb are 17,173 of unarguable production. The other twelve keepers are a rumour.</p>
+            
+              <p>Bijan at 9,999 is tied for the most valuable asset in the league and CeeDee is a genuine WR1. Then comes the steepest drop in SnS: from Lamb at 7,174 to the third-best keeper, Tyler Shough, at 4,780 — a valuation I have now checked against the source data three times and still refuse to accept.</p>
+            
+              <p>The quarterback plan is Shough, C.J. Stroud and Kyler Murray: three men, 13,090 in combined capital, and a combined effect on your Sunday best described as a low hum. The tight end room is George Kittle and nothing at all, 3,312, the lowest in the league. Kittle and Terry McLaurin are also the two oldest useful players on the roster, which is not where you want your remaining reliability concentrated.</p>
+            
+              <p>The team name has been functioning as a disclaimer for some time now and nobody has asked it to stop.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>Bijan carries, CeeDee helps, everything else abstains. 5–9 with two absolutely enormous weeks.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">59,513</span><span class="sp-rail-rk">9th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Top two</dt>
+                  <dd>
+                    <span class="sp-rail-note">Bijan 9,999 + CeeDee 7,174 = 29% of roster</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>TE capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">3,312</span><span class="sp-rail-rk">12th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">12.5%</span>
+                    
+                      <span class="sp-meter"><i style="width: 49%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Tyler Shough is the third-best keeper</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">11</span>
+            <span class="sp-team-name">
+              <h4>Bo Knows Football</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag">Flattest roster</span>
+                
+                  <span class="sp-tag">Three tight ends</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Amon-Ra St. Brown, and then a long, level plain of adequacy stretching to the horizon.</p>
+            
+              <p>Nine of the fourteen keepers sit between 2,600 and 3,800 — the flattest roster in the league. No star to build around beyond St. Brown, and no true dead weight to cut either, which sounds like balance and is actually the worst place to be in a keeper-14 format: nothing worth trading for, nothing worth trading away.</p>
+            
+              <p>The tight end situation deserves its own paragraph. Dalton Kincaid, Jake Ferguson and AJ Barner — 8,909 in capital across three players for one lineup slot, and not one of them will ever be the reason a week is won. That is fourth-most TE capital in SnS producing roughly eleventh-best TE production.</p>
+            
+              <p>There are real things here. Quinshon Judkins and Jadarian Price is a genuinely interesting young backfield, Matthew Golden is 23 and ascending, and Bo Nix and Jared Goff will quietly clear the superflex bar every week without ever winning one. Nothing is broken. Nothing is good.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>6–8, tenth in points, no notes, no memories, no reason to check the app after Week 10.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">57,187</span><span class="sp-rail-rk">11th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Keepers 2.6k–3.8k</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">9 of 14</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>TE capital</dt>
+                  <dd>
+                    <span class="sp-rail-note">8,909 across three interchangeable tight ends</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">14.0%</span>
+                    
+                      <span class="sp-meter"><i style="width: 55%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">Owns nothing anyone wants to trade for</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+        <article class="sp-team">
+          <header class="sp-team-head">
+            <span class="sp-rank">12</span>
+            <span class="sp-team-name">
+              <h4>Extended Warranty</h4>
+              <span class="sp-tags">
+                
+                  <span class="sp-tag sp-tag-future">Tilted to the future</span>
+                
+                  <span class="sp-tag">Most rookie capital</span>
+                
+                  <span class="sp-tag">Honest</span>
+                
+              </span>
+            </span>
+          </header>
+
+          <div class="sp-team-body">
+            <p class="sp-lede">Last in capital, last in the power ranking, and the only team on this page executing a coherent plan.</p>
+            
+              <p>A full quarter of the roster — 13,546 of 53,257 — is tied up in players who will score approximately nothing in 2026: Fernando Mendoza, Malachi Fields, Carson Beck, Emmett Johnson. That is 25.4% in rookie capital, ten points clear of second place. Jayden Daniels and George Pickens are the only two assets here that are simultaneously good and available this season.</p>
+            
+              <p>None of that is a criticism. In a fourteen-keeper league where eight teams are stuck in the middle owning nothing anybody wants, being genuinely bad on purpose is the sharpest position available. The team is named Extended Warranty and it is, in fact, paying now for coverage later.</p>
+            
+              <p>The concern is not the strategy, it is the shopping list. Rebuilds are won by acquiring the right young players, not merely young ones, and Mendoza at 5,237 is the third-most valuable quarterback in SnS that nobody will start this year. If he hits, this is a 2028 contender. If he does not, this is just a bad team that took the scenic route.</p>
+            
+            <p class="sp-verdict"><b>Verdict</b>3–11, and the least embarrassing 3–11 you will ever watch. Ask again in two years.</p>
+          </div>
+
+          <aside class="sp-rail">
+            <dl>
+              
+                <div class="sp-rail-row">
+                  <dt>Keeper capital</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">53,257</span><span class="sp-rail-rk">12th</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Rookie share</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">25.4%</span><span class="sp-rail-rk">1st</span>
+                    
+                      <span class="sp-meter"><i style="width: 100%"></i></span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Dead in 2026</dt>
+                  <dd>
+                    
+                      <span class="sp-rail-v">13,546</span>
+                    
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Real assets</dt>
+                  <dd>
+                    <span class="sp-rail-note">Jayden Daniels 7,237 · George Pickens 6,261</span>
+                  </dd>
+                </div>
+              
+                <div class="sp-rail-row">
+                  <dt>Fatal flaw</dt>
+                  <dd>
+                    <span class="sp-rail-note">The plan depends entirely on Mendoza</span>
+                  </dd>
+                </div>
+              
+            </dl>
+          </aside>
+        </article>
+      
+    </section>
+
+    
+    <section class="sp-section">
+      <h3 class="sp-h3">The money</h3>
+      <p class="sp-intro">Nine of you are playing for the group chat.</p>
+
+      <div class="sp-payouts">
+        
+          <div class="sp-payout is-champ">
+            <span class="sp-payout-place">First · Champion</span>
+            <span class="sp-payout-amt">$1,200</span>
+            <span class="sp-payout-team">Buckeye Air Raid</span>
+            <span class="sp-payout-why">Two real quarterbacks and six real receivers. Nobody else has both.</span>
+          </div>
+        
+          <div class="sp-payout">
+            <span class="sp-payout-place">Second</span>
+            <span class="sp-payout-amt">$450</span>
+            <span class="sp-payout-team">G.G.G</span>
+            <span class="sp-payout-why">Best roster in the league, one quarterback short of proving it.</span>
+          </div>
+        
+          <div class="sp-payout">
+            <span class="sp-payout-place">Third</span>
+            <span class="sp-payout-amt">$150</span>
+            <span class="sp-payout-team">aPukalypse Now</span>
+            <span class="sp-payout-why">Four elite receivers drag a mediocre QB room into the money.</span>
+          </div>
+        
+      </div>
+
+      <div class="sp-calls">
+        
+          <div class="sp-call">
+            <span class="sp-call-when">By Week 6</span>
+            <span class="sp-call-what">Dirty Shorts stops pretending Michael Penix Jr. is a starting superflex quarterback and puts three running backs on the block. Whoever answers first wins the trade.</span>
+          </div>
+        
+          <div class="sp-call">
+            <span class="sp-call-when">By Week 9</span>
+            <span class="sp-call-what">Gronkamole and Chips is either 7–2 or 3–6, with nothing in between. The oldest roster in the league does not do mediocre.</span>
+          </div>
+        
+          <div class="sp-call">
+            <span class="sp-call-when">Dec 9 deadline</span>
+            <span class="sp-call-what">The Jackson 10 holds Saquon Barkley one season too long. The team with the most quarterback capital in SnS will spend the offseason discovering what its receivers are actually worth.</span>
+          </div>
+        
+          <div class="sp-call">
+            <span class="sp-call-when">Offseason</span>
+            <span class="sp-call-what">Extended Warranty and Dirty Shorts are the two teams that will be good when everybody else&#39;s keeper list turns thirty at once. One of them planned it.</span>
+          </div>
+        
+          <div class="sp-call">
+            <span class="sp-call-when">The whole year</span>
+            <span class="sp-call-what">The eight teams in the middle of that chart make no significant trades, finish between 5–9 and 8–6, and keep the same fourteen players. This is the actual story of the 2026 season.</span>
+          </div>
+        
+      </div>
+    </section>
+
+    <p class="sp-colophon">
+      <b>Written 2026-09-09.</b>
+      Rosters are the post-draft keeper 14 for all twelve SnS teams. Player values are KeepTradeCut superflex, captured 1 September 2026 — capital totals, positional splits, QB2 values and rookie shares are computed from those and are exact as of this page&#39;s date. Everything else — the finish order, the payouts, the insults — is opinion, offered in the confidence that nobody will check back in December.
+      Unlike every other page here, this one is frozen: the weekly refresh moves
+      the rest of the site and leaves this article where it was.
+    </p>
+  </article>
+
+    </main>
+
+    
+  </body>
+</html>
