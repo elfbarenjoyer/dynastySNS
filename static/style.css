@@ -2460,6 +2460,53 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
 .bw-s4 { background: #bcd8e6; color: #10303f; }
 .bw-s5 { background: #e4eef4; color: #33545f; }
 
+/* ---- risers and fallers ---- */
+
+.bw-movers {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px; margin: 18px 0 0;
+}
+
+.bw-mcol { background: var(--card); border: 1px solid var(--rule); padding: 0 14px 12px; }
+
+.bw-mcol h4 {
+  font-family: var(--cond); text-transform: uppercase; font-weight: 700; font-size: 17px;
+  margin: 12px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+}
+.bw-mcol h4.bw-up { color: var(--up); }
+.bw-mcol h4.bw-dn { color: var(--down); }
+
+/* Name and direction bar on one line, the arithmetic tucked underneath, so a
+   column of six reads as six objects rather than twenty-four numbers. */
+.bw-mvr {
+  display: grid; grid-template-columns: minmax(0, 1fr) 62px;
+  grid-template-areas: "name num" "bar to";
+  gap: 2px 10px; align-items: center; padding: 7px 0;
+  border-bottom: 1px solid var(--hair);
+}
+.bw-mvr:last-child { border-bottom: 0; }
+
+.bw-mvname { grid-area: name; font-size: 13.5px; color: var(--ink); min-width: 0; }
+.bw-mvname b {
+  font-family: var(--num); font-size: 9px; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--faint); border: 1px solid var(--hair); padding: 1px 4px; margin-left: 6px;
+}
+.bw-mvname i { font-style: normal; font-size: 11.5px; color: var(--faint); margin-left: 6px; }
+
+.bw-mvbar { grid-area: bar; height: 4px; background: var(--wash); }
+.bw-mvbar u { display: block; height: 100%; text-decoration: none; }
+.bw-bup { background: var(--up); }
+.bw-bdn { background: var(--down); }
+
+.bw-mvnum {
+  grid-area: num; font-family: var(--num); font-size: 13px; font-weight: 600;
+  text-align: right; font-variant-numeric: tabular-nums;
+}
+.bw-mvto {
+  grid-area: to; font-family: var(--num); font-size: 10px; color: var(--faint);
+  text-align: right; white-space: nowrap;
+}
+
 /* ---- differential bars ---- */
 
 .bw-margins { margin: 18px 0 0; background: var(--card); border: 1px solid var(--rule); padding: 14px 16px; }
@@ -2519,7 +2566,10 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
   .bw-pgt { font-size: 12px; }
   .bw-pgr i { font-size: 11px; padding: 4px 0; }
 
-  .bw-mrow { grid-template-columns: 104px minmax(0, 1fr) 54px 32px; gap: 7px; }
+  .bw-mrow { grid-template-columns: 96px minmax(0, 1fr) 56px 44px; gap: 6px; }
+  .bw-movers { grid-template-columns: 1fr; }
+  .bw-mvname { font-size: 12.5px; }
+  .bw-mvname i { display: none; }
   .bw-mteam { font-size: 12px; }
 
   /* Whole points are enough on a phone; the decimals are what overflow. */
