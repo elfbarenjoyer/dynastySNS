@@ -2425,6 +2425,7 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
   display: flex; justify-content: space-between; gap: 8px; font-size: 13.5px;
   padding: 5px 0; border-top: 1px solid var(--hair); color: var(--dim);
 }
+.bw-empty { color: var(--faint); font-style: italic; }
 .bw-qcard li span { font-family: var(--num); font-size: 11px; color: var(--faint); flex: none; }
 
 /* ---- positional grid ---- */
