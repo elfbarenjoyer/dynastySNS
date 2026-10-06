@@ -544,7 +544,8 @@ main {
   border: 1px solid var(--rule);
 }
 
-.team-card > h2 {
+.team-card > h2,
+.hs-all > summary > h2 {
   font-family: var(--cond);
   text-transform: uppercase;
   font-size: 19px;
@@ -558,7 +559,8 @@ main {
   flex-wrap: wrap;
 }
 
-.team-card > h2 .muted {
+.team-card > h2 .muted,
+.hs-all > summary > h2 .muted {
   font-family: var(--body);
   text-transform: none;
   font-weight: 400;
@@ -1209,11 +1211,13 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
     font-size: 15px;
   }
 
-  .team-card > h2 {
+  .team-card > h2,
+  .hs-all > summary > h2 {
     font-size: 17px;
   }
 
-  .team-card > h2 .muted {
+  .team-card > h2 .muted,
+  .hs-all > summary > h2 .muted {
     margin-left: 0;
     flex-basis: 100%;
   }
@@ -1459,6 +1463,131 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
   display: none;
 }
 
+/* The report card: one expandable row per team. Header, rows and the
+   phone layout share one grid so the columns line up without a table, which
+   a <details> row cannot live inside. */
+.hs-row {
+  display: grid;
+  grid-template-columns: 26px 38px minmax(0, 1.4fr) 64px 80px minmax(0, 1fr) minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.hs-head {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--dim);
+}
+
+summary.hs-row {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary.hs-row::-webkit-details-marker,
+.hs-all > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary.hs-row:hover,
+.hs-team[open] > summary.hs-row {
+  background: var(--wash);
+}
+
+.hs-team:last-of-type > summary.hs-row {
+  border-bottom: 0;
+}
+
+.hs-team[open]:last-of-type > summary.hs-row {
+  border-bottom: 1px solid var(--hair);
+}
+
+.hs-rk {
+  font-family: var(--cond);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dim);
+}
+
+.hs-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.hs-name b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* One square per pick, in pick order, coloured by verdict: the draft at a
+   glance before the row is opened. */
+.hs-strip {
+  display: flex;
+  gap: 3px;
+}
+
+.hs-strip .hs-tier-dot {
+  margin: 0;
+}
+
+.hs-c-num {
+  text-align: right;
+}
+
+.hs-best {
+  font-size: 13px;
+  color: var(--dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hs-chevron {
+  justify-self: end;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--dim);
+  border-bottom: 2px solid var(--dim);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+details[open] > summary .hs-chevron {
+  transform: rotate(225deg);
+}
+
+.hs-detail {
+  border-bottom: 2px solid var(--rule);
+}
+
+.hs-detail .sheet-note b {
+  color: var(--ink-2);
+}
+
+.hs-all > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.hs-all > summary > h2 .hs-chevron {
+  margin-left: 4px;
+  align-self: center;
+}
+
+.hs-all:not([open]) > summary > h2 {
+  border-bottom: 0;
+}
+
 .hs-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1468,6 +1597,15 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
 @media (max-width: 640px) {
   .hs-pair {
     grid-template-columns: 1fr;
+  }
+
+  .hs-row {
+    grid-template-columns: 20px 28px minmax(0, 1fr) 46px 12px;
+    gap: 9px;
+  }
+
+  .hs-c-wide {
+    display: none;
   }
 
   .hs-sub.hs-phone {
