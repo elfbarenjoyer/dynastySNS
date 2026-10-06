@@ -855,6 +855,22 @@ tr.non-keeper .pos {
   min-width: 0;
 }
 
+/* In season: the real table under the roster ranking. */
+.power-standing {
+  margin: 5px 0 0;
+  font-size: 12.5px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.power-standing b {
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.power-standing b.delta-up { color: var(--up); }
+.power-standing b.delta-down { color: var(--down); }
+
 .power-info h3 {
   font-family: var(--cond);
   text-transform: uppercase;
@@ -1369,6 +1385,93 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
 
   .wu-newer {
     grid-column: auto;
+  }
+}
+
+/* -------------------------------------------------------------- hindsight */
+
+/* Five verdicts, coloured as a diverging scale: the ends are filled, the
+   near-misses are outlined, and par is deliberately quiet. */
+.hs-tier {
+  display: inline-block;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 6px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.hs-tier.hs-steal { background: var(--up); border-color: var(--up); color: #fff; }
+.hs-tier.hs-hit { color: var(--up); }
+.hs-tier.hs-par { color: var(--faint); }
+.hs-tier.hs-miss { color: var(--down); }
+.hs-tier.hs-bust { background: var(--down); border-color: var(--down); color: #fff; }
+
+.hs-tier-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 7px;
+  vertical-align: middle;
+  border: 1px solid currentColor;
+}
+
+.hs-tier-dot.hs-steal { background: var(--up); color: var(--up); }
+.hs-tier-dot.hs-hit { color: var(--up); }
+.hs-tier-dot.hs-par { color: var(--faint); }
+.hs-tier-dot.hs-miss { color: var(--down); }
+.hs-tier-dot.hs-bust { background: var(--down); color: var(--down); }
+
+.hs-grade {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-family: var(--cond);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hs-g-a,
+.hs-g-b { color: var(--up); }
+.hs-g-c { color: var(--faint); }
+.hs-g-d,
+.hs-g-f { color: var(--down); }
+
+/* Secondary line inside a cell: the slot under a name, the board's player
+   under an expected value. */
+.hs-sub {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--dim);
+}
+
+.hs-sub.hs-inline {
+  display: inline;
+}
+
+.hs-sub.hs-phone {
+  display: none;
+}
+
+.hs-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .hs-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .hs-sub.hs-phone {
+    display: block;
   }
 }
 

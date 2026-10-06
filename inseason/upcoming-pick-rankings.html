@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 08:05 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Season Writeups</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="upcoming-draft-board.html"
+            
+          >Upcoming Draft Board</a>
+        
+          <a
+            href="upcoming-pick-rankings.html"
+            class="on"
+          >2027 Pick Rankings</a>
+        
+          <a
+            href="hindsight.html"
+            
+          >Hindsight</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>2027 Pick Rankings</h2>
+    <p>
+      What each team's 2027 picks are worth if the season ended today, at KTC's
+      price for each slot. Only the first 4 rounds carry a price.
+      The order is the current standings reversed, so a losing week moves a team up
+      this list. Pick trades are tracked by hand.
+    </p>
+  </section>
+
+  
+    <section class="power-grid">
+      
+      
+        <article class="power-card">
+          <div class="power-rank">1</div>
+          <div class="power-info">
+            <h3>The Jackson 10</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 100.0%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.01 &#183; 2.01 &#183; 3.01 &#183; 4.01</p>
+          </div>
+          <p class="power-score">16,299</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">2</div>
+          <div class="power-info">
+            <h3>Extended Warranty</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 96.7%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.02 &#183; 2.02 &#183; 3.02 &#183; 4.02</p>
+          </div>
+          <p class="power-score">15,753</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">3</div>
+          <div class="power-info">
+            <h3>Dirty Shorts</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 93.8%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.03 &#183; 2.03 &#183; 3.03 &#183; 4.03</p>
+          </div>
+          <p class="power-score">15,284</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">4</div>
+          <div class="power-info">
+            <h3>Bo Knows Football</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 91.4%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.04 &#183; 2.04 &#183; 3.04 &#183; 4.04</p>
+          </div>
+          <p class="power-score">14,894</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">5</div>
+          <div class="power-info">
+            <h3>The Goonies</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 89.0%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.05 &#183; 2.05 &#183; 3.05 &#183; 4.05</p>
+          </div>
+          <p class="power-score">14,504</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">6</div>
+          <div class="power-info">
+            <h3>Gronkamole and Chips</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 86.6%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.06 &#183; 2.06 &#183; 3.06 &#183; 4.06</p>
+          </div>
+          <p class="power-score">14,114</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">7</div>
+          <div class="power-info">
+            <h3>Allen or Nothing</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 84.3%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.07 &#183; 2.07 &#183; 3.07 &#183; 4.07</p>
+          </div>
+          <p class="power-score">13,745</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">8</div>
+          <div class="power-info">
+            <h3>G.G.G</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 82.2%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.08 &#183; 2.08 &#183; 3.08 &#183; 4.08</p>
+          </div>
+          <p class="power-score">13,395</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">9</div>
+          <div class="power-info">
+            <h3>OutForTheSeason</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 80.0%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.09 &#183; 2.09 &#183; 3.09 &#183; 4.09</p>
+          </div>
+          <p class="power-score">13,047</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">10</div>
+          <div class="power-info">
+            <h3>Buckeye Air Raid</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 77.9%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.10 &#183; 2.10 &#183; 3.10 &#183; 4.10</p>
+          </div>
+          <p class="power-score">12,697</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">11</div>
+          <div class="power-info">
+            <h3>aPukalypse Now</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 75.2%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.11 &#183; 2.11 &#183; 3.11 &#183; 4.11</p>
+          </div>
+          <p class="power-score">12,249</p>
+        </article>
+      
+        <article class="power-card">
+          <div class="power-rank">12</div>
+          <div class="power-info">
+            <h3>LoUdPaXx President</h3>
+            <div class="power-bar">
+              <div
+                class="power-bar-fill"
+                style="width: 71.8%;"
+              ></div>
+            </div>
+            <p class="power-standing">1.12 &#183; 2.12 &#183; 3.12 &#183; 4.12</p>
+          </div>
+          <p class="power-score">11,703</p>
+        </article>
+      
+    </section>
+  
+
+    </main>
+
+    
+  </body>
+</html>

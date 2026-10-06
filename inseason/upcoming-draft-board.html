@@ -1,0 +1,1780 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 08:05 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Season Writeups</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="upcoming-draft-board.html"
+            class="on"
+          >Upcoming Draft Board</a>
+        
+          <a
+            href="upcoming-pick-rankings.html"
+            
+          >2027 Pick Rankings</a>
+        
+          <a
+            href="hindsight.html"
+            
+          >Hindsight</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>Upcoming Draft Board</h2>
+    <p>
+      The 2027 draft if the season ended today: the current standings
+      reversed, worst record first, the same order every round. The pool is KTC's
+      2027 devy class &#8212; 56 prospects, in KTC's
+      order. Devy values have their own scale, so each prospect is valued at what KTC
+      prices the pick he lands at; KTC prices the first 4 rounds
+      only. Pick trades are tracked by hand. All of it moves every week the table does.
+    </p>
+  </section>
+
+  
+    <section class="team-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="rk">#</th>
+              <th class="col-min">Pick</th>
+              <th>Team</th>
+              <th>Prospect</th>
+              <th class="col-pos">Pos</th>
+              <th class="col-min">School</th>
+              <th class="num">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              
+              <tr>
+                <td class="rk">1</td>
+                <td class="col-min pick-label">R1 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">Jeremiah Smith</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Ohio State Buckeyes</td>
+                <td class="num ktc">6,985</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">2</td>
+                <td class="col-min pick-label">R1 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">Jadan Baugh</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Florida Gators</td>
+                <td class="num ktc">6,985</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">3</td>
+                <td class="col-min pick-label">R1 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">Arch Manning</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Texas Longhorns</td>
+                <td class="num ktc">6,849</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">4</td>
+                <td class="col-min pick-label">R1 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">Kewan Lacy</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Ole Miss Rebels</td>
+                <td class="num ktc">6,576</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">5</td>
+                <td class="col-min pick-label">R1 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">Darian Mensah</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Miami Hurricanes</td>
+                <td class="num ktc">6,303</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">6</td>
+                <td class="col-min pick-label">R1 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">Cam Coleman</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Texas Longhorns</td>
+                <td class="num ktc">6,030</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">7</td>
+                <td class="col-min pick-label">R1 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">Dante Moore</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Oregon Ducks</td>
+                <td class="num ktc">5,786</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">8</td>
+                <td class="col-min pick-label">R1 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">Ahmad Hardy</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Missouri Tigers</td>
+                <td class="num ktc">5,570</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">9</td>
+                <td class="col-min pick-label">R1 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">Trinidad Chambliss</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Ole Miss Rebels</td>
+                <td class="num ktc">5,354</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">10</td>
+                <td class="col-min pick-label">R1 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">KJ Duff</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Rutgers Scarlet Knights</td>
+                <td class="num ktc">5,138</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">11</td>
+                <td class="col-min pick-label">R1 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">CJ Carr</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Notre Dame Fighting Irish</td>
+                <td class="num ktc">4,882</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">12</td>
+                <td class="col-min pick-label">R1 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">Julian Sayin</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Ohio State Buckeyes</td>
+                <td class="num ktc">4,586</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">13</td>
+                <td class="col-min pick-label">R2 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">Ryan Coleman-Williams</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Alabama Crimson Tide</td>
+                <td class="num ktc">4,290</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">14</td>
+                <td class="col-min pick-label">R2 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">Trey&#39;Dez Green</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="col-min player-meta">LSU Tigers</td>
+                <td class="num ktc">3,994</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">15</td>
+                <td class="col-min pick-label">R2 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">Nick Marsh</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Indiana Hoosiers</td>
+                <td class="num ktc">3,810</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">16</td>
+                <td class="col-min pick-label">R2 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">Ryan Wingo</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Texas Longhorns</td>
+                <td class="num ktc">3,736</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">17</td>
+                <td class="col-min pick-label">R2 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">Hollywood Smothers</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Texas Longhorns</td>
+                <td class="num ktc">3,664</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">18</td>
+                <td class="col-min pick-label">R2 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">Mark Fletcher Jr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Miami Hurricanes</td>
+                <td class="num ktc">3,590</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">19</td>
+                <td class="col-min pick-label">R2 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">Nate Frazier</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Georgia Bulldogs</td>
+                <td class="num ktc">3,510</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">20</td>
+                <td class="col-min pick-label">R2 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">Isaac Brown</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Louisville Cardinals</td>
+                <td class="num ktc">3,422</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">21</td>
+                <td class="col-min pick-label">R2 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">Jayden Maiava</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">USC Trojans</td>
+                <td class="num ktc">3,334</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">22</td>
+                <td class="col-min pick-label">R2 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">Bryant Wesco Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Clemson Tigers</td>
+                <td class="num ktc">3,246</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">23</td>
+                <td class="col-min pick-label">R2 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">Jamari Johnson</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="col-min player-meta">Oregon Ducks</td>
+                <td class="num ktc">3,132</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">24</td>
+                <td class="col-min pick-label">R2 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">Dylan Raiola</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Oregon Ducks</td>
+                <td class="num ktc">2,994</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">25</td>
+                <td class="col-min pick-label">R3 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">Josh Hoover</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Indiana Hoosiers</td>
+                <td class="num ktc">2,854</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">26</td>
+                <td class="col-min pick-label">R3 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">Charlie Becker</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Indiana Hoosiers</td>
+                <td class="num ktc">2,716</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">27</td>
+                <td class="col-min pick-label">R3 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">CJ Baxter</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Kentucky Wildcats</td>
+                <td class="num ktc">2,635</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">28</td>
+                <td class="col-min pick-label">R3 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">Eric Singleton Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Florida Gators</td>
+                <td class="num ktc">2,614</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">29</td>
+                <td class="col-min pick-label">R3 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">T.J. Moore</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Clemson Tigers</td>
+                <td class="num ktc">2,593</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">30</td>
+                <td class="col-min pick-label">R3 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">LJ Martin</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">BYU Cougars</td>
+                <td class="num ktc">2,572</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">31</td>
+                <td class="col-min pick-label">R3 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">Raleek Brown</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Texas Longhorns</td>
+                <td class="num ktc">2,547</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">32</td>
+                <td class="col-min pick-label">R3 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">Jordan Marshall</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Michigan Wolverines</td>
+                <td class="num ktc">2,519</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">33</td>
+                <td class="col-min pick-label">R3 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">Drew Mestemaker</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Oklahoma State Cowboys</td>
+                <td class="num ktc">2,491</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">34</td>
+                <td class="col-min pick-label">R3 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">Caden Durham</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">LSU Tigers</td>
+                <td class="num ktc">2,463</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">35</td>
+                <td class="col-min pick-label">R3 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">Isaiah Horton</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Texas A&amp;M Aggies</td>
+                <td class="num ktc">2,393</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">36</td>
+                <td class="col-min pick-label">R3 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">Byrum Brown</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Auburn Tigers</td>
+                <td class="num ktc">2,281</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">37</td>
+                <td class="col-min pick-label">R4 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">DJ Lagway</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Baylor Bears</td>
+                <td class="num ktc">2,170</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">38</td>
+                <td class="col-min pick-label">R4 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">Cam Cook</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">West Virginia Mountaineers</td>
+                <td class="num ktc">2,058</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">39</td>
+                <td class="col-min pick-label">R4 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">Isaiah Sategna III</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Oklahoma Sooners</td>
+                <td class="num ktc">1,990</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">40</td>
+                <td class="col-min pick-label">R4 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">Jayce Brown</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">LSU Tigers</td>
+                <td class="num ktc">1,968</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">41</td>
+                <td class="col-min pick-label">R4 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">Demond Williams Jr.</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Washington Huskies</td>
+                <td class="num ktc">1,944</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">42</td>
+                <td class="col-min pick-label">R4 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">Marcel Reed</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">Texas A&amp;M Aggies</td>
+                <td class="num ktc">1,922</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">43</td>
+                <td class="col-min pick-label">R4 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">Terrance Carter Jr.</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="col-min player-meta">Texas Tech Red Raiders</td>
+                <td class="num ktc">1,902</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">44</td>
+                <td class="col-min pick-label">R4 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">Quinton Martin Jr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Penn State Nittany Lions</td>
+                <td class="num ktc">1,884</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">45</td>
+                <td class="col-min pick-label">R4 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">Luke Reynolds</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="col-min player-meta">Virginia Tech Hokies</td>
+                <td class="num ktc">1,868</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">46</td>
+                <td class="col-min pick-label">R4 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">Quinten Joyner</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Texas Tech Red Raiders</td>
+                <td class="num ktc">1,850</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">47</td>
+                <td class="col-min pick-label">R4 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">Dilin Jones</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">LSU Tigers</td>
+                <td class="num ktc">1,842</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">48</td>
+                <td class="col-min pick-label">R4 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">Luke Hasz</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="col-min player-meta">Ole Miss Rebels</td>
+                <td class="num ktc">1,842</td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">49</td>
+                <td class="col-min pick-label">R5 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">Kenny Johnson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Texas Tech Red Raiders</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">50</td>
+                <td class="col-min pick-label">R5 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">Danny Scudero</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Colorado Buffaloes</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">51</td>
+                <td class="col-min pick-label">R5 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">CJ Bailey</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="col-min player-meta">NC State Wolfpack</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">52</td>
+                <td class="col-min pick-label">R5 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">Cam Edwards</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Western Illinois Leathernecks</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">53</td>
+                <td class="col-min pick-label">R5 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">Micah Hudson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Texas Tech Red Raiders</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">54</td>
+                <td class="col-min pick-label">R5 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">Taylor Tatum</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="col-min player-meta">Michigan Wolverines</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">55</td>
+                <td class="col-min pick-label">R5 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">Perry Thompson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">Minnesota Golden Gophers</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">56</td>
+                <td class="col-min pick-label">R5 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">Joshisa Trader</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="col-min player-meta">NC State Wolfpack</td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">57</td>
+                <td class="col-min pick-label">R5 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">58</td>
+                <td class="col-min pick-label">R5 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">59</td>
+                <td class="col-min pick-label">R5 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">60</td>
+                <td class="col-min pick-label">R5 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">61</td>
+                <td class="col-min pick-label">R6 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">62</td>
+                <td class="col-min pick-label">R6 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">63</td>
+                <td class="col-min pick-label">R6 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">64</td>
+                <td class="col-min pick-label">R6 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">65</td>
+                <td class="col-min pick-label">R6 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">66</td>
+                <td class="col-min pick-label">R6 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">67</td>
+                <td class="col-min pick-label">R6 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">68</td>
+                <td class="col-min pick-label">R6 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">69</td>
+                <td class="col-min pick-label">R6 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">70</td>
+                <td class="col-min pick-label">R6 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">71</td>
+                <td class="col-min pick-label">R6 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">72</td>
+                <td class="col-min pick-label">R6 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">73</td>
+                <td class="col-min pick-label">R7 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">74</td>
+                <td class="col-min pick-label">R7 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">75</td>
+                <td class="col-min pick-label">R7 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">76</td>
+                <td class="col-min pick-label">R7 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">77</td>
+                <td class="col-min pick-label">R7 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">78</td>
+                <td class="col-min pick-label">R7 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">79</td>
+                <td class="col-min pick-label">R7 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">80</td>
+                <td class="col-min pick-label">R7 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">81</td>
+                <td class="col-min pick-label">R7 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">82</td>
+                <td class="col-min pick-label">R7 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">83</td>
+                <td class="col-min pick-label">R7 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">84</td>
+                <td class="col-min pick-label">R7 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">85</td>
+                <td class="col-min pick-label">R8 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">86</td>
+                <td class="col-min pick-label">R8 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">87</td>
+                <td class="col-min pick-label">R8 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">88</td>
+                <td class="col-min pick-label">R8 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">89</td>
+                <td class="col-min pick-label">R8 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">90</td>
+                <td class="col-min pick-label">R8 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">91</td>
+                <td class="col-min pick-label">R8 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">92</td>
+                <td class="col-min pick-label">R8 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">93</td>
+                <td class="col-min pick-label">R8 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">94</td>
+                <td class="col-min pick-label">R8 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">95</td>
+                <td class="col-min pick-label">R8 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">96</td>
+                <td class="col-min pick-label">R8 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">97</td>
+                <td class="col-min pick-label">R9 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">98</td>
+                <td class="col-min pick-label">R9 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">99</td>
+                <td class="col-min pick-label">R9 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">100</td>
+                <td class="col-min pick-label">R9 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">101</td>
+                <td class="col-min pick-label">R9 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">102</td>
+                <td class="col-min pick-label">R9 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">103</td>
+                <td class="col-min pick-label">R9 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">104</td>
+                <td class="col-min pick-label">R9 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">105</td>
+                <td class="col-min pick-label">R9 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">106</td>
+                <td class="col-min pick-label">R9 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">107</td>
+                <td class="col-min pick-label">R9 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">108</td>
+                <td class="col-min pick-label">R9 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">109</td>
+                <td class="col-min pick-label">R10 P1</td>
+                <td class="player-meta">
+                  The Jackson 10
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">110</td>
+                <td class="col-min pick-label">R10 P2</td>
+                <td class="player-meta">
+                  Extended Warranty
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">111</td>
+                <td class="col-min pick-label">R10 P3</td>
+                <td class="player-meta">
+                  Dirty Shorts
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">112</td>
+                <td class="col-min pick-label">R10 P4</td>
+                <td class="player-meta">
+                  Bo Knows Football
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">113</td>
+                <td class="col-min pick-label">R10 P5</td>
+                <td class="player-meta">
+                  The Goonies
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">114</td>
+                <td class="col-min pick-label">R10 P6</td>
+                <td class="player-meta">
+                  Gronkamole and Chips
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">115</td>
+                <td class="col-min pick-label">R10 P7</td>
+                <td class="player-meta">
+                  Allen or Nothing
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">116</td>
+                <td class="col-min pick-label">R10 P8</td>
+                <td class="player-meta">
+                  G.G.G
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">117</td>
+                <td class="col-min pick-label">R10 P9</td>
+                <td class="player-meta">
+                  OutForTheSeason
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">118</td>
+                <td class="col-min pick-label">R10 P10</td>
+                <td class="player-meta">
+                  Buckeye Air Raid
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">119</td>
+                <td class="col-min pick-label">R10 P11</td>
+                <td class="player-meta">
+                  aPukalypse Now
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+              
+              <tr>
+                <td class="rk">120</td>
+                <td class="col-min pick-label">R10 P12</td>
+                <td class="player-meta">
+                  LoUdPaXx President
+                </td>
+                <td class="player-name">—</td>
+                <td class="col-pos"></td>
+                <td class="col-min player-meta"></td>
+                <td class="num ktc"><span class="delta-na" title="KTC does not price this round">&#8212;</span></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+
+    </main>
+
+    
+  </body>
+</html>
