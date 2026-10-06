@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 07:17 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="free-agents.html"
+            
+          >Free Agents</a>
+        
+          <a
+            href="free-agent-interest.html"
+            class="on"
+          >Who Wants Them</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Seasonal Articles</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="draft-board.html"
+            
+          >Draft Board</a>
+        
+          <a
+            href="draft-pick-rankings.html"
+            
+          >Pick Rankings</a>
+        
+          <a
+            href="trade-evaluator.html"
+            
+          >Offseason Trade Evaluator</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>Who Wants Them</h2>
+    <p>
+      Which teams could actually use each of the top 14 potential
+      free agents. A team is listed when the player is worth more than the worst
+      man they are keeping — best upgrade first.
+    </p>
+  </section>
+
+  <section class="team-card">
+    <h2>How this is worked out</h2>
+    <p class="muted">
+      Compared on KTC value, except quarterbacks (a team starts at most 2) and tight ends (a team needs at least 1). With 14 keepers against ten
+      starting slots, a keeper list is no longer a lineup, so value decides —
+      except at quarterback, where a team already holding two is choosing between
+      quarterbacks rather than against its worst player, and a third is worth
+      nothing to them. Teams whose worst keeper already outranks the whole pool
+      are not shopping and never appear.
+    </p>
+    
+  </section>
+
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Chris Bell
+        <span class="muted">
+          <b>3,181</b>
+          <span class="delta delta-up">+46</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Buckeye Air Raid</b></span>
+        <span>
+          
+            <b>11</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+774</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+723</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+658</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+550</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">5</td>
+                  <td class="player-name">The Jackson 10</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tre&#39; Harris
+                    (WR,
+                    2,682)
+                  </td>
+                  <td class="num ktc delta-up">+499</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">6</td>
+                  <td class="player-name">OutForTheSeason</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tony Pollard
+                    (RB,
+                    2,707)
+                  </td>
+                  <td class="num ktc delta-up">+474</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">7</td>
+                  <td class="player-name">Gronkamole and Chips</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jonathon Brooks
+                    (RB,
+                    2,716)
+                  </td>
+                  <td class="num ktc delta-up">+465</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">8</td>
+                  <td class="player-name">The Goonies</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Quentin Johnston
+                    (WR,
+                    2,739)
+                  </td>
+                  <td class="num ktc delta-up">+442</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">9</td>
+                  <td class="player-name">G.G.G</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Woody Marks
+                    (RB,
+                    2,916)
+                  </td>
+                  <td class="num ktc delta-up">+265</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">10</td>
+                  <td class="player-name">Dirty Shorts</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Travis Kelce
+                    (TE,
+                    2,950)
+                  </td>
+                  <td class="num ktc delta-up">+231</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">11</td>
+                  <td class="player-name">aPukalypse Now</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Braelon Allen
+                    (RB,
+                    3,138)
+                  </td>
+                  <td class="num ktc delta-up">+43</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-rb">RB</span>
+        Mike Washington Jr.
+        <span class="muted">
+          <b>3,021</b>
+          <span class="delta delta-down">-39</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>aPukalypse Now</b></span>
+        <span>
+          
+            <b>10</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+614</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+563</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+498</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+390</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">5</td>
+                  <td class="player-name">The Jackson 10</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tre&#39; Harris
+                    (WR,
+                    2,682)
+                  </td>
+                  <td class="num ktc delta-up">+339</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">6</td>
+                  <td class="player-name">OutForTheSeason</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tony Pollard
+                    (RB,
+                    2,707)
+                  </td>
+                  <td class="num ktc delta-up">+314</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">7</td>
+                  <td class="player-name">Gronkamole and Chips</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jonathon Brooks
+                    (RB,
+                    2,716)
+                  </td>
+                  <td class="num ktc delta-up">+305</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">8</td>
+                  <td class="player-name">The Goonies</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Quentin Johnston
+                    (WR,
+                    2,739)
+                  </td>
+                  <td class="num ktc delta-up">+282</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">9</td>
+                  <td class="player-name">G.G.G</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Woody Marks
+                    (RB,
+                    2,916)
+                  </td>
+                  <td class="num ktc delta-up">+105</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">10</td>
+                  <td class="player-name">Dirty Shorts</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Travis Kelce
+                    (TE,
+                    2,950)
+                  </td>
+                  <td class="num ktc delta-up">+71</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-te">TE</span>
+        Brenton Strange
+        <span class="muted">
+          <b>2,830</b>
+          <span class="delta delta-down">-112</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>G.G.G</b></span>
+        <span>
+          
+            <b>8</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+423</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+372</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+307</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+199</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">5</td>
+                  <td class="player-name">The Jackson 10</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tre&#39; Harris
+                    (WR,
+                    2,682)
+                  </td>
+                  <td class="num ktc delta-up">+148</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">6</td>
+                  <td class="player-name">OutForTheSeason</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tony Pollard
+                    (RB,
+                    2,707)
+                  </td>
+                  <td class="num ktc delta-up">+123</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">7</td>
+                  <td class="player-name">Gronkamole and Chips</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jonathon Brooks
+                    (RB,
+                    2,716)
+                  </td>
+                  <td class="num ktc delta-up">+114</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">8</td>
+                  <td class="player-name">The Goonies</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Quentin Johnston
+                    (WR,
+                    2,739)
+                  </td>
+                  <td class="num ktc delta-up">+91</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Malik Washington
+        <span class="muted">
+          <b>2,767</b>
+          <span class="delta delta-up">+144</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>aPukalypse Now</b></span>
+        <span>
+          
+            <b>8</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+360</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+309</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+244</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+136</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">5</td>
+                  <td class="player-name">The Jackson 10</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tre&#39; Harris
+                    (WR,
+                    2,682)
+                  </td>
+                  <td class="num ktc delta-up">+85</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">6</td>
+                  <td class="player-name">OutForTheSeason</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tony Pollard
+                    (RB,
+                    2,707)
+                  </td>
+                  <td class="num ktc delta-up">+60</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">7</td>
+                  <td class="player-name">Gronkamole and Chips</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jonathon Brooks
+                    (RB,
+                    2,716)
+                  </td>
+                  <td class="num ktc delta-up">+51</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">8</td>
+                  <td class="player-name">The Goonies</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Quentin Johnston
+                    (WR,
+                    2,739)
+                  </td>
+                  <td class="num ktc delta-up">+28</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Keon Coleman
+        <span class="muted">
+          <b>2,693</b>
+          <span class="delta delta-up">+159</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>The Goonies</b></span>
+        <span>
+          
+            <b>5</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+286</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+235</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+170</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+62</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">5</td>
+                  <td class="player-name">The Jackson 10</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tre&#39; Harris
+                    (WR,
+                    2,682)
+                  </td>
+                  <td class="num ktc delta-up">+11</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Roman Wilson
+        <span class="muted">
+          <b>2,667</b>
+          <span class="delta delta-up">+578</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>aPukalypse Now</b></span>
+        <span>
+          
+            <b>4</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+260</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+209</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+144</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+36</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-te">TE</span>
+        Dallas Goedert
+        <span class="muted">
+          <b>2,646</b>
+          <span class="delta delta-down">-129</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>The Jackson 10</b></span>
+        <span>
+          
+            <b>4</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+239</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+188</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+123</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">4</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Jacoby Brissett
+                    (QB,
+                    2,631)
+                  </td>
+                  <td class="num ktc delta-up">+15</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-qb">QB</span>
+        Kirk Cousins
+        <span class="muted">
+          <b>2,632</b>
+          <span class="delta delta-up">+388</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Dirty Shorts</b></span>
+        <span>
+          
+            No team in the league would take him over a keeper
+          
+        </span>
+      </p>
+
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Courtland Sutton
+        <span class="muted">
+          <b>2,627</b>
+          <span class="delta delta-down">-194</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>The Jackson 10</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+220</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+169</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+104</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-te">TE</span>
+        AJ Barner
+        <span class="muted">
+          <b>2,622</b>
+          <span class="delta delta-up">+15</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Gronkamole and Chips</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+215</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+164</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+99</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-rb">RB</span>
+        Rico Dowdle<span class="ir-flag" title="On injured reserve">IR</span>
+        <span class="muted">
+          <b>2,618</b>
+          <span class="delta delta-down">-223</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Dirty Shorts</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+211</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+160</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+95</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Michael Pittman Jr.
+        <span class="muted">
+          <b>2,615</b>
+          <span class="delta delta-down">-380</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Dirty Shorts</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+208</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+157</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+92</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-rb">RB</span>
+        Tyler Allgeier
+        <span class="muted">
+          <b>2,612</b>
+          <span class="delta delta-down">-155</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>OutForTheSeason</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+205</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+154</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+89</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        <span class="pos pos-wr">WR</span>
+        Ricky Pearsall<span class="ir-flag" title="On injured reserve">IR</span>
+        <span class="muted">
+          <b>2,606</b>
+          <span class="delta delta-up">+87</span>
+        </span>
+      </h2>
+      <p class="sheet-note">
+        <span>Cut by <b>Buckeye Air Raid</b></span>
+        <span>
+          
+            <b>3</b>
+            teams could use him
+          
+        </span>
+      </p>
+
+      
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th class="col-min">Why</th>
+                <th class="col-min">Over</th>
+                <th class="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="top-ten">
+                  <td class="rk">1</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Tyjae Spears
+                    (RB,
+                    2,407)
+                  </td>
+                  <td class="num ktc delta-up">+199</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">2</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Dylan Sampson
+                    (RB,
+                    2,458)
+                  </td>
+                  <td class="num ktc delta-up">+148</td>
+                </tr>
+              
+                <tr class="top-ten">
+                  <td class="rk">3</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="col-min player-meta">Value</td>
+                  <td class="col-min player-meta">
+                    Geno Smith
+                    (QB,
+                    2,523)
+                  </td>
+                  <td class="num ktc delta-up">+83</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </section>
+  
+
+    </main>
+
+    
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 07:17 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="free-agents.html"
+            
+          >Free Agents</a>
+        
+          <a
+            href="free-agent-interest.html"
+            
+          >Who Wants Them</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Seasonal Articles</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="draft-board.html"
+            
+          >Draft Board</a>
+        
+          <a
+            href="draft-pick-rankings.html"
+            
+          >Pick Rankings</a>
+        
+          <a
+            href="trade-evaluator.html"
+            class="on"
+          >Offseason Trade Evaluator</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>Offseason Trade Evaluator</h2>
+    <p>
+      Keeper-adjusted trade impact using top-14 KTC values plus
+      picks. Hold Ctrl (or Cmd) to select more than one asset per side.
+    </p>
+  </section>
+
+  
+  <script type="application/json" id="trade-data">{"assets_by_team": {"Allen or Nothing": {"picks": [{"id": "pick:Allen or Nothing:5", "ktc_value": 4831, "label": "R1 P5 (#5)", "overall": 5, "pick": 5, "round": 1}, {"id": "pick:Allen or Nothing:17", "ktc_value": 3162, "label": "R2 P5 (#17)", "overall": 17, "pick": 5, "round": 2}, {"id": "pick:Allen or Nothing:29", "ktc_value": 2693, "label": "R3 P5 (#29)", "overall": 29, "pick": 5, "round": 3}, {"id": "pick:Allen or Nothing:41", "ktc_value": 2576, "label": "R4 P5 (#41)", "overall": 41, "pick": 5, "round": 4}, {"id": "pick:Allen or Nothing:53", "ktc_value": 2478, "label": "R5 P5 (#53)", "overall": 53, "pick": 5, "round": 5}, {"id": "pick:Allen or Nothing:65", "ktc_value": 2316, "label": "R6 P5 (#65)", "overall": 65, "pick": 5, "round": 6}, {"id": "pick:Allen or Nothing:77", "ktc_value": 2164, "label": "R7 P5 (#77)", "overall": 77, "pick": 5, "round": 7}, {"id": "pick:Allen or Nothing:89", "ktc_value": 2111, "label": "R8 P5 (#89)", "overall": 89, "pick": 5, "round": 8}, {"id": "pick:Allen or Nothing:101", "ktc_value": 2048, "label": "R9 P5 (#101)", "overall": 101, "pick": 5, "round": 9}, {"id": "pick:Allen or Nothing:113", "ktc_value": 1976, "label": "R10 P5 (#113)", "overall": 113, "pick": 5, "round": 10}], "players": [{"id": "player:Allen or Nothing:josh allen", "ktc_value": 9992, "name": "Josh Allen", "position": "QB"}, {"id": "player:Allen or Nothing:jonathan taylor", "ktc_value": 6786, "name": "Jonathan Taylor", "position": "RB"}, {"id": "player:Allen or Nothing:tetairoa mcmillan", "ktc_value": 6220, "name": "Tetairoa McMillan", "position": "WR"}, {"id": "player:Allen or Nothing:dak prescott", "ktc_value": 5416, "name": "Dak Prescott", "position": "QB"}, {"id": "player:Allen or Nothing:jordyn tyson", "ktc_value": 4837, "name": "Jordyn Tyson", "position": "WR"}, {"id": "player:Allen or Nothing:rome odunze", "ktc_value": 4278, "name": "Rome Odunze", "position": "WR"}, {"id": "player:Allen or Nothing:david montgomery", "ktc_value": 3301, "name": "David Montgomery", "position": "RB"}, {"id": "player:Allen or Nothing:mike evans", "ktc_value": 3278, "name": "Mike Evans", "position": "WR"}, {"id": "player:Allen or Nothing:omar cooper", "ktc_value": 3259, "name": "Omar Cooper Jr.", "position": "WR"}, {"id": "player:Allen or Nothing:wandale robinson", "ktc_value": 2925, "name": "Wan\u0027Dale Robinson", "position": "WR"}, {"id": "player:Allen or Nothing:aaron jones", "ktc_value": 2693, "name": "Aaron Jones Sr.", "position": "RB"}, {"id": "player:Allen or Nothing:mark andrews", "ktc_value": 2578, "name": "Mark Andrews", "position": "TE"}, {"id": "player:Allen or Nothing:dalton schultz", "ktc_value": 2562, "name": "Dalton Schultz", "position": "TE"}, {"id": "player:Allen or Nothing:tyjae spears", "ktc_value": 2407, "name": "Tyjae Spears", "position": "RB"}, {"id": "player:Allen or Nothing:ryan flournoy", "ktc_value": 2068, "name": "Ryan Flournoy", "position": "WR"}, {"id": "player:Allen or Nothing:aaron rodgers", "ktc_value": 2019, "name": "Aaron Rodgers", "position": "QB"}, {"id": "player:Allen or Nothing:greg dulcich", "ktc_value": 1917, "name": "Greg Dulcich", "position": "TE"}, {"id": "player:Allen or Nothing:seth mcgowan", "ktc_value": 1878, "name": "Seth McGowan", "position": "RB"}, {"id": "player:Allen or Nothing:jauan jennings", "ktc_value": 1852, "name": "Jauan Jennings", "position": "WR"}, {"id": "player:Allen or Nothing:mack hollins", "ktc_value": 1718, "name": "Mack Hollins", "position": "WR"}, {"id": "player:Allen or Nothing:kenny gainwell", "ktc_value": null, "name": "Kenny Gainwell", "position": "RB"}]}, "Bo Knows Football": {"picks": [{"id": "pick:Bo Knows Football:4", "ktc_value": 4837, "label": "R1 P4 (#4)", "overall": 4, "pick": 4, "round": 1}, {"id": "pick:Bo Knows Football:9", "ktc_value": 4178, "label": "R1 P9 (#9)", "overall": 9, "pick": 9, "round": 1}, {"id": "pick:Bo Knows Football:16", "ktc_value": 3181, "label": "R2 P4 (#16)", "overall": 16, "pick": 4, "round": 2}, {"id": "pick:Bo Knows Football:28", "ktc_value": 2704, "label": "R3 P4 (#28)", "overall": 28, "pick": 4, "round": 3}, {"id": "pick:Bo Knows Football:40", "ktc_value": 2587, "label": "R4 P4 (#40)", "overall": 40, "pick": 4, "round": 4}, {"id": "pick:Bo Knows Football:64", "ktc_value": 2368, "label": "R6 P4 (#64)", "overall": 64, "pick": 4, "round": 6}, {"id": "pick:Bo Knows Football:76", "ktc_value": 2171, "label": "R7 P4 (#76)", "overall": 76, "pick": 4, "round": 7}, {"id": "pick:Bo Knows Football:88", "ktc_value": 2112, "label": "R8 P4 (#88)", "overall": 88, "pick": 4, "round": 8}, {"id": "pick:Bo Knows Football:100", "ktc_value": 2049, "label": "R9 P4 (#100)", "overall": 100, "pick": 4, "round": 9}, {"id": "pick:Bo Knows Football:112", "ktc_value": 1978, "label": "R10 P4 (#112)", "overall": 112, "pick": 4, "round": 10}], "players": [{"id": "player:Bo Knows Football:amonra st brown", "ktc_value": 7993, "name": "Amon-Ra St. Brown", "position": "WR"}, {"id": "player:Bo Knows Football:bo nix", "ktc_value": 5392, "name": "Bo Nix", "position": "QB"}, {"id": "player:Bo Knows Football:matthew golden", "ktc_value": 4960, "name": "Matthew Golden", "position": "WR"}, {"id": "player:Bo Knows Football:quinshon judkins", "ktc_value": 4927, "name": "Quinshon Judkins", "position": "RB"}, {"id": "player:Bo Knows Football:jared goff", "ktc_value": 4644, "name": "Jared Goff", "position": "QB"}, {"id": "player:Bo Knows Football:jadarian price", "ktc_value": 4529, "name": "Jadarian Price", "position": "RB"}, {"id": "player:Bo Knows Football:dalton kincaid", "ktc_value": 4308, "name": "Dalton Kincaid", "position": "TE"}, {"id": "player:Bo Knows Football:jaylen warren", "ktc_value": 3660, "name": "Jaylen Warren", "position": "RB"}, {"id": "player:Bo Knows Football:jake ferguson", "ktc_value": 3134, "name": "Jake Ferguson", "position": "TE"}, {"id": "player:Bo Knows Football:stefon diggs", "ktc_value": 2828, "name": "Stefon Diggs", "position": "WR"}, {"id": "player:Bo Knows Football:devaughn vele", "ktc_value": 2791, "name": "Devaughn Vele", "position": "WR"}, {"id": "player:Bo Knows Football:jk dobbins", "ktc_value": 2750, "name": "J.K. Dobbins", "position": "RB"}, {"id": "player:Bo Knows Football:deshaun watson", "ktc_value": 2650, "name": "Deshaun Watson", "position": "QB"}, {"id": "player:Bo Knows Football:dylan sampson", "ktc_value": 2458, "name": "Dylan Sampson", "position": "RB"}, {"id": "player:Bo Knows Football:rashid shaheed", "ktc_value": 2447, "name": "Rashid Shaheed", "position": "WR"}, {"id": "player:Bo Knows Football:jj mccarthy", "ktc_value": 2373, "name": "J.J. McCarthy", "position": "QB"}, {"id": "player:Bo Knows Football:cyrus allen", "ktc_value": 2309, "name": "Cyrus Allen", "position": "WR"}, {"id": "player:Bo Knows Football:tank dell", "ktc_value": 2206, "name": "Tank Dell", "position": "WR"}, {"id": "player:Bo Knows Football:kalif raymond", "ktc_value": 1800, "name": "Kalif Raymond", "position": "WR"}, {"id": "player:Bo Knows Football:keenan allen", "ktc_value": 1710, "name": "Keenan Allen", "position": "WR"}, {"id": "player:Bo Knows Football:christian kirk", "ktc_value": 1481, "name": "Christian Kirk", "position": "WR"}, {"id": "player:Bo Knows Football:tyreek hill", "ktc_value": 1192, "name": "Tyreek Hill", "position": "WR"}, {"id": "player:Bo Knows Football:brycen tremayne", "ktc_value": null, "name": "Brycen Tremayne", "position": "WR"}]}, "Buckeye Air Raid": {"picks": [{"id": "pick:Buckeye Air Raid:1", "ktc_value": 7210, "label": "R1 P1 (#1)", "overall": 1, "pick": 1, "round": 1}, {"id": "pick:Buckeye Air Raid:13", "ktc_value": 3259, "label": "R2 P1 (#13)", "overall": 13, "pick": 1, "round": 2}, {"id": "pick:Buckeye Air Raid:25", "ktc_value": 2830, "label": "R3 P1 (#25)", "overall": 25, "pick": 1, "round": 3}, {"id": "pick:Buckeye Air Raid:49", "ktc_value": 2515, "label": "R5 P1 (#49)", "overall": 49, "pick": 1, "round": 5}, {"id": "pick:Buckeye Air Raid:61", "ktc_value": 2401, "label": "R6 P1 (#61)", "overall": 61, "pick": 1, "round": 6}, {"id": "pick:Buckeye Air Raid:62", "ktc_value": 2373, "label": "R6 P2 (#62)", "overall": 62, "pick": 2, "round": 6}, {"id": "pick:Buckeye Air Raid:73", "ktc_value": 2189, "label": "R7 P1 (#73)", "overall": 73, "pick": 1, "round": 7}, {"id": "pick:Buckeye Air Raid:85", "ktc_value": 2146, "label": "R8 P1 (#85)", "overall": 85, "pick": 1, "round": 8}, {"id": "pick:Buckeye Air Raid:97", "ktc_value": 2071, "label": "R9 P1 (#97)", "overall": 97, "pick": 1, "round": 9}, {"id": "pick:Buckeye Air Raid:109", "ktc_value": 2000, "label": "R10 P1 (#109)", "overall": 109, "pick": 1, "round": 10}], "players": [{"id": "player:Buckeye Air Raid:jeremiyah love", "ktc_value": 7210, "name": "Jeremiyah Love", "position": "RB"}, {"id": "player:Buckeye Air Raid:joe burrow", "ktc_value": 6895, "name": "Joe Burrow", "position": "QB"}, {"id": "player:Buckeye Air Raid:drake london", "ktc_value": 6781, "name": "Drake London", "position": "WR"}, {"id": "player:Buckeye Air Raid:zay flowers", "ktc_value": 6360, "name": "Zay Flowers", "position": "WR"}, {"id": "player:Buckeye Air Raid:jalen hurts", "ktc_value": 5835, "name": "Jalen Hurts", "position": "QB"}, {"id": "player:Buckeye Air Raid:omarion hampton", "ktc_value": 5613, "name": "Omarion Hampton", "position": "RB"}, {"id": "player:Buckeye Air Raid:luther burden", "ktc_value": 5292, "name": "Luther Burden III", "position": "WR"}, {"id": "player:Buckeye Air Raid:harold fannin", "ktc_value": 4740, "name": "Harold Fannin Jr.", "position": "TE"}, {"id": "player:Buckeye Air Raid:kenyon sadiq", "ktc_value": 4720, "name": "Kenyon Sadiq", "position": "TE"}, {"id": "player:Buckeye Air Raid:jalen coker", "ktc_value": 4593, "name": "Jalen Coker", "position": "WR"}, {"id": "player:Buckeye Air Raid:jaylen waddle", "ktc_value": 4587, "name": "Jaylen Waddle", "position": "WR"}, {"id": "player:Buckeye Air Raid:jordan addison", "ktc_value": 3710, "name": "Jordan Addison", "position": "WR"}, {"id": "player:Buckeye Air Raid:marvin harrison", "ktc_value": 3370, "name": "Marvin Harrison Jr.", "position": "WR"}, {"id": "player:Buckeye Air Raid:zach charbonnet", "ktc_value": 3322, "name": "Zach Charbonnet", "position": "RB"}, {"id": "player:Buckeye Air Raid:chris bell", "ktc_value": 3181, "name": "Chris Bell", "position": "WR"}, {"id": "player:Buckeye Air Raid:ricky pearsall", "ktc_value": 2606, "name": "Ricky Pearsall", "position": "WR"}, {"id": "player:Buckeye Air Raid:nicholas singleton", "ktc_value": 2570, "name": "Nicholas Singleton", "position": "RB"}, {"id": "player:Buckeye Air Raid:drew allar", "ktc_value": 2368, "name": "Drew Allar", "position": "QB"}, {"id": "player:Buckeye Air Raid:kaytron allen", "ktc_value": 2152, "name": "Kaytron Allen", "position": "RB"}, {"id": "player:Buckeye Air Raid:emanuel wilson", "ktc_value": 2087, "name": "Emanuel Wilson", "position": "RB"}, {"id": "player:Buckeye Air Raid:jordan watkins", "ktc_value": 1311, "name": "Jordan Watkins", "position": "WR"}, {"id": "player:Buckeye Air Raid:demarcus robinson", "ktc_value": 1092, "name": "Demarcus Robinson", "position": "WR"}, {"id": "player:Buckeye Air Raid:aj dillon", "ktc_value": 952, "name": "AJ Dillon", "position": "RB"}]}, "Dirty Shorts": {"picks": [{"id": "pick:Dirty Shorts:3", "ktc_value": 5124, "label": "R1 P3 (#3)", "overall": 3, "pick": 3, "round": 1}, {"id": "pick:Dirty Shorts:15", "ktc_value": 3181, "label": "R2 P3 (#15)", "overall": 15, "pick": 3, "round": 2}, {"id": "pick:Dirty Shorts:27", "ktc_value": 2705, "label": "R3 P3 (#27)", "overall": 27, "pick": 3, "round": 3}, {"id": "pick:Dirty Shorts:39", "ktc_value": 2604, "label": "R4 P3 (#39)", "overall": 39, "pick": 3, "round": 4}, {"id": "pick:Dirty Shorts:51", "ktc_value": 2501, "label": "R5 P3 (#51)", "overall": 51, "pick": 3, "round": 5}, {"id": "pick:Dirty Shorts:63", "ktc_value": 2368, "label": "R6 P3 (#63)", "overall": 63, "pick": 3, "round": 6}, {"id": "pick:Dirty Shorts:75", "ktc_value": 2183, "label": "R7 P3 (#75)", "overall": 75, "pick": 3, "round": 7}, {"id": "pick:Dirty Shorts:87", "ktc_value": 2118, "label": "R8 P3 (#87)", "overall": 87, "pick": 3, "round": 8}, {"id": "pick:Dirty Shorts:99", "ktc_value": 2049, "label": "R9 P3 (#99)", "overall": 99, "pick": 3, "round": 9}, {"id": "pick:Dirty Shorts:111", "ktc_value": 1982, "label": "R10 P3 (#111)", "overall": 111, "pick": 3, "round": 10}], "players": [{"id": "player:Dirty Shorts:ashton jeanty", "ktc_value": 7430, "name": "Ashton Jeanty", "position": "RB"}, {"id": "player:Dirty Shorts:nico collins", "ktc_value": 5903, "name": "Nico Collins", "position": "WR"}, {"id": "player:Dirty Shorts:chase brown", "ktc_value": 5756, "name": "Chase Brown", "position": "RB"}, {"id": "player:Dirty Shorts:colston loveland", "ktc_value": 5307, "name": "Colston Loveland", "position": "TE"}, {"id": "player:Dirty Shorts:justin herbert", "ktc_value": 5257, "name": "Justin Herbert", "position": "QB"}, {"id": "player:Dirty Shorts:carnell tate", "ktc_value": 5124, "name": "Carnell Tate", "position": "WR"}, {"id": "player:Dirty Shorts:rashee rice", "ktc_value": 4603, "name": "Rashee Rice", "position": "WR"}, {"id": "player:Dirty Shorts:michael penix", "ktc_value": 3583, "name": "Michael Penix Jr.", "position": "QB"}, {"id": "player:Dirty Shorts:blake corum", "ktc_value": 3558, "name": "Blake Corum", "position": "RB"}, {"id": "player:Dirty Shorts:brian thomas", "ktc_value": 3376, "name": "Brian Thomas Jr.", "position": "WR"}, {"id": "player:Dirty Shorts:adonai mitchell", "ktc_value": 3127, "name": "Adonai Mitchell", "position": "WR"}, {"id": "player:Dirty Shorts:juwan johnson", "ktc_value": 3077, "name": "Juwan Johnson", "position": "TE"}, {"id": "player:Dirty Shorts:dontayvion wicks", "ktc_value": 3065, "name": "Dontayvion Wicks", "position": "WR"}, {"id": "player:Dirty Shorts:travis kelce", "ktc_value": 2950, "name": "Travis Kelce", "position": "TE"}, {"id": "player:Dirty Shorts:kirk cousins", "ktc_value": 2632, "name": "Kirk Cousins", "position": "QB"}, {"id": "player:Dirty Shorts:rico dowdle", "ktc_value": 2618, "name": "Rico Dowdle", "position": "RB"}, {"id": "player:Dirty Shorts:michael pittman", "ktc_value": 2615, "name": "Michael Pittman Jr.", "position": "WR"}, {"id": "player:Dirty Shorts:tank bigsby", "ktc_value": 2587, "name": "Tank Bigsby", "position": "RB"}, {"id": "player:Dirty Shorts:chris rodriguez", "ktc_value": 2282, "name": "Chris Rodriguez Jr.", "position": "RB"}, {"id": "player:Dirty Shorts:najee harris", "ktc_value": 1468, "name": "Najee Harris", "position": "RB"}]}, "Extended Warranty": {"picks": [{"id": "pick:Extended Warranty:2", "ktc_value": 5275, "label": "R1 P2 (#2)", "overall": 2, "pick": 2, "round": 1}, {"id": "pick:Extended Warranty:14", "ktc_value": 3215, "label": "R2 P2 (#14)", "overall": 14, "pick": 2, "round": 2}, {"id": "pick:Extended Warranty:26", "ktc_value": 2767, "label": "R3 P2 (#26)", "overall": 26, "pick": 2, "round": 3}, {"id": "pick:Extended Warranty:37", "ktc_value": 2612, "label": "R4 P1 (#37)", "overall": 37, "pick": 1, "round": 4}, {"id": "pick:Extended Warranty:38", "ktc_value": 2606, "label": "R4 P2 (#38)", "overall": 38, "pick": 2, "round": 4}, {"id": "pick:Extended Warranty:50", "ktc_value": 2507, "label": "R5 P2 (#50)", "overall": 50, "pick": 2, "round": 5}, {"id": "pick:Extended Warranty:74", "ktc_value": 2185, "label": "R7 P2 (#74)", "overall": 74, "pick": 2, "round": 7}, {"id": "pick:Extended Warranty:86", "ktc_value": 2139, "label": "R8 P2 (#86)", "overall": 86, "pick": 2, "round": 8}, {"id": "pick:Extended Warranty:98", "ktc_value": 2068, "label": "R9 P2 (#98)", "overall": 98, "pick": 2, "round": 9}, {"id": "pick:Extended Warranty:110", "ktc_value": 1994, "label": "R10 P2 (#110)", "overall": 110, "pick": 2, "round": 10}], "players": [{"id": "player:Extended Warranty:jayden daniels", "ktc_value": 5987, "name": "Jayden Daniels", "position": "QB"}, {"id": "player:Extended Warranty:george pickens", "ktc_value": 5932, "name": "George Pickens", "position": "WR"}, {"id": "player:Extended Warranty:fernando mendoza", "ktc_value": 5275, "name": "Fernando Mendoza", "position": "QB"}, {"id": "player:Extended Warranty:sam laporta", "ktc_value": 4414, "name": "Sam LaPorta", "position": "TE"}, {"id": "player:Extended Warranty:michael wilson", "ktc_value": 4314, "name": "Michael Wilson", "position": "WR"}, {"id": "player:Extended Warranty:isaiah likely", "ktc_value": 3823, "name": "Isaiah Likely", "position": "TE"}, {"id": "player:Extended Warranty:emmett johnson", "ktc_value": 3157, "name": "Emmett Johnson", "position": "RB"}, {"id": "player:Extended Warranty:jacory croskeymerritt", "ktc_value": 3088, "name": "Jacory Croskey-Merritt", "position": "RB"}, {"id": "player:Extended Warranty:malachi fields", "ktc_value": 3011, "name": "Malachi Fields", "position": "WR"}, {"id": "player:Extended Warranty:tre tucker", "ktc_value": 2810, "name": "Tre Tucker", "position": "WR"}, {"id": "player:Extended Warranty:jayden reed", "ktc_value": 2745, "name": "Jayden Reed", "position": "WR"}, {"id": "player:Extended Warranty:jordan mason", "ktc_value": 2745, "name": "Jordan Mason", "position": "RB"}, {"id": "player:Extended Warranty:carson beck", "ktc_value": 2538, "name": "Carson Beck", "position": "QB"}, {"id": "player:Extended Warranty:geno smith", "ktc_value": 2523, "name": "Geno Smith", "position": "QB"}, {"id": "player:Extended Warranty:brian robinson", "ktc_value": 2523, "name": "Brian Robinson", "position": "RB"}, {"id": "player:Extended Warranty:hunter henry", "ktc_value": 2185, "name": "Hunter Henry", "position": "TE"}, {"id": "player:Extended Warranty:kaleb johnson", "ktc_value": 2162, "name": "Kaleb Johnson", "position": "RB"}, {"id": "player:Extended Warranty:skyler bell", "ktc_value": 2049, "name": "Skyler Bell", "position": "WR"}, {"id": "player:Extended Warranty:james conner", "ktc_value": 1208, "name": "James Conner", "position": "RB"}, {"id": "player:Extended Warranty:jacob saylors", "ktc_value": 1197, "name": "Jacob Saylors", "position": "RB"}, {"id": "player:Extended Warranty:samaje perine", "ktc_value": 1184, "name": "Samaje Perine", "position": "RB"}]}, "G.G.G": {"picks": [{"id": "pick:G.G.G:7", "ktc_value": 4529, "label": "R1 P7 (#7)", "overall": 7, "pick": 7, "round": 1}, {"id": "pick:G.G.G:19", "ktc_value": 3139, "label": "R2 P7 (#19)", "overall": 19, "pick": 7, "round": 2}, {"id": "pick:G.G.G:31", "ktc_value": 2646, "label": "R3 P7 (#31)", "overall": 31, "pick": 7, "round": 3}, {"id": "pick:G.G.G:43", "ktc_value": 2570, "label": "R4 P7 (#43)", "overall": 43, "pick": 7, "round": 4}, {"id": "pick:G.G.G:55", "ktc_value": 2473, "label": "R5 P7 (#55)", "overall": 55, "pick": 7, "round": 5}, {"id": "pick:G.G.G:67", "ktc_value": 2309, "label": "R6 P7 (#67)", "overall": 67, "pick": 7, "round": 6}, {"id": "pick:G.G.G:79", "ktc_value": 2160, "label": "R7 P7 (#79)", "overall": 79, "pick": 7, "round": 7}, {"id": "pick:G.G.G:91", "ktc_value": 2103, "label": "R8 P7 (#91)", "overall": 91, "pick": 7, "round": 8}, {"id": "pick:G.G.G:103", "ktc_value": 2025, "label": "R9 P7 (#103)", "overall": 103, "pick": 7, "round": 9}, {"id": "pick:G.G.G:115", "ktc_value": 1970, "label": "R10 P7 (#115)", "overall": 115, "pick": 7, "round": 10}], "players": [{"id": "player:G.G.G:jahmyr gibbs", "ktc_value": 9995, "name": "Jahmyr Gibbs", "position": "RB"}, {"id": "player:G.G.G:caleb williams", "ktc_value": 7576, "name": "Caleb Williams", "position": "QB"}, {"id": "player:G.G.G:trey mcbride", "ktc_value": 7479, "name": "Trey McBride", "position": "TE"}, {"id": "player:G.G.G:justin jefferson", "ktc_value": 7216, "name": "Justin Jefferson", "position": "WR"}, {"id": "player:G.G.G:garrett wilson", "ktc_value": 6189, "name": "Garrett Wilson", "position": "WR"}, {"id": "player:G.G.G:devonta smith", "ktc_value": 5625, "name": "DeVonta Smith", "position": "WR"}, {"id": "player:G.G.G:ladd mcconkey", "ktc_value": 5212, "name": "Ladd McConkey", "position": "WR"}, {"id": "player:G.G.G:bhayshul tuten", "ktc_value": 4747, "name": "Bhayshul Tuten", "position": "RB"}, {"id": "player:G.G.G:dandre swift", "ktc_value": 4562, "name": "D\u0027Andre Swift", "position": "RB"}, {"id": "player:G.G.G:sam darnold", "ktc_value": 4311, "name": "Sam Darnold", "position": "QB"}, {"id": "player:G.G.G:kyle monangai", "ktc_value": 3707, "name": "Kyle Monangai", "position": "RB"}, {"id": "player:G.G.G:dezhaun stribling", "ktc_value": 3512, "name": "De\u0027Zhaun Stribling", "position": "WR"}, {"id": "player:G.G.G:antonio williams", "ktc_value": 3215, "name": "Antonio Williams", "position": "WR"}, {"id": "player:G.G.G:woody marks", "ktc_value": 2916, "name": "Woody Marks", "position": "RB"}, {"id": "player:G.G.G:brenton strange", "ktc_value": 2830, "name": "Brenton Strange", "position": "TE"}, {"id": "player:G.G.G:kayshon boutte", "ktc_value": 2515, "name": "Kayshon Boutte", "position": "WR"}, {"id": "player:G.G.G:isaac teslaa", "ktc_value": 2499, "name": "Isaac TeSlaa", "position": "WR"}, {"id": "player:G.G.G:jalen mcmillan", "ktc_value": 2447, "name": "Jalen McMillan", "position": "WR"}, {"id": "player:G.G.G:demond claiborne", "ktc_value": 2111, "name": "Demond Claiborne", "position": "RB"}, {"id": "player:G.G.G:drew lock", "ktc_value": 2096, "name": "Drew Lock", "position": "QB"}, {"id": "player:G.G.G:tyson bagent", "ktc_value": 2001, "name": "Tyson Bagent", "position": "QB"}, {"id": "player:G.G.G:carson wentz", "ktc_value": 1647, "name": "Carson Wentz", "position": "QB"}, {"id": "player:G.G.G:sione vaki", "ktc_value": 1467, "name": "Sione Vaki", "position": "RB"}]}, "Gronkamole and Chips": {"picks": [{"id": "pick:Gronkamole and Chips:6", "ktc_value": 4720, "label": "R1 P6 (#6)", "overall": 6, "pick": 6, "round": 1}, {"id": "pick:Gronkamole and Chips:18", "ktc_value": 3157, "label": "R2 P6 (#18)", "overall": 18, "pick": 6, "round": 2}, {"id": "pick:Gronkamole and Chips:30", "ktc_value": 2667, "label": "R3 P6 (#30)", "overall": 30, "pick": 6, "round": 3}, {"id": "pick:Gronkamole and Chips:42", "ktc_value": 2570, "label": "R4 P6 (#42)", "overall": 42, "pick": 6, "round": 4}, {"id": "pick:Gronkamole and Chips:54", "ktc_value": 2475, "label": "R5 P6 (#54)", "overall": 54, "pick": 6, "round": 5}, {"id": "pick:Gronkamole and Chips:66", "ktc_value": 2309, "label": "R6 P6 (#66)", "overall": 66, "pick": 6, "round": 6}, {"id": "pick:Gronkamole and Chips:78", "ktc_value": 2162, "label": "R7 P6 (#78)", "overall": 78, "pick": 6, "round": 7}, {"id": "pick:Gronkamole and Chips:90", "ktc_value": 2111, "label": "R8 P6 (#90)", "overall": 90, "pick": 6, "round": 8}, {"id": "pick:Gronkamole and Chips:102", "ktc_value": 2031, "label": "R9 P6 (#102)", "overall": 102, "pick": 6, "round": 9}, {"id": "pick:Gronkamole and Chips:114", "ktc_value": 1976, "label": "R10 P6 (#114)", "overall": 114, "pick": 6, "round": 10}], "players": [{"id": "player:Gronkamole and Chips:jaxon smithnjigba", "ktc_value": 9992, "name": "Jaxon Smith-Njigba", "position": "WR"}, {"id": "player:Gronkamole and Chips:christian mccaffrey", "ktc_value": 5630, "name": "Christian McCaffrey", "position": "RB"}, {"id": "player:Gronkamole and Chips:derrick henry", "ktc_value": 5064, "name": "Derrick Henry", "position": "RB"}, {"id": "player:Gronkamole and Chips:jordan love", "ktc_value": 4931, "name": "Jordan Love", "position": "QB"}, {"id": "player:Gronkamole and Chips:bucky irving", "ktc_value": 4846, "name": "Bucky Irving", "position": "RB"}, {"id": "player:Gronkamole and Chips:treveyon henderson", "ktc_value": 4625, "name": "TreVeyon Henderson", "position": "RB"}, {"id": "player:Gronkamole and Chips:tucker kraft", "ktc_value": 4607, "name": "Tucker Kraft", "position": "TE"}, {"id": "player:Gronkamole and Chips:josh downs", "ktc_value": 3784, "name": "Josh Downs", "position": "WR"}, {"id": "player:Gronkamole and Chips:matthew stafford", "ktc_value": 3575, "name": "Matthew Stafford", "position": "QB"}, {"id": "player:Gronkamole and Chips:malik willis", "ktc_value": 3204, "name": "Malik Willis", "position": "QB"}, {"id": "player:Gronkamole and Chips:xavier worthy", "ktc_value": 3142, "name": "Xavier Worthy", "position": "WR"}, {"id": "player:Gronkamole and Chips:jakobi meyers", "ktc_value": 2848, "name": "Jakobi Meyers", "position": "WR"}, {"id": "player:Gronkamole and Chips:khalil shakir", "ktc_value": 2835, "name": "Khalil Shakir", "position": "WR"}, {"id": "player:Gronkamole and Chips:jonathon brooks", "ktc_value": 2716, "name": "Jonathon Brooks", "position": "RB"}, {"id": "player:Gronkamole and Chips:aj barner", "ktc_value": 2622, "name": "AJ Barner", "position": "TE"}, {"id": "player:Gronkamole and Chips:rachaad white", "ktc_value": 2556, "name": "Rachaad White", "position": "RB"}, {"id": "player:Gronkamole and Chips:jaylin noel", "ktc_value": 2473, "name": "Jaylin Noel", "position": "WR"}, {"id": "player:Gronkamole and Chips:kimani vidal", "ktc_value": 1982, "name": "Kimani Vidal", "position": "RB"}, {"id": "player:Gronkamole and Chips:calvin ridley", "ktc_value": 1144, "name": "Calvin Ridley", "position": "WR"}, {"id": "player:Gronkamole and Chips:chig okonkwo", "ktc_value": null, "name": "Chig Okonkwo", "position": "TE"}]}, "LoUdPaXx President": {"picks": [{"id": "pick:LoUdPaXx President:8", "ktc_value": 4423, "label": "R1 P8 (#8)", "overall": 8, "pick": 8, "round": 1}, {"id": "pick:LoUdPaXx President:20", "ktc_value": 3071, "label": "R2 P8 (#20)", "overall": 20, "pick": 8, "round": 2}, {"id": "pick:LoUdPaXx President:32", "ktc_value": 2632, "label": "R3 P8 (#32)", "overall": 32, "pick": 8, "round": 3}, {"id": "pick:LoUdPaXx President:56", "ktc_value": 2461, "label": "R5 P8 (#56)", "overall": 56, "pick": 8, "round": 5}, {"id": "pick:LoUdPaXx President:68", "ktc_value": 2282, "label": "R6 P8 (#68)", "overall": 68, "pick": 8, "round": 6}, {"id": "pick:LoUdPaXx President:72", "ktc_value": 2189, "label": "R6 P12 (#72)", "overall": 72, "pick": 12, "round": 6}, {"id": "pick:LoUdPaXx President:80", "ktc_value": 2158, "label": "R7 P8 (#80)", "overall": 80, "pick": 8, "round": 7}, {"id": "pick:LoUdPaXx President:92", "ktc_value": 2102, "label": "R8 P8 (#92)", "overall": 92, "pick": 8, "round": 8}, {"id": "pick:LoUdPaXx President:104", "ktc_value": 2024, "label": "R9 P8 (#104)", "overall": 104, "pick": 8, "round": 9}, {"id": "pick:LoUdPaXx President:116", "ktc_value": 1967, "label": "R10 P8 (#116)", "overall": 116, "pick": 8, "round": 10}], "players": [{"id": "player:LoUdPaXx President:brock bowers", "ktc_value": 8183, "name": "Brock Bowers", "position": "TE"}, {"id": "player:LoUdPaXx President:brock purdy", "ktc_value": 6905, "name": "Brock Purdy", "position": "QB"}, {"id": "player:LoUdPaXx President:chris olave", "ktc_value": 6783, "name": "Chris Olave", "position": "WR"}, {"id": "player:LoUdPaXx President:bryce young", "ktc_value": 5560, "name": "Bryce Young", "position": "QB"}, {"id": "player:LoUdPaXx President:javonte williams", "ktc_value": 4963, "name": "Javonte Williams", "position": "RB"}, {"id": "player:LoUdPaXx President:denzel boston", "ktc_value": 4831, "name": "Denzel Boston", "position": "WR"}, {"id": "player:LoUdPaXx President:cam skattebo", "ktc_value": 4733, "name": "Cam Skattebo", "position": "RB"}, {"id": "player:LoUdPaXx President:davante adams", "ktc_value": 3926, "name": "Davante Adams", "position": "WR"}, {"id": "player:LoUdPaXx President:dk metcalf", "ktc_value": 3184, "name": "DK Metcalf", "position": "WR"}, {"id": "player:LoUdPaXx President:rhamondre stevenson", "ktc_value": 3042, "name": "Rhamondre Stevenson", "position": "RB"}, {"id": "player:LoUdPaXx President:jayden higgins", "ktc_value": 3010, "name": "Jayden Higgins", "position": "WR"}, {"id": "player:LoUdPaXx President:pat bryant", "ktc_value": 2980, "name": "Pat Bryant", "position": "WR"}, {"id": "player:LoUdPaXx President:keaton mitchell", "ktc_value": 2764, "name": "Keaton Mitchell", "position": "RB"}, {"id": "player:LoUdPaXx President:jacoby brissett", "ktc_value": 2631, "name": "Jacoby Brissett", "position": "QB"}, {"id": "player:LoUdPaXx President:rashod bateman", "ktc_value": 2478, "name": "Rashod Bateman", "position": "WR"}, {"id": "player:LoUdPaXx President:pat freiermuth", "ktc_value": 2475, "name": "Pat Freiermuth", "position": "TE"}, {"id": "player:LoUdPaXx President:shedeur sanders", "ktc_value": 2316, "name": "Shedeur Sanders", "position": "QB"}, {"id": "player:LoUdPaXx President:travis hunter", "ktc_value": 2183, "name": "Travis Hunter", "position": "WR"}, {"id": "player:LoUdPaXx President:marshawn lloyd", "ktc_value": 2157, "name": "MarShawn Lloyd", "position": "RB"}, {"id": "player:LoUdPaXx President:darren waller", "ktc_value": 1941, "name": "Darren Waller", "position": "TE"}, {"id": "player:LoUdPaXx President:jerry jeudy", "ktc_value": 1899, "name": "Jerry Jeudy", "position": "WR"}]}, "OutForTheSeason": {"picks": [{"id": "pick:OutForTheSeason:10", "ktc_value": 3512, "label": "R1 P10 (#10)", "overall": 10, "pick": 10, "round": 1}, {"id": "pick:OutForTheSeason:22", "ktc_value": 3021, "label": "R2 P10 (#22)", "overall": 22, "pick": 10, "round": 2}, {"id": "pick:OutForTheSeason:34", "ktc_value": 2622, "label": "R3 P10 (#34)", "overall": 34, "pick": 10, "round": 3}, {"id": "pick:OutForTheSeason:46", "ktc_value": 2538, "label": "R4 P10 (#46)", "overall": 46, "pick": 10, "round": 4}, {"id": "pick:OutForTheSeason:58", "ktc_value": 2447, "label": "R5 P10 (#58)", "overall": 58, "pick": 10, "round": 5}, {"id": "pick:OutForTheSeason:70", "ktc_value": 2206, "label": "R6 P10 (#70)", "overall": 70, "pick": 10, "round": 6}, {"id": "pick:OutForTheSeason:82", "ktc_value": 2157, "label": "R7 P10 (#82)", "overall": 82, "pick": 10, "round": 7}, {"id": "pick:OutForTheSeason:94", "ktc_value": 2098, "label": "R8 P10 (#94)", "overall": 94, "pick": 10, "round": 8}, {"id": "pick:OutForTheSeason:106", "ktc_value": 2018, "label": "R9 P10 (#106)", "overall": 106, "pick": 10, "round": 9}, {"id": "pick:OutForTheSeason:118", "ktc_value": 1941, "label": "R10 P10 (#118)", "overall": 118, "pick": 10, "round": 10}], "players": [{"id": "player:OutForTheSeason:bijan robinson", "ktc_value": 9999, "name": "Bijan Robinson", "position": "RB"}, {"id": "player:OutForTheSeason:ceedee lamb", "ktc_value": 7460, "name": "CeeDee Lamb", "position": "WR"}, {"id": "player:OutForTheSeason:tyler shough", "ktc_value": 5989, "name": "Tyler Shough", "position": "QB"}, {"id": "player:OutForTheSeason:kc concepcion", "ktc_value": 4423, "name": "KC Concepcion Jr.", "position": "WR"}, {"id": "player:OutForTheSeason:cj stroud", "ktc_value": 4328, "name": "C.J. Stroud", "position": "QB"}, {"id": "player:OutForTheSeason:chuba hubbard", "ktc_value": 4097, "name": "Chuba Hubbard", "position": "RB"}, {"id": "player:OutForTheSeason:george kittle", "ktc_value": 3736, "name": "George Kittle", "position": "TE"}, {"id": "player:OutForTheSeason:kyler murray", "ktc_value": 3408, "name": "Kyler Murray", "position": "QB"}, {"id": "player:OutForTheSeason:rj harvey", "ktc_value": 3310, "name": "RJ Harvey", "position": "RB"}, {"id": "player:OutForTheSeason:terry mclaurin", "ktc_value": 3197, "name": "Terry McLaurin", "position": "WR"}, {"id": "player:OutForTheSeason:josh jacobs", "ktc_value": 2967, "name": "Josh Jacobs", "position": "RB"}, {"id": "player:OutForTheSeason:deebo samuel", "ktc_value": 2849, "name": "Deebo Samuel Sr.", "position": "WR"}, {"id": "player:OutForTheSeason:romeo doubs", "ktc_value": 2750, "name": "Romeo Doubs", "position": "WR"}, {"id": "player:OutForTheSeason:tony pollard", "ktc_value": 2707, "name": "Tony Pollard", "position": "RB"}, {"id": "player:OutForTheSeason:tyler allgeier", "ktc_value": 2612, "name": "Tyler Allgeier", "position": "RB"}, {"id": "player:OutForTheSeason:zachariah branch", "ktc_value": 2461, "name": "Zachariah Branch", "position": "WR"}, {"id": "player:OutForTheSeason:elijah sarratt", "ktc_value": 2158, "name": "Elijah Sarratt", "position": "WR"}, {"id": "player:OutForTheSeason:zavion thomas", "ktc_value": 1976, "name": "Zavion Thomas", "position": "WR"}, {"id": "player:OutForTheSeason:cooper kupp", "ktc_value": 1753, "name": "Cooper Kupp", "position": "WR"}, {"id": "player:OutForTheSeason:tyrone tracy", "ktc_value": 1683, "name": "Tyrone Tracy Jr.", "position": "RB"}]}, "The Goonies": {"picks": [{"id": "pick:The Goonies:11", "ktc_value": 3469, "label": "R1 P11 (#11)", "overall": 11, "pick": 11, "round": 1}, {"id": "pick:The Goonies:23", "ktc_value": 3011, "label": "R2 P11 (#23)", "overall": 23, "pick": 11, "round": 2}, {"id": "pick:The Goonies:47", "ktc_value": 2536, "label": "R4 P11 (#47)", "overall": 47, "pick": 11, "round": 4}, {"id": "pick:The Goonies:59", "ktc_value": 2447, "label": "R5 P11 (#59)", "overall": 59, "pick": 11, "round": 5}, {"id": "pick:The Goonies:60", "ktc_value": 2406, "label": "R5 P12 (#60)", "overall": 60, "pick": 12, "round": 5}, {"id": "pick:The Goonies:71", "ktc_value": 2200, "label": "R6 P11 (#71)", "overall": 71, "pick": 11, "round": 6}, {"id": "pick:The Goonies:83", "ktc_value": 2152, "label": "R7 P11 (#83)", "overall": 83, "pick": 11, "round": 7}, {"id": "pick:The Goonies:95", "ktc_value": 2096, "label": "R8 P11 (#95)", "overall": 95, "pick": 11, "round": 8}, {"id": "pick:The Goonies:107", "ktc_value": 2002, "label": "R9 P11 (#107)", "overall": 107, "pick": 11, "round": 9}, {"id": "pick:The Goonies:119", "ktc_value": 1932, "label": "R10 P11 (#119)", "overall": 119, "pick": 11, "round": 10}], "players": [{"id": "player:The Goonies:jamarr chase", "ktc_value": 9003, "name": "Ja\u0027Marr Chase", "position": "WR"}, {"id": "player:The Goonies:kenneth walker", "ktc_value": 7361, "name": "Kenneth Walker III", "position": "RB"}, {"id": "player:The Goonies:james cook", "ktc_value": 6587, "name": "James Cook III", "position": "RB"}, {"id": "player:The Goonies:drake maye", "ktc_value": 6496, "name": "Drake Maye", "position": "QB"}, {"id": "player:The Goonies:christian watson", "ktc_value": 5183, "name": "Christian Watson", "position": "WR"}, {"id": "player:The Goonies:makai lemon", "ktc_value": 4178, "name": "Makai Lemon", "position": "WR"}, {"id": "player:The Goonies:cam ward", "ktc_value": 3545, "name": "Cam Ward", "position": "QB"}, {"id": "player:The Goonies:travis etienne", "ktc_value": 3507, "name": "Travis Etienne Jr.", "position": "RB"}, {"id": "player:The Goonies:daniel jones", "ktc_value": 3445, "name": "Daniel Jones", "position": "QB"}, {"id": "player:The Goonies:alec pierce", "ktc_value": 3425, "name": "Alec Pierce", "position": "WR"}, {"id": "player:The Goonies:kyle pitts", "ktc_value": 3256, "name": "Kyle Pitts Sr.", "position": "TE"}, {"id": "player:The Goonies:caleb douglas", "ktc_value": 3139, "name": "Caleb Douglas", "position": "WR"}, {"id": "player:The Goonies:jakobi lane", "ktc_value": 3071, "name": "Ja\u0027Kobi Lane", "position": "WR"}, {"id": "player:The Goonies:quentin johnston", "ktc_value": 2739, "name": "Quentin Johnston", "position": "WR"}, {"id": "player:The Goonies:keon coleman", "ktc_value": 2693, "name": "Keon Coleman", "position": "WR"}, {"id": "player:The Goonies:tj hockenson", "ktc_value": 2604, "name": "T.J. Hockenson", "position": "TE"}, {"id": "player:The Goonies:kendre miller", "ktc_value": 2401, "name": "Kendre Miller", "position": "RB"}, {"id": "player:The Goonies:elic ayomanor", "ktc_value": 2229, "name": "Elic Ayomanor", "position": "WR"}, {"id": "player:The Goonies:mike gesicki", "ktc_value": 1967, "name": "Mike Gesicki", "position": "TE"}, {"id": "player:The Goonies:george holani", "ktc_value": 1911, "name": "George Holani", "position": "RB"}, {"id": "player:The Goonies:ray davis", "ktc_value": 1799, "name": "Ray Davis", "position": "RB"}, {"id": "player:The Goonies:jameis winston", "ktc_value": 1797, "name": "Jameis Winston", "position": "QB"}, {"id": "player:The Goonies:tyler higbee", "ktc_value": 1505, "name": "Tyler Higbee", "position": "TE"}]}, "The Jackson 10": {"picks": [{"id": "pick:The Jackson 10:21", "ktc_value": 3021, "label": "R2 P9 (#21)", "overall": 21, "pick": 9, "round": 2}, {"id": "pick:The Jackson 10:33", "ktc_value": 2627, "label": "R3 P9 (#33)", "overall": 33, "pick": 9, "round": 3}, {"id": "pick:The Jackson 10:45", "ktc_value": 2556, "label": "R4 P9 (#45)", "overall": 45, "pick": 9, "round": 4}, {"id": "pick:The Jackson 10:52", "ktc_value": 2499, "label": "R5 P4 (#52)", "overall": 52, "pick": 4, "round": 5}, {"id": "pick:The Jackson 10:57", "ktc_value": 2461, "label": "R5 P9 (#57)", "overall": 57, "pick": 9, "round": 5}, {"id": "pick:The Jackson 10:69", "ktc_value": 2229, "label": "R6 P9 (#69)", "overall": 69, "pick": 9, "round": 6}, {"id": "pick:The Jackson 10:81", "ktc_value": 2158, "label": "R7 P9 (#81)", "overall": 81, "pick": 9, "round": 7}, {"id": "pick:The Jackson 10:93", "ktc_value": 2098, "label": "R8 P9 (#93)", "overall": 93, "pick": 9, "round": 8}, {"id": "pick:The Jackson 10:105", "ktc_value": 2019, "label": "R9 P9 (#105)", "overall": 105, "pick": 9, "round": 9}, {"id": "pick:The Jackson 10:117", "ktc_value": 1955, "label": "R10 P9 (#117)", "overall": 117, "pick": 9, "round": 10}], "players": [{"id": "player:The Jackson 10:lamar jackson", "ktc_value": 7541, "name": "Lamar Jackson", "position": "QB"}, {"id": "player:The Jackson 10:patrick mahomes", "ktc_value": 6574, "name": "Patrick Mahomes", "position": "QB"}, {"id": "player:The Jackson 10:devon achane", "ktc_value": 5567, "name": "De\u0027Von Achane", "position": "RB"}, {"id": "player:The Jackson 10:emeka egbuka", "ktc_value": 5334, "name": "Emeka Egbuka", "position": "WR"}, {"id": "player:The Jackson 10:saquon barkley", "ktc_value": 4725, "name": "Saquon Barkley", "position": "RB"}, {"id": "player:The Jackson 10:jameson williams", "ktc_value": 4219, "name": "Jameson Williams", "position": "WR"}, {"id": "player:The Jackson 10:dj moore", "ktc_value": 3703, "name": "DJ Moore", "position": "WR"}, {"id": "player:The Jackson 10:baker mayfield", "ktc_value": 3592, "name": "Baker Mayfield", "position": "QB"}, {"id": "player:The Jackson 10:kaelon black", "ktc_value": 3162, "name": "Kaelon Black", "position": "RB"}, {"id": "player:The Jackson 10:ollie gordon", "ktc_value": 3038, "name": "Ollie Gordon II", "position": "RB"}, {"id": "player:The Jackson 10:oronde gadsden", "ktc_value": 2862, "name": "Oronde Gadsden", "position": "TE"}, {"id": "player:The Jackson 10:ted hurst", "ktc_value": 2832, "name": "Ted Hurst III", "position": "WR"}, {"id": "player:The Jackson 10:eli stowers", "ktc_value": 2705, "name": "Eli Stowers", "position": "TE"}, {"id": "player:The Jackson 10:tre harris", "ktc_value": 2682, "name": "Tre\u0027 Harris", "position": "WR"}, {"id": "player:The Jackson 10:dallas goedert", "ktc_value": 2646, "name": "Dallas Goedert", "position": "TE"}, {"id": "player:The Jackson 10:courtland sutton", "ktc_value": 2627, "name": "Courtland Sutton", "position": "WR"}, {"id": "player:The Jackson 10:chris godwin", "ktc_value": 2567, "name": "Chris Godwin Jr.", "position": "WR"}, {"id": "player:The Jackson 10:jaylen wright", "ktc_value": 2536, "name": "Jaylen Wright", "position": "RB"}, {"id": "player:The Jackson 10:jalon daniels", "ktc_value": 2189, "name": "Jalon Daniels", "position": "QB"}, {"id": "player:The Jackson 10:alvin kamara", "ktc_value": 2139, "name": "Alvin Kamara", "position": "RB"}, {"id": "player:The Jackson 10:cade otton", "ktc_value": 2098, "name": "Cade Otton", "position": "TE"}, {"id": "player:The Jackson 10:tyquan thornton", "ktc_value": 2000, "name": "Tyquan Thornton", "position": "WR"}, {"id": "player:The Jackson 10:anthony richardson", "ktc_value": 1796, "name": "Anthony Richardson Sr.", "position": "QB"}]}, "aPukalypse Now": {"picks": [{"id": "pick:aPukalypse Now:12", "ktc_value": 3416, "label": "R1 P12 (#12)", "overall": 12, "pick": 12, "round": 1}, {"id": "pick:aPukalypse Now:24", "ktc_value": 2832, "label": "R2 P12 (#24)", "overall": 24, "pick": 12, "round": 2}, {"id": "pick:aPukalypse Now:35", "ktc_value": 2618, "label": "R3 P11 (#35)", "overall": 35, "pick": 11, "round": 3}, {"id": "pick:aPukalypse Now:36", "ktc_value": 2615, "label": "R3 P12 (#36)", "overall": 36, "pick": 12, "round": 3}, {"id": "pick:aPukalypse Now:44", "ktc_value": 2567, "label": "R4 P8 (#44)", "overall": 44, "pick": 8, "round": 4}, {"id": "pick:aPukalypse Now:48", "ktc_value": 2523, "label": "R4 P12 (#48)", "overall": 48, "pick": 12, "round": 4}, {"id": "pick:aPukalypse Now:84", "ktc_value": 2152, "label": "R7 P12 (#84)", "overall": 84, "pick": 12, "round": 7}, {"id": "pick:aPukalypse Now:96", "ktc_value": 2087, "label": "R8 P12 (#96)", "overall": 96, "pick": 12, "round": 8}, {"id": "pick:aPukalypse Now:108", "ktc_value": 2001, "label": "R9 P12 (#108)", "overall": 108, "pick": 12, "round": 9}, {"id": "pick:aPukalypse Now:120", "ktc_value": 1930, "label": "R10 P12 (#120)", "overall": 120, "pick": 12, "round": 10}], "players": [{"id": "player:aPukalypse Now:puka nacua", "ktc_value": 7759, "name": "Puka Nacua", "position": "WR"}, {"id": "player:aPukalypse Now:malik nabers", "ktc_value": 6736, "name": "Malik Nabers", "position": "WR"}, {"id": "player:aPukalypse Now:trevor lawrence", "ktc_value": 6693, "name": "Trevor Lawrence", "position": "QB"}, {"id": "player:aPukalypse Now:parker washington", "ktc_value": 5925, "name": "Parker Washington", "position": "WR"}, {"id": "player:aPukalypse Now:tyler warren", "ktc_value": 5775, "name": "Tyler Warren", "position": "TE"}, {"id": "player:aPukalypse Now:jaxson dart", "ktc_value": 5613, "name": "Jaxson Dart", "position": "QB"}, {"id": "player:aPukalypse Now:breece hall", "ktc_value": 5442, "name": "Breece Hall", "position": "RB"}, {"id": "player:aPukalypse Now:kyren williams", "ktc_value": 5323, "name": "Kyren Williams", "position": "RB"}, {"id": "player:aPukalypse Now:tee higgins", "ktc_value": 5140, "name": "Tee Higgins", "position": "WR"}, {"id": "player:aPukalypse Now:aj brown", "ktc_value": 4416, "name": "A.J. Brown", "position": "WR"}, {"id": "player:aPukalypse Now:ty simpson", "ktc_value": 3469, "name": "Ty Simpson", "position": "QB"}, {"id": "player:aPukalypse Now:jonah coleman", "ktc_value": 3416, "name": "Jonah Coleman", "position": "RB"}, {"id": "player:aPukalypse Now:terrance ferguson", "ktc_value": 3216, "name": "Terrance Ferguson", "position": "TE"}, {"id": "player:aPukalypse Now:braelon allen", "ktc_value": 3138, "name": "Braelon Allen", "position": "RB"}, {"id": "player:aPukalypse Now:mike washington", "ktc_value": 3021, "name": "Mike Washington Jr.", "position": "RB"}, {"id": "player:aPukalypse Now:malik washington", "ktc_value": 2767, "name": "Malik Washington", "position": "WR"}, {"id": "player:aPukalypse Now:roman wilson", "ktc_value": 2667, "name": "Roman Wilson", "position": "WR"}, {"id": "player:aPukalypse Now:jack bech", "ktc_value": 2200, "name": "Jack Bech", "position": "WR"}, {"id": "player:aPukalypse Now:marcus mariota", "ktc_value": 2098, "name": "Marcus Mariota", "position": "QB"}, {"id": "player:aPukalypse Now:chris brooks", "ktc_value": 1559, "name": "Chris Brooks", "position": "RB"}, {"id": "player:aPukalypse Now:devin neal", "ktc_value": 1106, "name": "Devin Neal", "position": "RB"}, {"id": "player:aPukalypse Now:austin ekeler", "ktc_value": 956, "name": "Austin Ekeler", "position": "RB"}, {"id": "player:aPukalypse Now:case keenum", "ktc_value": 796, "name": "Case Keenum", "position": "QB"}]}}, "keeper_cutoff": 14, "teams": ["LoUdPaXx President", "aPukalypse Now", "Buckeye Air Raid", "OutForTheSeason", "G.G.G", "Allen or Nothing", "Gronkamole and Chips", "The Goonies", "Bo Knows Football", "Dirty Shorts", "Extended Warranty", "The Jackson 10"]}</script>
+
+  <div class="trade-form">
+    <div class="trade-row">
+      <label class="trade-label">
+        Team A
+        <select id="team-a"></select>
+      </label>
+      <label class="trade-label">
+        Team B
+        <select id="team-b"></select>
+      </label>
+    </div>
+
+    <p class="muted" id="trade-hint">Select assets from either side to evaluate a trade.</p>
+
+    <div class="trade-grid">
+      <section class="team-card">
+        <h2 id="team-a-heading">Team A Sends</h2>
+        <div class="sheet-body">
+          <label class="trade-label" for="team-a-players">Players</label>
+          <select id="team-a-players" multiple size="12"></select>
+          <label class="trade-label" for="team-a-picks">Picks</label>
+          <select id="team-a-picks" multiple size="8"></select>
+        </div>
+      </section>
+
+      <section class="team-card">
+        <h2 id="team-b-heading">Team B Sends</h2>
+        <div class="sheet-body">
+          <label class="trade-label" for="team-b-players">Players</label>
+          <select id="team-b-players" multiple size="12"></select>
+          <label class="trade-label" for="team-b-picks">Picks</label>
+          <select id="team-b-picks" multiple size="8"></select>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="team-card" id="trade-result" hidden>
+    <h2>Trade Impact</h2>
+    <div class="trade-summary">
+      <div class="trade-summary-card">
+        <h4 id="res-a-name"></h4>
+        <p>Top-14 KTC: <span id="res-a-keepers"></span></p>
+        <p>Picks Total: <span id="res-a-picks"></span></p>
+        <p class="trade-total">Total: <span id="res-a-total"></span></p>
+        <p class="trade-delta delta" id="res-a-delta"></p>
+      </div>
+      <div class="trade-summary-card">
+        <h4 id="res-b-name"></h4>
+        <p>Top-14 KTC: <span id="res-b-keepers"></span></p>
+        <p>Picks Total: <span id="res-b-picks"></span></p>
+        <p class="trade-total">Total: <span id="res-b-total"></span></p>
+        <p class="trade-delta delta" id="res-b-delta"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var DATA = JSON.parse(document.getElementById("trade-data").textContent);
+      var TEAMS = DATA.teams;
+      var ASSETS = DATA.assets_by_team;
+      var CUTOFF = DATA.keeper_cutoff;
+
+      var el = function (id) { return document.getElementById(id); };
+      var fmt = function (n) { return n.toLocaleString(); };
+
+      // Keeper value: the top CUTOFF players by KTC value. Same rule the power
+      // rankings use for power_score (see build_league_view in league.py).
+      function keeperTotal(players) {
+        return players
+          .map(function (p) { return p.ktc_value; })
+          .filter(function (v) { return v !== null && v !== undefined; })
+          .sort(function (a, b) { return b - a; })
+          .slice(0, CUTOFF)
+          .reduce(function (a, b) { return a + b; }, 0);
+      }
+
+      function pickTotal(picks) {
+        return picks.reduce(function (sum, p) { return sum + (p.ktc_value || 0); }, 0);
+      }
+
+      function selectedIds(select) {
+        return Array.prototype.filter
+          .call(select.options, function (o) { return o.selected; })
+          .map(function (o) { return o.value; });
+      }
+
+      function fill(select, items, label) {
+        select.innerHTML = "";
+        items.forEach(function (item) {
+          var opt = document.createElement("option");
+          opt.value = item.id;
+          opt.textContent = label(item);
+          select.appendChild(opt);
+        });
+      }
+
+      function assetsFor(team) {
+        return ASSETS[team] || { players: [], picks: [] };
+      }
+
+      function playerLabel(p) {
+        return p.name + " (" + (p.position || "-") + ") — " +
+          (p.ktc_value === null || p.ktc_value === undefined ? "N/A" : p.ktc_value);
+      }
+
+      function pickLabel(p) {
+        return p.label + " — " +
+          (p.ktc_value === null || p.ktc_value === undefined ? "N/A" : p.ktc_value);
+      }
+
+      function populateTeams() {
+        [el("team-a"), el("team-b")].forEach(function (sel) {
+          TEAMS.forEach(function (t) {
+            var opt = document.createElement("option");
+            opt.value = t;
+            opt.textContent = t;
+            sel.appendChild(opt);
+          });
+        });
+        el("team-a").selectedIndex = 0;
+        el("team-b").selectedIndex = TEAMS.length > 1 ? 1 : 0;
+      }
+
+      function loadSide(side) {
+        var team = el("team-" + side).value;
+        var a = assetsFor(team);
+        fill(el("team-" + side + "-players"), a.players, playerLabel);
+        fill(el("team-" + side + "-picks"), a.picks, pickLabel);
+        el("team-" + side + "-heading").textContent = team + " Sends";
+      }
+
+      function moved(all, ids) {
+        var sent = all.filter(function (x) { return ids.indexOf(x.id) !== -1; });
+        var kept = all.filter(function (x) { return ids.indexOf(x.id) === -1; });
+        return { sent: sent, kept: kept };
+      }
+
+      function setDelta(node, value) {
+        node.textContent = (value > 0 ? "+" : "") + fmt(value);
+        node.classList.remove("delta-up", "delta-down", "delta-even");
+        node.classList.add(value > 0 ? "delta-up" : value < 0 ? "delta-down" : "delta-even");
+      }
+
+      function evaluate() {
+        var teamA = el("team-a").value;
+        var teamB = el("team-b").value;
+        var result = el("trade-result");
+        var hint = el("trade-hint");
+
+        if (teamA === teamB) {
+          result.hidden = true;
+          hint.textContent = "Pick two different teams to evaluate a trade.";
+          return;
+        }
+
+        var A = assetsFor(teamA);
+        var B = assetsFor(teamB);
+        var aPlayers = moved(A.players, selectedIds(el("team-a-players")));
+        var bPlayers = moved(B.players, selectedIds(el("team-b-players")));
+        var aPicks = moved(A.picks, selectedIds(el("team-a-picks")));
+        var bPicks = moved(B.picks, selectedIds(el("team-b-picks")));
+
+        var nothingSelected = !aPlayers.sent.length && !bPlayers.sent.length &&
+          !aPicks.sent.length && !bPicks.sent.length;
+        if (nothingSelected) {
+          result.hidden = true;
+          hint.textContent = "Select assets from either side to evaluate a trade.";
+          return;
+        }
+        hint.textContent = "";
+
+        var aKeepBefore = keeperTotal(A.players);
+        var bKeepBefore = keeperTotal(B.players);
+        var aKeepAfter = keeperTotal(aPlayers.kept.concat(bPlayers.sent));
+        var bKeepAfter = keeperTotal(bPlayers.kept.concat(aPlayers.sent));
+
+        var aPickBefore = pickTotal(A.picks);
+        var bPickBefore = pickTotal(B.picks);
+        var aPickAfter = pickTotal(aPicks.kept.concat(bPicks.sent));
+        var bPickAfter = pickTotal(bPicks.kept.concat(aPicks.sent));
+
+        var sides = [
+          { k: "a", name: teamA, kb: aKeepBefore, ka: aKeepAfter, pb: aPickBefore, pa: aPickAfter },
+          { k: "b", name: teamB, kb: bKeepBefore, ka: bKeepAfter, pb: bPickBefore, pa: bPickAfter }
+        ];
+        sides.forEach(function (s) {
+          var before = s.kb + s.pb;
+          var after = s.ka + s.pa;
+          el("res-" + s.k + "-name").textContent = s.name;
+          el("res-" + s.k + "-keepers").textContent = fmt(s.kb) + " → " + fmt(s.ka);
+          el("res-" + s.k + "-picks").textContent = fmt(s.pb) + " → " + fmt(s.pa);
+          el("res-" + s.k + "-total").textContent = fmt(before) + " → " + fmt(after);
+          setDelta(el("res-" + s.k + "-delta"), after - before);
+        });
+        result.hidden = false;
+      }
+
+      populateTeams();
+      ["a", "b"].forEach(function (side) {
+        loadSide(side);
+        el("team-" + side).addEventListener("change", function () {
+          loadSide(side);
+          evaluate();
+        });
+        el("team-" + side + "-players").addEventListener("change", evaluate);
+        el("team-" + side + "-picks").addEventListener("change", evaluate);
+      });
+      evaluate();
+    })();
+  </script>
+
+    </main>
+
+    
+  </body>
+</html>

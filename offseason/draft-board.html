@@ -1,0 +1,2031 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 07:17 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="free-agents.html"
+            
+          >Free Agents</a>
+        
+          <a
+            href="free-agent-interest.html"
+            
+          >Who Wants Them</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Seasonal Articles</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="draft-board.html"
+            class="on"
+          >Draft Board</a>
+        
+          <a
+            href="draft-pick-rankings.html"
+            
+          >Pick Rankings</a>
+        
+          <a
+            href="trade-evaluator.html"
+            
+          >Offseason Trade Evaluator</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            class="on" aria-current="true"
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>Draft Board</h2>
+    <p>
+      Rookies, potential free agents, and unowned players ranked by KTC value,
+      laid against your draft order.
+    </p>
+  </section>
+
+  <section class="legend">
+    <span class="badge" style="color: var(--wr)">Rookie</span>
+    <span class="badge" style="color: var(--te)">Potential free agent</span>
+    <span class="badge" style="color: var(--rb)">Unowned</span>
+  </section>
+
+  <section class="team-card">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th class="col-min">Pick</th>
+            <th>Team</th>
+            <th>Selection</th>
+            <th class="col-min">Type</th>
+            <th class="col-pos">Pos</th>
+            <th class="num">KTC</th>
+            <th class="num col-delta">Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">1</td>
+              <td class="col-min pick-label">R1 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Jeremiyah Love</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">7,210
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+42</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">2</td>
+              <td class="col-min pick-label">R1 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Fernando Mendoza</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">5,275
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+63</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">3</td>
+              <td class="col-min pick-label">R1 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Carnell Tate</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">5,124
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+57</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">4</td>
+              <td class="col-min pick-label">R1 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Jordyn Tyson</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">4,837
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+22</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">5</td>
+              <td class="col-min pick-label">R1 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Denzel Boston</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">4,831
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+812</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">6</td>
+              <td class="col-min pick-label">R1 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Kenyon Sadiq</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">4,720
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+1000</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">7</td>
+              <td class="col-min pick-label">R1 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Jadarian Price</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">4,529
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-716</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">8</td>
+              <td class="col-min pick-label">R1 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">KC Concepcion</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">4,423
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+28</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">9</td>
+              <td class="col-min pick-label">R1 P9</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Makai Lemon</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">4,178
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-216</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">10</td>
+              <td class="col-min pick-label">R1 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">De&#39;Zhaun Stribling</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,512
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-55</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">11</td>
+              <td class="col-min pick-label">R1 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Ty Simpson</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">3,469
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-51</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">12</td>
+              <td class="col-min pick-label">R1 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Jonah Coleman</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">3,416
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+5</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">13</td>
+              <td class="col-min pick-label">R2 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Omar Cooper Jr.</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,259
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-8</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">14</td>
+              <td class="col-min pick-label">R2 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Antonio Williams</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,215
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+6</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">15</td>
+              <td class="col-min pick-label">R2 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Chris Bell</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,181
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+46</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">16</td>
+              <td class="col-min pick-label">R2 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Chris Bell</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,181
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+46</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">17</td>
+              <td class="col-min pick-label">R2 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Kaelon Black</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">3,162
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-133</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">18</td>
+              <td class="col-min pick-label">R2 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Emmett Johnson</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">3,157
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+127</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">19</td>
+              <td class="col-min pick-label">R2 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Caleb Douglas</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,139
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-103</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">20</td>
+              <td class="col-min pick-label">R2 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Ja&#39;Kobi Lane</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,071
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-82</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">21</td>
+              <td class="col-min pick-label">R2 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Mike Washington Jr.</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">3,021
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-39</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">22</td>
+              <td class="col-min pick-label">R2 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Mike Washington Jr.</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">3,021
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-39</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">23</td>
+              <td class="col-min pick-label">R2 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Malachi Fields</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">3,011
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-98</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">24</td>
+              <td class="col-min pick-label">R2 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Ted Hurst</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,832
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+212</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">25</td>
+              <td class="col-min pick-label">R3 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Brenton Strange</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,830
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-112</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">26</td>
+              <td class="col-min pick-label">R3 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Malik Washington</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,767
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+144</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">27</td>
+              <td class="col-min pick-label">R3 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Eli Stowers</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,705
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-70</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">28</td>
+              <td class="col-min pick-label">R3 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Germie Bernard</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,704
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-111</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">29</td>
+              <td class="col-min pick-label">R3 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Keon Coleman</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,693
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+159</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">30</td>
+              <td class="col-min pick-label">R3 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Roman Wilson</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,667
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+578</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">31</td>
+              <td class="col-min pick-label">R3 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Dallas Goedert</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,646
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-129</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">32</td>
+              <td class="col-min pick-label">R3 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Kirk Cousins</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,632
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+388</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">33</td>
+              <td class="col-min pick-label">R3 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Courtland Sutton</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,627
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-194</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">34</td>
+              <td class="col-min pick-label">R3 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">AJ Barner</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,622
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+15</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">35</td>
+              <td class="col-min pick-label">R3 P11</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Rico Dowdle</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,618
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-223</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">36</td>
+              <td class="col-min pick-label">R3 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Michael Pittman Jr.</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,615
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-380</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">37</td>
+              <td class="col-min pick-label">R4 P1</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Tyler Allgeier</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,612
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-155</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">38</td>
+              <td class="col-min pick-label">R4 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Ricky Pearsall</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,606
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+87</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">39</td>
+              <td class="col-min pick-label">R4 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">T.J. Hockenson</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,604
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-23</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">40</td>
+              <td class="col-min pick-label">R4 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Tank Bigsby</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,587
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-41</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">41</td>
+              <td class="col-min pick-label">R4 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Michael Mayer</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,576
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-32</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">42</td>
+              <td class="col-min pick-label">R4 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Nicholas Singleton</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,570
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+10</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">43</td>
+              <td class="col-min pick-label">R4 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Nicholas Singleton</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,570
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+10</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">44</td>
+              <td class="col-min pick-label">R4 P8</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Chris Godwin Jr.</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,567
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-415</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">45</td>
+              <td class="col-min pick-label">R4 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Rachaad White</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,556
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-46</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">46</td>
+              <td class="col-min pick-label">R4 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Carson Beck</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,538
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-103</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">47</td>
+              <td class="col-min pick-label">R4 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Jaylen Wright</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,536
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+347</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">48</td>
+              <td class="col-min pick-label">R4 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Brian Robinson</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,523
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+310</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">49</td>
+              <td class="col-min pick-label">R5 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Kayshon Boutte</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,515
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-135</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">50</td>
+              <td class="col-min pick-label">R5 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Eli Raridon</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,507
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+5</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">51</td>
+              <td class="col-min pick-label">R5 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Kenneth Gainwell</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,501
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-196</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">52</td>
+              <td class="col-min pick-label">R5 P4</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Isaac TeSlaa</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,499
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+144</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">53</td>
+              <td class="col-min pick-label">R5 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Rashod Bateman</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,478
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+184</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">54</td>
+              <td class="col-min pick-label">R5 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Pat Freiermuth</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,475
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+103</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">55</td>
+              <td class="col-min pick-label">R5 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Jaylin Noel</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,473
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-31</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">56</td>
+              <td class="col-min pick-label">R5 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Zachariah Branch</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,461
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-75</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">57</td>
+              <td class="col-min pick-label">R5 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Zachariah Branch</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,461
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-75</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">58</td>
+              <td class="col-min pick-label">R5 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Jalen McMillan</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,447
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-267</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">59</td>
+              <td class="col-min pick-label">R5 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Rashid Shaheed</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,447
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-89</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">60</td>
+              <td class="col-min pick-label">R5 P12</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Mac Jones</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,406
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+122</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">61</td>
+              <td class="col-min pick-label">R6 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Kendre Miller</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,401
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+224</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">62</td>
+              <td class="col-min pick-label">R6 P2</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">J.J. McCarthy</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,373
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+396</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">63</td>
+              <td class="col-min pick-label">R6 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Drew Allar</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,368
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-53</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">64</td>
+              <td class="col-min pick-label">R6 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Drew Allar</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,368
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-53</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">65</td>
+              <td class="col-min pick-label">R6 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Shedeur Sanders</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,316
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-54</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">66</td>
+              <td class="col-min pick-label">R6 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Cyrus Allen</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,309
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-218</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">67</td>
+              <td class="col-min pick-label">R6 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Cyrus Allen</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,309
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-218</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">68</td>
+              <td class="col-min pick-label">R6 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Chris Rodriguez Jr.</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,282
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-185</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">69</td>
+              <td class="col-min pick-label">R6 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Elic Ayomanor</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,229
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-34</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">70</td>
+              <td class="col-min pick-label">R6 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Tank Dell</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,206
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-136</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">71</td>
+              <td class="col-min pick-label">R6 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Jack Bech</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,200
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-205</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">72</td>
+              <td class="col-min pick-label">R6 P12</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Jalon Daniels</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,189
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+362</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">73</td>
+              <td class="col-min pick-label">R7 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Jalon Daniels</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,189
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+362</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">74</td>
+              <td class="col-min pick-label">R7 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Hunter Henry</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,185
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-223</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">75</td>
+              <td class="col-min pick-label">R7 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Travis Hunter</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,183
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-276</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">76</td>
+              <td class="col-min pick-label">R7 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Chigoziem Okonkwo</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,171
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-196</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">77</td>
+              <td class="col-min pick-label">R7 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Troy Franklin</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,164
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-92</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">78</td>
+              <td class="col-min pick-label">R7 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Kaleb Johnson</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,162
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">79</td>
+              <td class="col-min pick-label">R7 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Tory Horton</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,160
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-41</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">80</td>
+              <td class="col-min pick-label">R7 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Elijah Sarratt</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,158
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-193</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">81</td>
+              <td class="col-min pick-label">R7 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Elijah Sarratt</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,158
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-193</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">82</td>
+              <td class="col-min pick-label">R7 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">MarShawn Lloyd</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,157
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-562</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">83</td>
+              <td class="col-min pick-label">R7 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Kaytron Allen</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,152
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-209</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">84</td>
+              <td class="col-min pick-label">R7 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Kaytron Allen</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,152
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-209</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">85</td>
+              <td class="col-min pick-label">R8 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Gunnar Helm</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,146
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-94</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">86</td>
+              <td class="col-min pick-label">R8 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Alvin Kamara</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,139
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+238</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">87</td>
+              <td class="col-min pick-label">R8 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Kevin Coleman</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,118
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-32</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">88</td>
+              <td class="col-min pick-label">R8 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Xavier Hutchinson</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,112
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-81</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">89</td>
+              <td class="col-min pick-label">R8 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Demond Claiborne</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,111
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-151</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">90</td>
+              <td class="col-min pick-label">R8 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Demond Claiborne</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,111
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-151</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">91</td>
+              <td class="col-min pick-label">R8 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Chris Brazzell II</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,103
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-80</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">92</td>
+              <td class="col-min pick-label">R8 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Darnell Washington</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,102
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+271</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">93</td>
+              <td class="col-min pick-label">R8 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Marcus Mariota</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,098
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-12</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">94</td>
+              <td class="col-min pick-label">R8 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Cade Otton</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,098
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-92</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">95</td>
+              <td class="col-min pick-label">R8 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Drew Lock</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,096
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-166</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">96</td>
+              <td class="col-min pick-label">R8 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Emanuel Wilson</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,087
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+388</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">97</td>
+              <td class="col-min pick-label">R9 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Jalen Nailor</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,071
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-75</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">98</td>
+              <td class="col-min pick-label">R9 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Ryan Flournoy</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,068
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-57</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">99</td>
+              <td class="col-min pick-label">R9 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Skyler Bell</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,049
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-87</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">100</td>
+              <td class="col-min pick-label">R9 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Skyler Bell</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,049
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-87</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">101</td>
+              <td class="col-min pick-label">R9 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Kyle Williams</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,048
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-161</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">102</td>
+              <td class="col-min pick-label">R9 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Mason Taylor</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,031
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-112</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">103</td>
+              <td class="col-min pick-label">R9 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Elijah Arroyo</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,025
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-125</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">104</td>
+              <td class="col-min pick-label">R9 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Demario Douglas</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,024
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-176</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">105</td>
+              <td class="col-min pick-label">R9 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Aaron Rodgers</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,019
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+89</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">106</td>
+              <td class="col-min pick-label">R9 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Raheim Sanders</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">2,018
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+170</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">107</td>
+              <td class="col-min pick-label">R9 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Max Klare</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">2,002
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-53</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">108</td>
+              <td class="col-min pick-label">R9 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Tyson Bagent</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">2,001
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-108</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">109</td>
+              <td class="col-min pick-label">R10 P1</td>
+              <td class="player-meta">Buckeye Air Raid</td>
+              <td class="player-name">Tyquan Thornton</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">2,000
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+121</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">110</td>
+              <td class="col-min pick-label">R10 P2</td>
+              <td class="player-meta">Extended Warranty</td>
+              <td class="player-name">Jaylin Lane</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">1,994
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+63</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">111</td>
+              <td class="col-min pick-label">R10 P3</td>
+              <td class="player-meta">Dirty Shorts</td>
+              <td class="player-name">Kimani Vidal</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+              <td class="num ktc">1,982
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-81</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">112</td>
+              <td class="col-min pick-label">R10 P4</td>
+              <td class="player-meta">Bo Knows Football</td>
+              <td class="player-name">Jalen Milroe</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">1,978
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+1</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">113</td>
+              <td class="col-min pick-label">R10 P5</td>
+              <td class="player-meta">Allen or Nothing</td>
+              <td class="player-name">Zavion Thomas</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">1,976
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">114</td>
+              <td class="col-min pick-label">R10 P6</td>
+              <td class="player-meta">Gronkamole and Chips</td>
+              <td class="player-name">Zavion Thomas</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">1,976
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">115</td>
+              <td class="col-min pick-label">R10 P7</td>
+              <td class="player-meta">G.G.G</td>
+              <td class="player-name">Cole Kmet</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">1,970
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-82</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">116</td>
+              <td class="col-min pick-label">R10 P8</td>
+              <td class="player-meta">LoUdPaXx President</td>
+              <td class="player-name">Mike Gesicki</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">1,967
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+346</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">117</td>
+              <td class="col-min pick-label">R10 P9</td>
+              <td class="player-meta">The Jackson 10</td>
+              <td class="player-name">Tez Johnson</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">1,955
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-37</span></td>
+              
+            </tr>
+          
+            
+            <tr class="free-agent-row">
+              <td class="rk">118</td>
+              <td class="col-min pick-label">R10 P10</td>
+              <td class="player-meta">OutForTheSeason</td>
+              <td class="player-name">Darren Waller</td>
+              <td class="col-min sel-type">Free Agent</td>
+              <td class="col-pos"><span class="pos pos-te">TE</span></td>
+              <td class="num ktc">1,941
+      <span class="caret delta-up">▲</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-up">+508</span></td>
+              
+            </tr>
+          
+            
+            <tr class="rookie-row">
+              <td class="rk">119</td>
+              <td class="col-min pick-label">R10 P11</td>
+              <td class="player-meta">The Goonies</td>
+              <td class="player-name">Cade Klubnik</td>
+              <td class="col-min sel-type">Rookie</td>
+              <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+              <td class="num ktc">1,932
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-84</span></td>
+              
+            </tr>
+          
+            
+            <tr class="unowned-row">
+              <td class="rk">120</td>
+              <td class="col-min pick-label">R10 P12</td>
+              <td class="player-meta">aPukalypse Now</td>
+              <td class="player-name">Chimere Dike</td>
+              <td class="col-min sel-type">Unowned</td>
+              <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+              <td class="num ktc">1,930
+      <span class="caret delta-down">▼</span></td>
+              
+                <td class="num col-delta"><span class="delta delta-down">-80</span></td>
+              
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+    </main>
+
+    
+  </body>
+</html>

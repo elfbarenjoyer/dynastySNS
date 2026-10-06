@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 07:17 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="writeups.html"
+            class="on"
+          >Season Writeups</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  <section class="power-hero">
+    <h2>Season Writeups</h2>
+    <p>
+      Every piece written about the league, newest first. The figures inside each
+      one are frozen on the day it was written, so read it against its date.
+    </p>
+  </section>
+
+  <section class="wu-list">
+    
+      
+        <h3 class="wu-season">2026 season</h3>
+      
+      <a
+        class="wu-item wu-lead"
+        href="2026-week-03.html"
+      >
+        <span class="wu-when"><b>Week 3 2026</b> &#183; Written 2026-09-23</span>
+        <span class="wu-title">Nobody is building.</span><span class="wu-standfirst">Plot every team in SnS by how good it is now against how good it will be, and one corner of the board comes back empty. Four teams are contending, four are spending down, four are rebuilding, and not one holds a roster worth more in the future than it is today. Three weeks of football repriced all 168 keepers in this league — eighty-four up, eighty-four down — and none of that movement produced a single team on the way up.</span>
+      </a>
+    
+      
+      <a
+        class="wu-item"
+        href="2026-preseason.html"
+      >
+        <span class="wu-when"><b>Preseason 2026</b> &#183; Written 2026-09-09</span>
+        <span class="wu-title">Four teams have a plan. Eight have a roster.</span><span class="wu-standfirst">Fourteen keepers is enough rope to hang yourself with, and this year most of the league used it to tie a knot in the middle. Of twelve rosters, exactly two are honestly built to win in 2026 and two are honestly built for later. The other eight are sitting on a pile of players nobody would describe as a direction — good enough to make the playoffs, not good enough to matter, too valuable to tear down. Here is how all twelve end up.</span>
+      </a>
+    
+  </section>
+
+    </main>
+
+    
+  </body>
+</html>

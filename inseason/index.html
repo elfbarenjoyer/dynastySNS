@@ -1,0 +1,3403 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-06 07:17 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            class="on"
+          >Depth Charts</a>
+        
+          <a
+            href="writeups.html"
+            
+          >Season Writeups</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Bijan Robinson</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1041
+              <small>Ollie Gordon II</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -1114
+              <small>Drake Maye</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    <section class="upnext" id="upnext">
+        <span class="upnext-k">Coming up</span>
+        <span class="upnext-list">
+          
+            <span
+              class="upnext-item is-next"
+              data-date="2026-12-09"
+            >
+              <b>Trade Deadline</b> 9 Dec</span>
+          
+        </span>
+        <a
+          class="upnext-more"
+          href="league-info.html"
+        >All dates</a>
+      </section>
+    
+
+    <main>
+      
+  <section class="legend">
+    <span class="badge top-ten">Top 14 keepers</span>
+    <span class="badge non-keeper">Outside top 14</span>
+    
+      <span class="badge delta-up">KTC up</span>
+      <span class="badge delta-down">KTC down</span>
+    
+  </section>
+
+  
+    <section class="team-card">
+      <h2>
+        LoUdPaXx President
+        <span class="muted">
+          Keeper capital <b>63,495</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Brock Bowers</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">8,183
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+571</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Brock Purdy</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">6,905
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+654</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Chris Olave</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,783
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+462</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Bryce Young</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,560
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+790</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Javonte Williams</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,963
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+76</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Denzel Boston</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,831
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+812</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Cam Skattebo</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,733
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-189</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Davante Adams</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,926
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+461</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">DK Metcalf</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,184
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-32</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Rhamondre Stevenson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,042
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-204</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Jayden Higgins<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,010
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-65</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Pat Bryant</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,980
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+101</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Keaton Mitchell</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,764
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+229</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Jacoby Brissett</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,631
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-5</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Rashod Bateman</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,478
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+184</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Pat Freiermuth</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,475
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+103</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Shedeur Sanders</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,316
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-54</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Travis Hunter</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,183
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-276</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">MarShawn Lloyd</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,157
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-562</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Darren Waller</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">1,941
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+508</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Jerry Jeudy</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,899
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-115</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        aPukalypse Now
+        <span class="muted">
+          Keeper capital <b>72,061</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Puka Nacua</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">7,759
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-390</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Malik Nabers</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,736
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-473</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Trevor Lawrence</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">6,693
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-46</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Parker Washington</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,925
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+501</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Tyler Warren</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">5,775
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+75</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Jaxson Dart<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,613
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-119</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Breece Hall</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,442
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-165</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Kyren Williams</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,323
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+354</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Tee Higgins</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,140
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+140</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">A.J. Brown<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,416
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-287</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Ty Simpson</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,469
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-51</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Jonah Coleman<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,416
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+5</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Terrance Ferguson</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,216
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+184</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Braelon Allen</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,138
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+365</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Mike Washington Jr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,021
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-39</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Malik Washington</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,767
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+144</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Roman Wilson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,667
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+578</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Jack Bech</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,200
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-205</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Marcus Mariota</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,098
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-12</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Chris Brooks</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,559
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-309</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Devin Neal</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,106
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-64</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Austin Ekeler</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">956</td>
+                
+                  <td class="num col-delta"><span class="delta-na">—</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">Case Keenum</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">796</td>
+                
+                  <td class="num col-delta"><span class="delta-na">—</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Buckeye Air Raid
+        <span class="muted">
+          Keeper capital <b>73,028</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Jeremiyah Love</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">7,210
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+42</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Joe Burrow</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">6,895
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-201</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Drake London</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,781
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+478</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Zay Flowers</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,360
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+530</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Jalen Hurts</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,835
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-379</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Omarion Hampton</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,613
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-980</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Luther Burden III</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,292
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+113</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Harold Fannin Jr.</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">4,740
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+339</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Kenyon Sadiq</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">4,720
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+1000</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Jalen Coker</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,593
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+354</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Jaylen Waddle</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,587
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-336</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Jordan Addison</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,710
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+241</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Marvin Harrison Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,370
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-412</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Zach Charbonnet<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,322
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+113</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Chris Bell</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,181
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+46</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Ricky Pearsall<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,606
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+87</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Nicholas Singleton</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,570
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+10</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Drew Allar</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,368
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-53</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Kaytron Allen</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,152
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-209</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Emanuel Wilson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,087
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+388</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Jordan Watkins</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,311
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+112</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Demarcus Robinson<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,092
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+316</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">AJ Dillon</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">952
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+354</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        OutForTheSeason
+        <span class="muted">
+          Keeper capital <b>61,220</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Bijan Robinson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">9,999
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+155</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">CeeDee Lamb</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">7,460
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+192</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Tyler Shough</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,989
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+683</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">KC Concepcion Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,423
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+28</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">C.J. Stroud</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">4,328
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-182</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Chuba Hubbard</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,097
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+606</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">George Kittle</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,736
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+347</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Kyler Murray<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,408
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-68</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">RJ Harvey</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,310
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+33</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Terry McLaurin</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,197
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-62</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Josh Jacobs</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,967
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-110</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Deebo Samuel Sr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,849
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+73</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Romeo Doubs</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,750
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-44</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Tony Pollard</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,707
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+61</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Tyler Allgeier</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,612
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-155</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Zachariah Branch</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,461
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-75</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Elijah Sarratt</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,158
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-193</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Zavion Thomas</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,976
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Cooper Kupp</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,753
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+67</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Tyrone Tracy Jr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,683
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-247</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        G.G.G
+        <span class="muted">
+          Keeper capital <b>76,262</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Jahmyr Gibbs</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">9,995
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-3</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Caleb Williams<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">7,576
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-479</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Trey McBride</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">7,479
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-55</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Justin Jefferson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">7,216
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-391</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Garrett Wilson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,189
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+353</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">DeVonta Smith</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,625
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-25</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Ladd McConkey</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,212
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-324</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Bhayshul Tuten</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,747
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+325</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">D&#39;Andre Swift</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,562
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-139</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Sam Darnold</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">4,311
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+182</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Kyle Monangai</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,707
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+204</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">De&#39;Zhaun Stribling<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,512
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-55</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Antonio Williams</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,215
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+6</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Woody Marks</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,916
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+100</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Brenton Strange</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,830
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-112</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Kayshon Boutte</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,515
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-135</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Isaac TeSlaa</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,499
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+144</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Jalen McMillan<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,447
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-267</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Demond Claiborne</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,111
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-151</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Drew Lock</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,096
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-166</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Tyson Bagent</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,001
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-108</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Carson Wentz</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">1,647
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-187</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">Sione Vaki</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,467
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+236</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Allen or Nothing
+        <span class="muted">
+          Keeper capital <b>60,532</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Josh Allen</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">9,992
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-7</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Jonathan Taylor</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">6,786
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+12</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Tetairoa McMillan</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">6,220
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+127</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Dak Prescott</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,416
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+216</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Jordyn Tyson<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,837
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+22</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Rome Odunze</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,278
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-537</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">David Montgomery</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,301
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-471</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Mike Evans</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,278
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-125</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Omar Cooper Jr.<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,259
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-8</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Wan&#39;Dale Robinson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,925
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-128</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Aaron Jones Sr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,693
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+103</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Mark Andrews</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,578
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-106</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Dalton Schultz</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,562
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+34</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Tyjae Spears</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,407
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-46</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Ryan Flournoy</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,068
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-57</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Aaron Rodgers</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,019
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+89</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Greg Dulcich</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">1,917
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-100</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Seth McGowan</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,878
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-57</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Jauan Jennings</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,852
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-117</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Mack Hollins</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,718
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+433</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Kenny Gainwell</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc"><span class="delta-na">N/A</span></td>
+                
+                  <td class="num col-delta"><span class="delta-na">—</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Gronkamole and Chips
+        <span class="muted">
+          Keeper capital <b>61,799</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Jaxon Smith-Njigba</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">9,992
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+61</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Christian McCaffrey</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,630
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+24</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Derrick Henry</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,064
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+167</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Jordan Love</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">4,931
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-325</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Bucky Irving</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,846
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-166</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">TreVeyon Henderson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,625
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-372</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Tucker Kraft</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">4,607
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-333</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Josh Downs</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,784
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+257</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Matthew Stafford</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,575
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-5</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Malik Willis</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,204
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-236</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Xavier Worthy</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,142
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-14</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Jakobi Meyers</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,848
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+152</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Khalil Shakir</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,835
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-72</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Jonathon Brooks<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,716
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-540</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">AJ Barner</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,622
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+15</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Rachaad White</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,556
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-46</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Jaylin Noel</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,473
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-31</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Kimani Vidal</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,982
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-81</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Calvin Ridley</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,144
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-258</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Chig Okonkwo</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc"><span class="delta-na">N/A</span></td>
+                
+                  <td class="num col-delta"><span class="delta-na">—</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        The Goonies
+        <span class="muted">
+          Keeper capital <b>64,935</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Ja&#39;Marr Chase</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">9,003
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-500</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Kenneth Walker III</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">7,361
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+609</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">James Cook III</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">6,587
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-51</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Drake Maye</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">6,496
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-1114</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Christian Watson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,183
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+497</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Makai Lemon</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,178
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-216</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Cam Ward</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,545
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-489</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Travis Etienne Jr.<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,507
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-526</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Daniel Jones</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,445
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-126</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Alec Pierce<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,425
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-63</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Kyle Pitts Sr.</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,256
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-510</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Caleb Douglas</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,139
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-103</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Ja&#39;Kobi Lane<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,071
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-82</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Quentin Johnston</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,739
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-460</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Keon Coleman</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,693
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+159</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">T.J. Hockenson</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,604
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-23</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Kendre Miller</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,401
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+224</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Elic Ayomanor</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,229
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-34</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Mike Gesicki</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">1,967
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+346</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">George Holani</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,911
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-117</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Ray Davis</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,799
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-192</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Jameis Winston</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">1,797
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-4</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">Tyler Higbee</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">1,505
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+318</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Bo Knows Football
+        <span class="muted">
+          Keeper capital <b>57,024</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Amon-Ra St. Brown</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">7,993
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-318</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Bo Nix</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,392
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-189</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Matthew Golden</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,960
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+821</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Quinshon Judkins</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,927
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+109</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Jared Goff</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">4,644
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+50</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Jadarian Price</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,529
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-716</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Dalton Kincaid</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">4,308
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+206</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Jaylen Warren</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,660
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+459</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Jake Ferguson</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,134
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+82</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Stefon Diggs</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,828
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-15</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Devaughn Vele</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,791
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+195</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">J.K. Dobbins</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,750
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-177</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Deshaun Watson</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,650
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+969</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Dylan Sampson<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,458
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+95</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Rashid Shaheed</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,447
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-89</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">J.J. McCarthy</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,373
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+396</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Cyrus Allen</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,309
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-218</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Tank Dell<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,206
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-136</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Kalif Raymond</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,800
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+843</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Keenan Allen</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,710
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+82</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Christian Kirk<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,481
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-69</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Tyreek Hill</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">1,192
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+275</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">Brycen Tremayne</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc"><span class="delta-na">N/A</span></td>
+                
+                  <td class="num col-delta"><span class="delta-na">—</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Dirty Shorts
+        <span class="muted">
+          Keeper capital <b>62,116</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Ashton Jeanty</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">7,430
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-219</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Nico Collins</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,903
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+161</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Chase Brown</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,756
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-147</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Colston Loveland</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">5,307
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-442</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Justin Herbert</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,257
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-785</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Carnell Tate</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,124
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+57</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Rashee Rice</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,603
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-169</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Michael Penix Jr.</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,583
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+739</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Blake Corum</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,558
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-29</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Brian Thomas Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,376
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-572</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Adonai Mitchell</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,127
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+297</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Juwan Johnson</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,077
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+312</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Dontayvion Wicks</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,065
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+182</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Travis Kelce</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,950
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+296</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Kirk Cousins</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,632
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+388</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Rico Dowdle<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,618
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-223</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Michael Pittman Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,615
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-380</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Tank Bigsby</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,587
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-41</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Chris Rodriguez Jr.</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,282
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-185</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Najee Harris</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,468
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-63</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        Extended Warranty
+        <span class="muted">
+          Keeper capital <b>52,362</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Jayden Daniels</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,987
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-465</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">George Pickens</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,932
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-22</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">Fernando Mendoza</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">5,275
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+63</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Sam LaPorta</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">4,414
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-131</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Michael Wilson</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,314
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+585</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Isaiah Likely</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">3,823
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-183</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">Emmett Johnson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,157
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+127</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Jacory Croskey-Merritt</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,088
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-182</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Malachi Fields</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,011
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-98</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Tre Tucker</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,810
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+156</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Jayden Reed<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,745
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-269</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Jordan Mason<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,745
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-136</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Carson Beck</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,538
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-103</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Geno Smith</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,523
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+210</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Brian Robinson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,523
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+310</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Hunter Henry</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,185
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-223</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Kaleb Johnson</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,162
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Skyler Bell</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,049
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-87</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">James Conner<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,208
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-114</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Jacob Saylors</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,197
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-127</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Samaje Perine</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">1,184
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+200</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+    <section class="team-card">
+      <h2>
+        The Jackson 10
+        <span class="muted">
+          Keeper capital <b>58,536</b>
+        </span>
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th class="col-pos">Pos</th>
+              <th class="num">KTC</th>
+              <th class="num col-delta">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr class="top-ten">
+                <td class="rk">1</td>
+                <td class="player-name">Lamar Jackson</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">7,541
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-258</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">2</td>
+                <td class="player-name">Patrick Mahomes</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">6,574
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+335</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">3</td>
+                <td class="player-name">De&#39;Von Achane<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">5,567
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-1046</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">4</td>
+                <td class="player-name">Emeka Egbuka</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">5,334
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-528</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">5</td>
+                <td class="player-name">Saquon Barkley</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">4,725
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-378</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">6</td>
+                <td class="player-name">Jameson Williams</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">4,219
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-131</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">7</td>
+                <td class="player-name">DJ Moore</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">3,703
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-168</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">8</td>
+                <td class="player-name">Baker Mayfield<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">3,592
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-676</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">9</td>
+                <td class="player-name">Kaelon Black</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,162
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-133</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">10</td>
+                <td class="player-name">Ollie Gordon II</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">3,038
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+1041</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">11</td>
+                <td class="player-name">Oronde Gadsden</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,862
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-56</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">12</td>
+                <td class="player-name">Ted Hurst III</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,832
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+212</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">13</td>
+                <td class="player-name">Eli Stowers<span class="ir-flag" title="On injured reserve">IR</span></td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,705
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-70</span></td>
+                
+              </tr>
+            
+              <tr class="top-ten">
+                <td class="rk">14</td>
+                <td class="player-name">Tre&#39; Harris</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,682
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+127</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">15</td>
+                <td class="player-name">Dallas Goedert</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,646
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-129</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">16</td>
+                <td class="player-name">Courtland Sutton</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,627
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-194</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">17</td>
+                <td class="player-name">Chris Godwin Jr.</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,567
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-415</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">18</td>
+                <td class="player-name">Jaylen Wright</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,536
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+347</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">19</td>
+                <td class="player-name">Jalon Daniels</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">2,189
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+362</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">20</td>
+                <td class="player-name">Alvin Kamara</td>
+                <td class="col-pos"><span class="pos pos-rb">RB</span></td>
+                <td class="num ktc">2,139
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+238</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">21</td>
+                <td class="player-name">Cade Otton</td>
+                <td class="col-pos"><span class="pos pos-te">TE</span></td>
+                <td class="num ktc">2,098
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-92</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">22</td>
+                <td class="player-name">Tyquan Thornton</td>
+                <td class="col-pos"><span class="pos pos-wr">WR</span></td>
+                <td class="num ktc">2,000
+      <span class="caret delta-up">▲</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-up">+121</span></td>
+                
+              </tr>
+            
+              <tr class="non-keeper">
+                <td class="rk">23</td>
+                <td class="player-name">Anthony Richardson Sr.</td>
+                <td class="col-pos"><span class="pos pos-qb">QB</span></td>
+                <td class="num ktc">1,796
+      <span class="caret delta-down">▼</span></td>
+                
+                  <td class="num col-delta"><span class="delta delta-down">-66</span></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+
+    </main>
+
+    
+      <script>
+        // The export is static, so "has this date passed" was answered when the
+        // page was built -- up to a week ago on the weekly sync. Re-answering it
+        // here against the reader's actual clock means a deadline that lapses on
+        // a Monday is struck through that Monday, not the following Sunday.
+        // The server-rendered classes stay as the no-JS fallback.
+        (function () {
+          var now = new Date();
+          var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+          document.querySelectorAll("[data-date]").forEach(function (node) {
+            var parts = node.getAttribute("data-date").split("-");
+            if (parts.length !== 3) return;
+            var when = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+            node.classList.toggle("is-past", when < today);
+          });
+
+          var bar = document.getElementById("upnext");
+          if (!bar) return;
+
+          var items = bar.querySelectorAll(".upnext-item");
+          var live = [];
+          items.forEach(function (item) {
+            item.classList.remove("is-next");
+            // Rules carry no date and never expire, so they always count.
+            if (!item.hasAttribute("data-date") || !item.classList.contains("is-past")) {
+              live.push(item);
+            }
+          });
+
+          if (!live.length) {
+            // Everything lapsed since the last build. Better to drop the bar than
+            // to head a page with a list of dates that have all gone.
+            bar.hidden = true;
+            return;
+          }
+          live[0].classList.add("is-next");
+        })();
+      </script>
+    
+  </body>
+</html>

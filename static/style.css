@@ -241,6 +241,46 @@ nav a.on {
   border-bottom-color: var(--paper);
 }
 
+/* ---------------------------------------------------------- phase switch */
+
+/* In-season / off-season. A segmented pair beside the wordmark rather than two
+   more tabs: it changes which set of tabs you are looking at, so it sits above
+   them. Phones get a copy at the foot of the drawer instead (see base.html). */
+.phase-switch {
+  display: inline-flex;
+  border: 1px solid #2b3340;
+}
+
+.phase-switch-head {
+  align-self: center;
+  margin-right: auto;
+}
+
+.phase-switch-drawer {
+  display: none;
+}
+
+.phase-switch a {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 11px;
+  font-weight: 700;
+  color: #98a2b3;
+  text-decoration: none;
+  padding: 6px 11px;
+  white-space: nowrap;
+}
+
+.phase-switch a:hover {
+  color: #fff;
+}
+
+.phase-switch a.on {
+  color: #fff;
+  background: var(--accent);
+}
+
 /* ------------------------------------------------------------ stat strip */
 
 .stat-strip {
@@ -532,8 +572,7 @@ main {
 
 /* Lists are not padded here: their rows carry the gutter themselves, so adding
    it to the list too would double-indent every row. */
-.team-card > p,
-.team-card > .rb-panel-head {
+.team-card > p {
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -891,9 +930,7 @@ tr.non-keeper .pos {
   flex: 1 1 200px;
 }
 
-.trade-label select,
-.rb-search,
-.rb-textarea {
+.trade-label select {
   font-family: var(--body);
   font-size: 14px;
   text-transform: none;
@@ -906,8 +943,7 @@ tr.non-keeper .pos {
   width: 100%;
 }
 
-.trade-button,
-.rb-button {
+.trade-button {
   font-family: var(--cond);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -922,29 +958,9 @@ tr.non-keeper .pos {
   min-height: 40px;
 }
 
-.trade-button:hover,
-.rb-button:hover:not(:disabled) {
+.trade-button:hover {
   background: var(--accent);
   border-color: var(--accent);
-}
-
-.rb-button {
-  background: var(--card);
-  color: var(--ink);
-  border-color: var(--rule);
-}
-
-.rb-button:hover:not(:disabled) {
-  color: #fff;
-}
-
-.rb-button:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.rb-danger {
-  color: var(--down);
 }
 
 .trade-grid,
@@ -1037,392 +1053,7 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
   color: var(--dim);
 }
 
-/* -------------------------------------------------------- rankings builder */
-
-.rb-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
-
-.rb-saved {
-  margin-left: auto;
-  font-size: 12px;
-  color: var(--dim);
-}
-
-.rb-layout {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.25fr);
-  align-items: start;
-}
-
-.rb-panel-head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--hair);
-}
-
-.rb-panel-head h3 {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  font-size: 15px;
-  margin: 0;
-}
-
-.rb-count {
-  font-family: var(--num);
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--dim);
-}
-
-.rb-search {
-  min-width: 150px;
-  flex: 1 1 150px;
-  width: auto;
-}
-
-.rb-export-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.rb-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 10px 14px 0;
-}
-
-.rb-chip {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  font-size: 11px;
-  font-weight: 700;
-  background: transparent;
-  color: var(--dim);
-  border: 1px solid var(--rule);
-  border-radius: 0;
-  padding: 6px 11px;
-  cursor: pointer;
-}
-
-.rb-chip-on {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
-
-.rb-hint {
-  font-size: 12.5px;
-  color: var(--dim);
-  padding: 8px 14px 0;
-  margin: 0;
-}
-
-.rb-list {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  max-height: 68vh;
-  overflow-y: auto;
-}
-
-.rb-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 14px;
-  border-bottom: 1px solid var(--hair);
-}
-
-.rb-row:hover {
-  background: var(--wash);
-}
-
-.rb-board .rb-row {
-  cursor: grab;
-}
-
-.rb-row-main {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  min-width: 0;
-  flex: 1;
-}
-
-.rb-row-main .player-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.rb-meta {
-  color: var(--dim);
-  font-size: 12px;
-}
-
-.rb-rank {
-  width: 44px;
-  flex: none;
-  font-family: var(--cond);
-  font-size: 15px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  color: var(--ink);
-  text-align: center;
-  border-left: 3px solid var(--accent);
-  padding: 4px 0;
-}
-
-.rb-add {
-  flex: none;
-  width: 30px;
-  height: 30px;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1;
-  background: var(--ink);
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.rb-add:hover {
-  background: var(--accent);
-}
-
-.rb-controls {
-  display: flex;
-  gap: 4px;
-  flex: none;
-}
-
-.rb-icon {
-  width: 28px;
-  height: 28px;
-  line-height: 1;
-  background: transparent;
-  color: var(--dim);
-  border: 1px solid var(--rule);
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.rb-icon:hover:not(:disabled) {
-  color: var(--ink);
-  border-color: var(--ink);
-}
-
-.rb-icon:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.rb-tier {
-  background: var(--wash);
-  border-bottom: none;
-  border-left: 3px solid var(--ink);
-}
-
-.rb-tier-label {
-  flex: 1;
-  background: transparent;
-  color: var(--ink);
-  border: none;
-  font-family: var(--cond);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 2px 0;
-}
-
-.rb-custom {
-  background: #fdf8e7;
-}
-
-.rb-badge {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  background: var(--ink);
-  color: #fff;
-  padding: 1px 5px;
-  border-radius: 2px;
-  font-size: 9.5px;
-  font-weight: 700;
-  margin-left: 6px;
-}
-
-.rb-dragging {
-  opacity: 0.4;
-}
-
-.rb-drop-target {
-  outline: 2px dashed var(--accent);
-  outline-offset: -2px;
-}
-
-.rb-empty {
-  font-size: 13px;
-  color: var(--dim);
-  padding: 12px 14px;
-}
-
-.rb-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(11, 14, 19, 0.6);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 24px 16px;
-  overflow-y: auto;
-  z-index: 50;
-}
-
-.rb-modal[hidden] {
-  display: none;
-}
-
-.rb-modal-card {
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-top: 4px solid var(--accent);
-  padding: 20px;
-  width: min(640px, 100%);
-}
-
-.rb-modal-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.rb-modal-head h3 {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  font-size: 19px;
-  margin: 0;
-}
-
-.rb-modal-card h4 {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 13px;
-  margin: 18px 0 4px;
-}
-
-.rb-close {
-  background: transparent;
-  border: 1px solid var(--rule);
-  color: var(--dim);
-  border-radius: 0;
-  width: 32px;
-  height: 32px;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.rb-sample {
-  background: var(--wash);
-  border: 1px solid var(--hair);
-  padding: 10px 12px;
-  font-family: var(--num);
-  font-size: 12px;
-  color: var(--ink-2);
-  overflow-x: auto;
-  margin: 8px 0;
-}
-
-.rb-textarea {
-  min-height: 160px;
-  font-family: var(--num);
-  font-size: 13px;
-  resize: vertical;
-}
-
-.rb-import-status {
-  color: var(--up);
-  font-size: 13px;
-  min-height: 18px;
-}
-
-.rb-import-status.rb-error {
-  color: var(--down);
-}
-
-.rb-modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-/* The builder is a two-column drag-and-drop board; it has no honest phone
-   layout, so below tablet width the nav link is withdrawn and anyone who
-   reaches the URL directly gets told why rather than shown a broken board. */
-.desktop-only {
-  display: none;
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-top: 4px solid var(--accent);
-  padding: 20px;
-}
-
-.desktop-only h2 {
-  font-family: var(--cond);
-  text-transform: uppercase;
-  font-size: 19px;
-  margin: 0 0 6px;
-}
-
-.desktop-only p {
-  margin: 0;
-  color: var(--dim);
-  font-size: 14px;
-}
-
 /* ============================================================== responsive */
-
-@media (max-width: 1000px) {
-  .rb-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .rb-list {
-    max-height: 50vh;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav-desktop-only {
-    display: none;
-  }
-
-  .rb-page {
-    display: none;
-  }
-
-  .desktop-only {
-    display: block;
-  }
-}
 
 @media (max-width: 640px) {
   :root {
@@ -1499,6 +1130,24 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
     padding-left: 11px;
   }
 
+  .phase-switch-head {
+    display: none;
+  }
+
+  .site-header nav .phase-switch-drawer {
+    display: flex;
+    margin: 12px 0 14px;
+  }
+
+  /* Undo the drawer's row treatment of nav links for the pair. */
+  .site-header nav .phase-switch a {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 10px 0;
+    border: 0;
+    font-size: 12px;
+  }
+
   .stat-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1573,6 +1222,153 @@ tr.unowned-row .rk { border-left-color: var(--rb); }
   * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------- writeups */
+
+/* The archive: one card per article, newest first. The newest leads with its
+   standfirst in full; the rest are clamped to two lines so the list stays a
+   list once a season has a dozen editions in it. */
+.wu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wu-season {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  color: var(--dim);
+  margin: 8px 0 0;
+}
+
+.wu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--rule);
+  padding: 14px 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wu-item:hover,
+.wu-lead {
+  border-left-color: var(--accent);
+}
+
+.wu-when {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dim);
+}
+
+.wu-when b {
+  color: var(--accent);
+}
+
+.wu-title {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.wu-lead .wu-title {
+  font-size: 30px;
+}
+
+.wu-standfirst {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  max-width: 76ch;
+}
+
+.wu-item:not(.wu-lead) .wu-standfirst {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Above an article: the way back to the archive. */
+.wu-crumb {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--dim);
+}
+
+.wu-crumb a {
+  text-decoration: none;
+}
+
+/* Below an article: the neighbouring editions. */
+.wu-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+}
+
+.wu-pager a {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.wu-pager a:hover {
+  border-color: var(--accent);
+}
+
+.wu-pager small {
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  color: var(--dim);
+}
+
+.wu-newer {
+  grid-column: 2;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .wu-lead .wu-title {
+    font-size: 25px;
+  }
+
+  .wu-pager {
+    grid-template-columns: 1fr;
+  }
+
+  .wu-newer {
+    grid-column: auto;
   }
 }
 
