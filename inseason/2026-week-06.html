@@ -1,0 +1,1411 @@
+<!doctype html>
+<html lang="en" style="--accent: #c41e2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e13" />
+    <title>SnSAllStars | Dynasty Dashboard</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../static/fonts/barlow-condensed-700-latin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="masthead-top">
+        <h1><span class="wordmark">SnSAllStars</span></h1>
+        
+      <span class="phase-switch phase-switch-head">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    <button
+          type="button"
+          class="nav-burger"
+          id="nav-burger"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <p class="timestamp">
+          <span class="meta-tags"><span class="badge-meta"><span class="k">Format</span> <b>Superflex</b></span>
+            <span class="badge-meta"><span class="k">Values</span> <b>Raw</b></span>
+            <span class="badge-meta"><span class="k">Keepers</span> <b>Top 14</b></span>
+            <span class="badge-meta"><span class="k">Updated</span> <b>2026-10-13 20:13 UTC</b></span>
+          </span>
+        </p>
+      </div>
+      <nav id="site-nav">
+          <a
+            href="index.html"
+            
+          >Depth Charts</a>
+        
+          <a
+            href="writeups.html"
+            class="on"
+          >Season Writeups</a>
+        
+          <a
+            href="power-rankings.html"
+            
+          >Power Rankings</a>
+        
+          <a
+            href="upcoming-draft-board.html"
+            
+          >Upcoming Draft Board</a>
+        
+          <a
+            href="upcoming-pick-rankings.html"
+            
+          >2027 Pick Rankings</a>
+        
+          <a
+            href="hindsight.html"
+            
+          >Hindsight</a>
+        
+          <a
+            href="league-info.html"
+            
+          >League Info</a>
+        
+        
+      <span class="phase-switch phase-switch-drawer">
+        
+          <a
+            href="../inseason/index.html"
+            class="on" aria-current="true"
+          >In-season</a>
+        
+          <a
+            href="../offseason/index.html"
+            
+          >Off-season</a>
+        
+      </span>
+    
+      </nav>
+    </header>
+
+    <script>
+      // Drawer toggle. Scripted rather than a checkbox hack so the button
+      // carries real aria-expanded state; the <noscript> below leaves the nav
+      // open if this never runs, so the menu is never unreachable.
+      (function () {
+        var burger = document.getElementById("nav-burger");
+        var nav = document.getElementById("site-nav");
+        if (!burger || !nav) return;
+
+        function setOpen(open) {
+          burger.setAttribute("aria-expanded", String(open));
+          nav.classList.toggle("is-open", open);
+        }
+
+        burger.addEventListener("click", function () {
+          setOpen(burger.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            setOpen(false);
+            burger.focus();
+          }
+        });
+      })();
+    </script>
+    <noscript>
+      <style>
+        #site-nav { display: flex !important; }
+        .nav-burger { display: none !important; }
+      </style>
+    </noscript>
+
+    
+      <section class="stat-strip">
+        <div class="stat">
+          <span class="k">Teams</span>
+          <span class="v">12</span>
+        </div>
+        
+          <div class="stat">
+            <span class="k">Most valuable asset</span>
+            <span class="v">
+              9,999
+              <small>Jaxon Smith-Njigba</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest riser</span>
+            <span class="v delta-up">
+              +1329
+              <small>Dohnte Meyers</small>
+            </span>
+          </div>
+        
+        
+          <div class="stat">
+            <span class="k">Biggest faller</span>
+            <span class="v delta-down">
+              -531
+              <small>Omarion Hampton</small>
+            </span>
+          </div>
+        
+      </section>
+    
+
+    
+
+    <main>
+      
+  
+  <div class="wu-crumb">
+    <a href="writeups.html">&#8592; Season Writeups</a>
+    <span>Week 6 2026</span>
+  </div>
+
+  <article class="bw">
+
+    <header class="bw-hero">
+      <p class="bw-kicker">
+        <span>Update &#183; Week 6</span>
+        <span class="bw-kicker-rule"></span>
+        <span>SnSAllStars</span>
+      </p>
+      <h2>Built for now.</h2>
+      <p class="bw-standfirst">Set every team's roster value this week against what it will be worth later, and SnS splits cleanly. Four teams are built for now: Gronkamole and Chips, LoUdPaXx President, OutForTheSeason and Allen or Nothing are all strong today and below the middle of the league on dynasty value. Two are built for later and winning anyway: aPukalypse Now and Buckeye Air Raid hold the second- and third-most keeper capital, sit second and third in the table, and rank only seventh and eighth on current strength. G.G.G is the best at <em>both</em>, and fifth.</p>
+      <dl class="bw-facts">
+        
+          <div class="bw-fact"><dt>Games played</dt><dd>5<small>of 14 regular-season weeks</small></dd></div>
+        
+          <div class="bw-fact"><dt>Window closing</dt><dd>4<small>strong now, weaker later</small></dd></div>
+        
+          <div class="bw-fact"><dt>Window opening</dt><dd>0<small>still nobody</small></dd></div>
+        
+          <div class="bw-fact"><dt>Unbeaten</dt><dd>1<small>LoUdPaXx President, 5–0</small></dd></div>
+        
+      </dl>
+    </header>
+
+    <section class="bw-section">
+      <h3 class="bw-h3">The contention cycle</h3>
+      <p class="bw-intro">Present strength on the horizontal — the Week-6 power score, which reads current roster quality rather than results. Dynasty value on the vertical — KeepTradeCut superflex capital across your fourteen keepers. Teams are supposed to travel the dashed loop clockwise over a career: rebuild in the bottom left, climb the left side as young assets appreciate, contend across the top, then slide down the right as the roster ages. The left-hand climb is empty.</p>
+
+      <figure class="team-card bw-figure">
+        
+  
+  <div class="bw-chart bw-chart-wide">
+    <svg viewBox="0 0 760 545" role="img"
+         aria-labelledby="bwt-wide bwd-wide">
+      <title id="bwt-wide">Present strength against dynasty value, all twelve teams</title><desc id="bwd-wide">A scatter of twelve teams. G.G.G sits alone at top right. aPukalypse Now and Buckeye Air Raid are high on dynasty value but near the middle on present strength, and The Goonies sits just inside the top-right quadrant. Gronkamole and Chips, LoUdPaXx President, OutForTheSeason and Allen or Nothing are strong now but low on dynasty value, in the bottom right. Only Allen or Nothing and Dirty Shorts are inside the central no-man&#39;s-land box. Emergency Room, Bo Knows Football and Extended Warranty are bottom left, Extended Warranty last on both. The top-left quadrant is empty. Every figure also appears in the tables below.</desc>
+
+      <rect x="404.0" y="38" width="326.0"
+            height="207.0" class="bw-q-open"/>
+      <rect x="78" y="38" width="326.0"
+            height="207.0" class="bw-q-opening"/>
+      <rect x="404.0" y="245.0" width="326.0"
+            height="207.0" class="bw-q-closing"/>
+      <rect x="78" y="245.0" width="326.0"
+            height="207.0" class="bw-q-rebuild"/><ellipse cx="404.0" cy="245.0"
+               rx="260.8" ry="165.6" class="bw-cycle"/><rect x="261.0" y="154.2" width="286.0"
+            height="181.6" class="bw-zone"/>
+      
+        <text x="269.0" y="169.2" class="bw-zonet">NO MAN&#8217;S LAND</text>
+      
+
+      <rect x="78" y="38" width="652"
+            height="414" class="bw-frame"/>
+      <line x1="404.0" y1="38" x2="404.0" y2="452" class="bw-split"/>
+      <line x1="78" y1="245.0" x2="730" y2="245.0" class="bw-split"/>
+
+      
+        <g class="bw-quad">
+          <text x="414.0" y="53">WINDOW OPEN</text>
+          <text x="394.0" y="53" text-anchor="end">WINDOW OPENING</text>
+          <text x="414.0" y="444">WINDOW CLOSING</text>
+          <text x="394.0" y="444" text-anchor="end">REBUILDING</text>
+        </g>
+      
+
+      <g class="bw-ax">
+        <text x="78" y="472">&#8592; STRUGGLING NOW</text>
+        <text x="730" y="472" text-anchor="end">WINNING NOW &#8594;</text>
+        
+          <text x="404.0" y="492" text-anchor="middle" class="bw-axt">PRESENT &#183; WEEK-6 POWER SCORE</text>
+          <text transform="translate(34,245.0) rotate(-90)" text-anchor="middle" class="bw-axt">FUTURE &#183; KTC KEEPER CAPITAL &#8594;</text>
+        
+      </g>
+
+      <g>
+        
+          <circle cx="690.0" cy="63.4" r="7" class="bw-dot bw-d-open"/>
+          <text x="679.0" y="66.4" text-anchor="end"
+                class="bw-plab">G.G.G</text>
+        
+          <circle cx="611.6" cy="300.2" r="7" class="bw-dot bw-d-closing"/>
+          <text x="611.6" y="329.2" text-anchor="middle"
+                class="bw-plab">Gronkamole and Chips</text>
+        
+          <circle cx="598.5" cy="249.7" r="7" class="bw-dot bw-d-closing"/>
+          <text x="609.5" y="252.7" text-anchor="start"
+                class="bw-plab">LoUdPaXx President</text>
+        
+          <circle cx="584.2" cy="295.1" r="7" class="bw-dot bw-d-closing"/>
+          <text x="584.2" y="280.1" text-anchor="middle"
+                class="bw-plab">OutForTheSeason</text>
+        
+          <circle cx="563.6" cy="238.1" r="7" class="bw-dot bw-d-open"/>
+          <text x="552.6" y="241.1" text-anchor="end"
+                class="bw-plab">The Goonies</text>
+        
+          <circle cx="507.5" cy="312.2" r="7" class="bw-dot bw-d-closing"/>
+          <text x="507.5" y="297.2" text-anchor="middle"
+                class="bw-plab">Allen or Nothing</text>
+        
+          <circle cx="475.5" cy="111.0" r="7" class="bw-dot bw-d-open"/>
+          <text x="464.5" y="105.0" text-anchor="end"
+                class="bw-plab">aPukalypse Now</text>
+        
+          <circle cx="433.7" cy="139.3" r="7" class="bw-dot bw-d-open"/>
+          <text x="422.7" y="142.3" text-anchor="end"
+                class="bw-plab">Buckeye Air Raid</text>
+        
+          <circle cx="386.8" cy="308.9" r="7" class="bw-dot bw-d-rebuild"/>
+          <text x="386.8" y="293.9" text-anchor="middle"
+                class="bw-plab">Dirty Shorts</text>
+        
+          <circle cx="368.5" cy="366.3" r="7" class="bw-dot bw-d-rebuild"/>
+          <text x="368.5" y="351.3" text-anchor="middle"
+                class="bw-plab">Emergency Room</text>
+        
+          <circle cx="362.8" cy="379.7" r="7" class="bw-dot bw-d-rebuild"/>
+          <text x="362.8" y="408.7" text-anchor="middle"
+                class="bw-plab">Bo Knows Football</text>
+        
+          <circle cx="118.0" cy="426.6" r="7" class="bw-dot bw-d-rebuild"/>
+          <text x="129.0" y="429.6" text-anchor="start"
+                class="bw-plab">Extended Warranty</text>
+        
+      </g>
+    </svg>
+  </div>
+
+  
+  <div class="bw-chart bw-chart-compact">
+    <svg viewBox="0 0 400 372" role="img"
+         aria-labelledby="bwt-compact bwd-compact">
+      <title id="bwt-compact">Present strength against dynasty value, all twelve teams</title><desc id="bwd-compact">A scatter of twelve teams. G.G.G sits alone at top right. aPukalypse Now and Buckeye Air Raid are high on dynasty value but near the middle on present strength, and The Goonies sits just inside the top-right quadrant. Gronkamole and Chips, LoUdPaXx President, OutForTheSeason and Allen or Nothing are strong now but low on dynasty value, in the bottom right. Only Allen or Nothing and Dirty Shorts are inside the central no-man&#39;s-land box. Emergency Room, Bo Knows Football and Extended Warranty are bottom left, Extended Warranty last on both. The top-left quadrant is empty. Every figure also appears in the tables below.</desc>
+
+      <rect x="209.0" y="22" width="179.0"
+            height="139.0" class="bw-q-open"/>
+      <rect x="30" y="22" width="179.0"
+            height="139.0" class="bw-q-opening"/>
+      <rect x="209.0" y="161.0" width="179.0"
+            height="139.0" class="bw-q-closing"/>
+      <rect x="30" y="161.0" width="179.0"
+            height="139.0" class="bw-q-rebuild"/><ellipse cx="209.0" cy="161.0"
+               rx="143.2" ry="111.2" class="bw-cycle"/><rect x="130.5" y="100.0" width="157.0"
+            height="121.9" class="bw-zone"/>
+      
+
+      <rect x="30" y="22" width="358"
+            height="278" class="bw-frame"/>
+      <line x1="209.0" y1="22" x2="209.0" y2="300" class="bw-split"/>
+      <line x1="30" y1="161.0" x2="388" y2="161.0" class="bw-split"/>
+
+      
+
+      <g class="bw-ax">
+        <text x="30" y="320">&#8592; STRUGGLING NOW</text>
+        <text x="388" y="320" text-anchor="end">WINNING NOW &#8594;</text>
+        
+          <text x="30" y="14" class="bw-axt">&#8593; FUTURE &#183; KTC CAPITAL</text>
+        
+      </g>
+
+      <g>
+        
+          <circle cx="366.0" cy="39.1" r="5" class="bw-dot bw-d-open"/>
+          <text x="357.0" y="42.1" text-anchor="end"
+                class="bw-plab">G.G.G</text>
+        
+          <circle cx="323.0" cy="198.1" r="5" class="bw-dot bw-d-closing"/>
+          <text x="323.0" y="216.1" text-anchor="middle"
+                class="bw-plab">Gronkamole and Chips</text>
+        
+          <circle cx="315.8" cy="164.2" r="5" class="bw-dot bw-d-closing"/>
+          <text x="306.8" y="175.2" text-anchor="end"
+                class="bw-plab">LoUdPaXx President</text>
+        
+          <circle cx="307.9" cy="194.7" r="5" class="bw-dot bw-d-closing"/>
+          <text x="298.9" y="188.7" text-anchor="end"
+                class="bw-plab">OutForTheSeason</text>
+        
+          <circle cx="296.6" cy="156.4" r="5" class="bw-dot bw-d-open"/>
+          <text x="287.6" y="159.4" text-anchor="end"
+                class="bw-plab">The Goonies</text>
+        
+          <circle cx="265.8" cy="206.1" r="5" class="bw-dot bw-d-closing"/>
+          <text x="265.8" y="233.1" text-anchor="middle"
+                class="bw-plab">Allen or Nothing</text>
+        
+          <circle cx="248.3" cy="71.0" r="5" class="bw-dot bw-d-open"/>
+          <text x="239.3" y="65.0" text-anchor="end"
+                class="bw-plab">aPukalypse Now</text>
+        
+          <circle cx="225.3" cy="90.0" r="5" class="bw-dot bw-d-open"/>
+          <text x="216.3" y="93.0" text-anchor="end"
+                class="bw-plab">Buckeye Air Raid</text>
+        
+          <circle cx="199.6" cy="203.9" r="5" class="bw-dot bw-d-rebuild"/>
+          <text x="190.6" y="206.9" text-anchor="end"
+                class="bw-plab">Dirty Shorts</text>
+        
+          <circle cx="189.5" cy="242.4" r="5" class="bw-dot bw-d-rebuild"/>
+          <text x="189.5" y="229.4" text-anchor="middle"
+                class="bw-plab">Emergency Room</text>
+        
+          <circle cx="186.4" cy="251.5" r="5" class="bw-dot bw-d-rebuild"/>
+          <text x="186.4" y="269.5" text-anchor="middle"
+                class="bw-plab">Bo Knows Football</text>
+        
+          <circle cx="52.0" cy="282.9" r="5" class="bw-dot bw-d-rebuild"/>
+          <text x="61.0" y="285.9" text-anchor="start"
+                class="bw-plab">Extended Warranty</text>
+        
+      </g>
+    </svg>
+  </div>
+
+        <figcaption>Both axes are normalised 0–10 across this league only, so 10 is the best team in SnS rather than an absolute. The two correlate at ρ = 0.67: what a roster is worth now and what it will be worth later are related, but loosely, which is why three of the four corners are full.</figcaption>
+      </figure>
+
+      <div class="bw-quads">
+        
+          <div class="bw-qcard bw-q-open">
+            <h4>Window Open<span>4</span></h4>
+            <ul>
+              
+                <li>G.G.G<span>10.0 / 10.0</span></li>
+              
+                <li>The Goonies<span>7.8 / 5.2</span></li>
+              
+                <li>aPukalypse Now<span>6.2 / 8.7</span></li>
+              
+                <li>Buckeye Air Raid<span>5.5 / 7.9</span></li>
+              
+            </ul>
+          </div>
+        
+          <div class="bw-qcard bw-q-closing">
+            <h4>Window Closing<span>4</span></h4>
+            <ul>
+              
+                <li>Gronkamole and Chips<span>8.6 / 3.5</span></li>
+              
+                <li>LoUdPaXx President<span>8.4 / 4.9</span></li>
+              
+                <li>OutForTheSeason<span>8.2 / 3.6</span></li>
+              
+                <li>Allen or Nothing<span>6.8 / 3.1</span></li>
+              
+            </ul>
+          </div>
+        
+          <div class="bw-qcard bw-q-opening">
+            <h4>Window Opening<span>0</span></h4>
+            <ul>
+              <li class="bw-empty">Nobody</li>
+              
+            </ul>
+          </div>
+        
+          <div class="bw-qcard bw-q-rebuild">
+            <h4>Rebuilding<span>4</span></h4>
+            <ul>
+              
+                <li>Dirty Shorts<span>4.7 / 3.2</span></li>
+              
+                <li>Emergency Room<span>4.4 / 1.7</span></li>
+              
+                <li>Bo Knows Football<span>4.3 / 1.3</span></li>
+              
+                <li>Extended Warranty<span>0.0 / 0.0</span></li>
+              
+            </ul>
+          </div>
+        
+      </div>
+
+      <p class="bw-note"><b>Five teams read three or more points worse later than now.</b> <b>Gronkamole and Chips</b> <b>−5.2</b>, <b>OutForTheSeason</b> <b>−4.5</b>, <b>Allen or Nothing</b> <b>−3.7</b>, <b>LoUdPaXx President</b> <b>−3.5</b> and <b>Bo Knows Football</b> <b>−3.0</b>. The league app files Gronkamole and Chips under "All In", and the chart agrees: no team in SnS is tilted harder toward now. Only two teams read better later than now, and they are the two chasing LoUdPaXx in the table: <b>aPukalypse Now</b> and <b>Buckeye Air Raid</b>, both <b>+2.4</b>. LoUdPaXx itself sits 0.1 below the window-open line, one decent week of dynasty value from joining G.G.G in the top-right corner.</p>
+      <p class="bw-note"><b>Almost everyone has picked a side.</b> Only <b>Allen or Nothing</b> and <b>Dirty Shorts</b> sit inside the grey box, average now and average later, with The Goonies and Buckeye Air Raid just outside it. The rest of the league is spread evenly: four teams with the window open, four with it closing, four rebuilding, and nobody on the climb in between.</p>
+    </section>
+
+    
+      <section class="bw-section">
+        <h3 class="bw-h3">Risers and fallers</h3>
+        <p class="bw-intro">Every rostered keeper repriced against what it was worth on 6 October &#8212; 168 players, 72 up and 94 down, moving an average of 151 points. This is the layer underneath the vertical axis: the chart moves because these did.</p>
+
+        <div class="bw-movers">
+          <div class="bw-mcol">
+            <h4 class="bw-up">Risers</h4>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Tetairoa McMillan<b>WR</b><i>Allen or Nothing</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:100.0%"></u></span>
+                <span class="bw-mvnum bw-pos">+542</span>
+                <span class="bw-mvto">6,220&#8202;&#8594;&#8202;6,762</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Michael Wilson<b>WR</b><i>Extended Warranty</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:82.7%"></u></span>
+                <span class="bw-mvnum bw-pos">+448</span>
+                <span class="bw-mvto">4,314&#8202;&#8594;&#8202;4,762</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Jaylen Warren<b>RB</b><i>Bo Knows Football</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:80.4%"></u></span>
+                <span class="bw-mvnum bw-pos">+436</span>
+                <span class="bw-mvto">3,660&#8202;&#8594;&#8202;4,096</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Keon Coleman<b>WR</b><i>The Goonies</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:79.2%"></u></span>
+                <span class="bw-mvnum bw-pos">+429</span>
+                <span class="bw-mvto">2,693&#8202;&#8594;&#8202;3,122</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Drake Maye<b>QB</b><i>The Goonies</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:76.2%"></u></span>
+                <span class="bw-mvnum bw-pos">+413</span>
+                <span class="bw-mvto">6,496&#8202;&#8594;&#8202;6,909</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Carnell Tate<b>WR</b><i>Dirty Shorts</i></span>
+                <span class="bw-mvbar"><u class="bw-bup" style="width:64.9%"></u></span>
+                <span class="bw-mvnum bw-pos">+352</span>
+                <span class="bw-mvto">5,124&#8202;&#8594;&#8202;5,476</span>
+              </div>
+            
+          </div>
+          <div class="bw-mcol">
+            <h4 class="bw-dn">Fallers</h4>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Omarion Hampton<b>RB</b><i>Buckeye Air Raid</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:98.5%"></u></span>
+                <span class="bw-mvnum bw-neg">-534</span>
+                <span class="bw-mvto">5,613&#8202;&#8594;&#8202;5,079</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Jalen Hurts<b>QB</b><i>Buckeye Air Raid</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:91.0%"></u></span>
+                <span class="bw-mvnum bw-neg">-493</span>
+                <span class="bw-mvto">5,835&#8202;&#8594;&#8202;5,342</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Dalton Kincaid<b>TE</b><i>Bo Knows Football</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:86.0%"></u></span>
+                <span class="bw-mvnum bw-neg">-466</span>
+                <span class="bw-mvto">4,308&#8202;&#8594;&#8202;3,842</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Ladd McConkey<b>WR</b><i>G.G.G</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:84.9%"></u></span>
+                <span class="bw-mvnum bw-neg">-460</span>
+                <span class="bw-mvto">5,212&#8202;&#8594;&#8202;4,752</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Saquon Barkley<b>RB</b><i>Emergency Room</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:84.3%"></u></span>
+                <span class="bw-mvnum bw-neg">-457</span>
+                <span class="bw-mvto">4,725&#8202;&#8594;&#8202;4,268</span>
+              </div>
+            
+              <div class="bw-mvr">
+                <span class="bw-mvname">Tyler Shough<b>QB</b><i>OutForTheSeason</i></span>
+                <span class="bw-mvbar"><u class="bw-bdn" style="width:76.4%"></u></span>
+                <span class="bw-mvnum bw-neg">-414</span>
+                <span class="bw-mvto">5,989&#8202;&#8594;&#8202;5,575</span>
+              </div>
+            
+          </div>
+        </div>
+
+        <p class="bw-intro">Summed over the fourteen keepers each team holds today, priced then and priced now:</p>
+        <div class="bw-margins">
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Extended Warranty</span>
+              <span class="bw-mtrack">
+                <i class="bw-mp"
+                   style="left:50%;width:34.7%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-pos">+1,354</span>
+              <span class="bw-mrec">53,716</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">LoUdPaXx President</span>
+              <span class="bw-mtrack">
+                <i class="bw-mp"
+                   style="left:50%;width:23.0%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-pos">+897</span>
+              <span class="bw-mrec">64,392</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">aPukalypse Now</span>
+              <span class="bw-mtrack">
+                <i class="bw-mp"
+                   style="left:50%;width:18.3%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-pos">+716</span>
+              <span class="bw-mrec">72,777</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">OutForTheSeason</span>
+              <span class="bw-mtrack">
+                <i class="bw-mp"
+                   style="left:50%;width:13.4%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-pos">+525</span>
+              <span class="bw-mrec">61,650</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">The Goonies</span>
+              <span class="bw-mtrack">
+                <i class="bw-mp"
+                   style="left:50%;width:5.5%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-pos">+213</span>
+              <span class="bw-mrec">65,102</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Allen or Nothing</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:0.0%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">+0</span>
+              <span class="bw-mrec">60,626</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Gronkamole and Chips</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:11.2%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-437</span>
+              <span class="bw-mrec">61,362</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Bo Knows Football</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:11.9%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-464</span>
+              <span class="bw-mrec">56,549</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">G.G.G</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:15.5%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-605</span>
+              <span class="bw-mrec">75,657</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Emergency Room</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:30.3%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-1,184</span>
+              <span class="bw-mrec">57,352</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Dirty Shorts</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:33.1%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-1,293</span>
+              <span class="bw-mrec">60,823</span>
+            </div>
+          
+            <div class="bw-mrow">
+              <span class="bw-mteam">Buckeye Air Raid</span>
+              <span class="bw-mtrack">
+                <i class="bw-mn"
+                   style="right:50%;width:50.0%"></i>
+                <b class="bw-mzero"></b>
+              </span>
+              <span class="bw-mval bw-neg">-1,953</span>
+              <span class="bw-mrec">71,075</span>
+            </div>
+          
+        </div>
+        <p class="bw-note"><b>One week, smaller moves.</b> 72 keepers rose and 94 fell, by an average of 151 points, about half the churn of the last two editions, and the league's keepers are worth <b>2,231</b> less than on 6 October. <b>Extended Warranty</b> gained the most (<b>+1,354</b>), led by Michael Wilson <b>+448</b>, and <b>LoUdPaXx President</b> was second (+897), gaining for a third straight edition. <b>Buckeye Air Raid</b> lost the most (<b>−1,953</b>), with the two biggest fallers in SnS: Omarion Hampton <b>−534</b> and Jalen Hurts <b>−493</b>. Drake Maye, who led the fallers in both previous editions, bounced back <b>+413</b>. And <b>Allen or Nothing</b>'s fourteen keepers moved a combined <b>zero</b>: Tetairoa McMillan's <b>+542</b>, the biggest single rise of the week, was cancelled to the point by everyone else's dips.</p>
+      </section>
+    
+
+    <section class="bw-section">
+      <h3 class="bw-h3">Where the points come from</h3>
+      <p class="bw-intro">The power score is the sum of four positional groups. Each cell is a team's rank at that position through five weeks &#8212; darker is better. Read across for a team's shape; read down for who owns a position.</p>
+      <div class="bw-pg">
+        <div class="bw-pgh"><span></span><b>QB</b><b>RB</b><b>WR</b><b>TE</b></div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">G.G.G</span>
+              <i class="bw-s5">9</i>
+              <i class="bw-s1">1</i>
+              <i class="bw-s2">3</i>
+              <i class="bw-s1">2</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Gronkamole and Chips</span>
+              <i class="bw-s4">8</i>
+              <i class="bw-s1">2</i>
+              <i class="bw-s3">6</i>
+              <i class="bw-s4">7</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">LoUdPaXx President</span>
+              <i class="bw-s2">3</i>
+              <i class="bw-s3">6</i>
+              <i class="bw-s4">8</i>
+              <i class="bw-s1">1</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">OutForTheSeason</span>
+              <i class="bw-s3">6</i>
+              <i class="bw-s2">4</i>
+              <i class="bw-s4">7</i>
+              <i class="bw-s2">4</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">The Goonies</span>
+              <i class="bw-s4">7</i>
+              <i class="bw-s2">3</i>
+              <i class="bw-s2">4</i>
+              <i class="bw-s5">10</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Allen or Nothing</span>
+              <i class="bw-s1">1</i>
+              <i class="bw-s4">8</i>
+              <i class="bw-s5">10</i>
+              <i class="bw-s5">12</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">aPukalypse Now</span>
+              <i class="bw-s5">12</i>
+              <i class="bw-s4">7</i>
+              <i class="bw-s1">1</i>
+              <i class="bw-s3">6</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Buckeye Air Raid</span>
+              <i class="bw-s2">4</i>
+              <i class="bw-s5">10</i>
+              <i class="bw-s1">2</i>
+              <i class="bw-s4">8</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Dirty Shorts</span>
+              <i class="bw-s5">11</i>
+              <i class="bw-s3">5</i>
+              <i class="bw-s5">9</i>
+              <i class="bw-s3">5</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Emergency Room</span>
+              <i class="bw-s1">2</i>
+              <i class="bw-s5">11</i>
+              <i class="bw-s5">11</i>
+              <i class="bw-s5">11</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Bo Knows Football</span>
+              <i class="bw-s3">5</i>
+              <i class="bw-s5">9</i>
+              <i class="bw-s3">5</i>
+              <i class="bw-s5">9</i>
+          </div>
+        
+          <div class="bw-pgr">
+            <span class="bw-pgt">Extended Warranty</span>
+              <i class="bw-s5">10</i>
+              <i class="bw-s5">12</i>
+              <i class="bw-s5">12</i>
+              <i class="bw-s2">3</i>
+          </div>
+        
+      </div>
+      <p class="bw-note"><b>The strongest rosters right now are built on running backs.</b> Three of the four best own three of the top four backfields: <b>G.G.G</b> (<b>RB1</b>), <b>Gronkamole and Chips</b> (<b>RB2</b>) and <b>OutForTheSeason</b> (<b>RB4</b>). <b>LoUdPaXx President</b> is the exception, third on the strength of <b>QB3</b> and the league's best tight end room, <b>TE1</b>.</p>
+      <p class="bw-note"><b>aPukalypse Now and Buckeye Air Raid are winning on their receivers.</b> aPukalypse has the best wide receivers in SnS (<b>WR1</b>) and the worst quarterbacks (<b>QB12</b>); Buckeye has <b>WR2</b> and only <b>RB10</b>. They rank seventh and eighth on present strength and sit second and third in the table. <b>Emergency Room</b> is the mirror image: <b>QB2</b>, eleventh at every other position, and 0–5.</p>
+    </section>
+
+    
+      <section class="bw-section">
+        <h3 class="bw-h3">The actual standings</h3>
+        <p class="bw-intro">Straight from Yahoo: wins first, ties broken on points for. The last column is how far each team sits from its power ranking &#8212; positive means the record flatters the roster, negative means it does not.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="rk">#</th><th>Team</th><th class="num">W&#8211;L</th>
+                <th class="num col-min">PF</th><th class="num col-min">PA</th>
+                <th class="num col-min">Streak</th><th class="num">Power</th><th class="num">Gap</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td class="rk">1</td>
+                  <td class="player-name">LoUdPaXx President</td>
+                  <td class="num">5&#8211;0</td>
+                  <td class="num col-min">743.14</td>
+                  <td class="num col-min">570.66</td>
+                  <td class="num col-min">5W</td>
+                  <td class="num">3</td>
+                  <td class="num"><span class="bw-mv bw-up">&#9650; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">2</td>
+                  <td class="player-name">aPukalypse Now</td>
+                  <td class="num">4&#8211;1</td>
+                  <td class="num col-min">659.52</td>
+                  <td class="num col-min">533.52</td>
+                  <td class="num col-min">4W</td>
+                  <td class="num">7</td>
+                  <td class="num"><span class="bw-mv bw-up">&#9650; 5</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">3</td>
+                  <td class="player-name">Buckeye Air Raid</td>
+                  <td class="num">4&#8211;1</td>
+                  <td class="num col-min">574.66</td>
+                  <td class="num col-min">487.44</td>
+                  <td class="num col-min">4W</td>
+                  <td class="num">8</td>
+                  <td class="num"><span class="bw-mv bw-up">&#9650; 5</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">4</td>
+                  <td class="player-name">Gronkamole and Chips</td>
+                  <td class="num">3&#8211;2</td>
+                  <td class="num col-min">696.58</td>
+                  <td class="num col-min">654.06</td>
+                  <td class="num col-min">1W</td>
+                  <td class="num">2</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">5</td>
+                  <td class="player-name">G.G.G</td>
+                  <td class="num">3&#8211;2</td>
+                  <td class="num col-min">687.50</td>
+                  <td class="num col-min">594.64</td>
+                  <td class="num col-min">1W</td>
+                  <td class="num">1</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 4</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">6</td>
+                  <td class="player-name">OutForTheSeason</td>
+                  <td class="num">2&#8211;3</td>
+                  <td class="num col-min">655.70</td>
+                  <td class="num col-min">569.10</td>
+                  <td class="num col-min">1L</td>
+                  <td class="num">4</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">7</td>
+                  <td class="player-name">Allen or Nothing</td>
+                  <td class="num">2&#8211;3</td>
+                  <td class="num col-min">650.90</td>
+                  <td class="num col-min">637.34</td>
+                  <td class="num col-min">3L</td>
+                  <td class="num">6</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 1</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">8</td>
+                  <td class="player-name">The Goonies</td>
+                  <td class="num">2&#8211;3</td>
+                  <td class="num col-min">619.98</td>
+                  <td class="num col-min">670.20</td>
+                  <td class="num col-min">1L</td>
+                  <td class="num">5</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 3</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">9</td>
+                  <td class="player-name">Bo Knows Football</td>
+                  <td class="num">2&#8211;3</td>
+                  <td class="num col-min">570.48</td>
+                  <td class="num col-min">665.92</td>
+                  <td class="num col-min">2L</td>
+                  <td class="num">11</td>
+                  <td class="num"><span class="bw-mv bw-up">&#9650; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">10</td>
+                  <td class="player-name">Extended Warranty</td>
+                  <td class="num">2&#8211;3</td>
+                  <td class="num col-min">504.30</td>
+                  <td class="num col-min">615.16</td>
+                  <td class="num col-min">2W</td>
+                  <td class="num">12</td>
+                  <td class="num"><span class="bw-mv bw-up">&#9650; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">11</td>
+                  <td class="player-name">Dirty Shorts</td>
+                  <td class="num">1&#8211;4</td>
+                  <td class="num col-min">474.88</td>
+                  <td class="num col-min">717.86</td>
+                  <td class="num col-min">4L</td>
+                  <td class="num">9</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+                </tr>
+              
+                <tr>
+                  <td class="rk">12</td>
+                  <td class="player-name">Emergency Room</td>
+                  <td class="num">0&#8211;5</td>
+                  <td class="num col-min">473.84</td>
+                  <td class="num col-min">595.58</td>
+                  <td class="num col-min">5L</td>
+                  <td class="num">10</td>
+                  <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <p class="bw-note"><b>The table and the rosters disagree most at the top.</b> <b>aPukalypse Now</b> and <b>Buckeye Air Raid</b> are second and third at 4–1, five places above their present strength, the widest gaps in SnS. <b>G.G.G</b> has the strongest roster right now and is fifth at 3–2, despite the third-most points. <b>LoUdPaXx President</b>, 5–0 and third on present strength, is where the table and the rosters come closest to agreeing. At the bottom, <b>Emergency Room</b> is 0–5, two places below its present strength.</p>
+      </section>
+    
+
+    <section class="bw-section">
+      <h3 class="bw-h3">Power ranking after 5 weeks</h3>
+      <p class="bw-intro">The same twelve teams sorted by current roster value instead of by record &#8212; this is the horizontal axis of the chart above, not a league table. Differential is points for minus points against.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="rk">#</th><th>Team</th><th class="num">Power</th><th class="num">W&#8211;L</th>
+              <th class="num col-min">PF</th><th class="num col-min">PA</th>
+              <th class="num">Diff</th><th class="num col-min">Streak</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td class="rk">1</td>
+                <td class="player-name"><span class="bw-chip bw-c-open"></span>G.G.G</td>
+                <td class="num ktc">5,470</td>
+                <td class="num">3&#8211;2</td>
+                <td class="num col-min">687.50</td>
+                <td class="num col-min">594.64</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+92.86</span><span class="bw-brief">+93</span>
+                </td>
+                <td class="num col-min">1W</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">2</td>
+                <td class="player-name"><span class="bw-chip bw-c-closing"></span>Gronkamole and Chips</td>
+                <td class="num ktc">5,031</td>
+                <td class="num">3&#8211;2</td>
+                <td class="num col-min">696.58</td>
+                <td class="num col-min">654.06</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+42.52</span><span class="bw-brief">+43</span>
+                </td>
+                <td class="num col-min">1W</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">3</td>
+                <td class="player-name"><span class="bw-chip bw-c-closing"></span>LoUdPaXx President</td>
+                <td class="num ktc">4,959</td>
+                <td class="num">5&#8211;0</td>
+                <td class="num col-min">743.14</td>
+                <td class="num col-min">570.66</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+172.48</span><span class="bw-brief">+172</span>
+                </td>
+                <td class="num col-min">5W</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">4</td>
+                <td class="player-name"><span class="bw-chip bw-c-closing"></span>OutForTheSeason</td>
+                <td class="num ktc">4,878</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num col-min">655.70</td>
+                <td class="num col-min">569.10</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+86.60</span><span class="bw-brief">+87</span>
+                </td>
+                <td class="num col-min">1L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">5</td>
+                <td class="player-name"><span class="bw-chip bw-c-open"></span>The Goonies</td>
+                <td class="num ktc">4,761</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num col-min">619.98</td>
+                <td class="num col-min">670.20</td>
+                <td class="num bw-neg">
+                  <span class="bw-full">-50.22</span><span class="bw-brief">-50</span>
+                </td>
+                <td class="num col-min">1L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">6</td>
+                <td class="player-name"><span class="bw-chip bw-c-closing"></span>Allen or Nothing</td>
+                <td class="num ktc">4,449</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num col-min">650.90</td>
+                <td class="num col-min">637.34</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+13.56</span><span class="bw-brief">+14</span>
+                </td>
+                <td class="num col-min">3L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">7</td>
+                <td class="player-name"><span class="bw-chip bw-c-open"></span>aPukalypse Now</td>
+                <td class="num ktc">4,268</td>
+                <td class="num">4&#8211;1</td>
+                <td class="num col-min">659.52</td>
+                <td class="num col-min">533.52</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+126.00</span><span class="bw-brief">+126</span>
+                </td>
+                <td class="num col-min">4W</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">8</td>
+                <td class="player-name"><span class="bw-chip bw-c-open"></span>Buckeye Air Raid</td>
+                <td class="num ktc">4,034</td>
+                <td class="num">4&#8211;1</td>
+                <td class="num col-min">574.66</td>
+                <td class="num col-min">487.44</td>
+                <td class="num bw-pos">
+                  <span class="bw-full">+87.22</span><span class="bw-brief">+87</span>
+                </td>
+                <td class="num col-min">4W</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">9</td>
+                <td class="player-name"><span class="bw-chip bw-c-rebuild"></span>Dirty Shorts</td>
+                <td class="num ktc">3,774</td>
+                <td class="num">1&#8211;4</td>
+                <td class="num col-min">474.88</td>
+                <td class="num col-min">717.86</td>
+                <td class="num bw-neg">
+                  <span class="bw-full">-242.98</span><span class="bw-brief">-243</span>
+                </td>
+                <td class="num col-min">4L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">10</td>
+                <td class="player-name"><span class="bw-chip bw-c-rebuild"></span>Emergency Room</td>
+                <td class="num ktc">3,669</td>
+                <td class="num">0&#8211;5</td>
+                <td class="num col-min">473.84</td>
+                <td class="num col-min">595.58</td>
+                <td class="num bw-neg">
+                  <span class="bw-full">-121.74</span><span class="bw-brief">-122</span>
+                </td>
+                <td class="num col-min">5L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">11</td>
+                <td class="player-name"><span class="bw-chip bw-c-rebuild"></span>Bo Knows Football</td>
+                <td class="num ktc">3,638</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num col-min">570.48</td>
+                <td class="num col-min">665.92</td>
+                <td class="num bw-neg">
+                  <span class="bw-full">-95.44</span><span class="bw-brief">-95</span>
+                </td>
+                <td class="num col-min">2L</td>
+              </tr>
+            
+              <tr>
+                <td class="rk">12</td>
+                <td class="player-name"><span class="bw-chip bw-c-rebuild"></span>Extended Warranty</td>
+                <td class="num ktc">2,267</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num col-min">504.30</td>
+                <td class="num col-min">615.16</td>
+                <td class="num bw-neg">
+                  <span class="bw-full">-110.86</span><span class="bw-brief">-111</span>
+                </td>
+                <td class="num col-min">2W</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bw-section">
+      <h3 class="bw-h3">Who is actually good</h3>
+      <p class="bw-intro">Point differential, best to worst, with each team's record beside it. Seven teams are in the black; the other five are collectively the same amount in the red.</p>
+      <div class="bw-margins">
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">LoUdPaXx President</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:35.5%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+172.5</span>
+            <span class="bw-mrec">5&#8211;0</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">aPukalypse Now</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:25.9%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+126.0</span>
+            <span class="bw-mrec">4&#8211;1</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">G.G.G</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:19.1%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+92.9</span>
+            <span class="bw-mrec">3&#8211;2</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Buckeye Air Raid</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:17.9%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+87.2</span>
+            <span class="bw-mrec">4&#8211;1</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">OutForTheSeason</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:17.8%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+86.6</span>
+            <span class="bw-mrec">2&#8211;3</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Gronkamole and Chips</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:8.7%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+42.5</span>
+            <span class="bw-mrec">3&#8211;2</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Allen or Nothing</span>
+            <span class="bw-mtrack">
+              <i class="bw-mp"
+                 style="left:50%;width:2.8%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-pos">+13.6</span>
+            <span class="bw-mrec">2&#8211;3</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">The Goonies</span>
+            <span class="bw-mtrack">
+              <i class="bw-mn"
+                 style="right:50%;width:10.3%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-neg">-50.2</span>
+            <span class="bw-mrec">2&#8211;3</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Bo Knows Football</span>
+            <span class="bw-mtrack">
+              <i class="bw-mn"
+                 style="right:50%;width:19.6%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-neg">-95.4</span>
+            <span class="bw-mrec">2&#8211;3</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Extended Warranty</span>
+            <span class="bw-mtrack">
+              <i class="bw-mn"
+                 style="right:50%;width:22.8%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-neg">-110.9</span>
+            <span class="bw-mrec">2&#8211;3</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Emergency Room</span>
+            <span class="bw-mtrack">
+              <i class="bw-mn"
+                 style="right:50%;width:25.1%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-neg">-121.7</span>
+            <span class="bw-mrec">0&#8211;5</span>
+          </div>
+        
+          <div class="bw-mrow">
+            <span class="bw-mteam">Dirty Shorts</span>
+            <span class="bw-mtrack">
+              <i class="bw-mn"
+                 style="right:50%;width:50.0%"></i>
+              <b class="bw-mzero"></b>
+            </span>
+            <span class="bw-mval bw-neg">-243.0</span>
+            <span class="bw-mrec">1&#8211;4</span>
+          </div>
+        
+      </div>
+      <p class="bw-note"><b>Week 5, game by game.</b> The schedule kept doing Dirty Shorts no favours: <b>717.86</b> points against, 47.66 more than any other team, after running into aPukalypse Now's <b>167.84</b>, the highest score of the week. <b>Buckeye Air Raid</b> beat OutForTheSeason 93.90 to 53.88 in the lowest-scoring game of the week, and is 4–1 on only the eighth-most points, having faced the fewest in the league (487.44). <b>Gronkamole and Chips</b> beat The Goonies 167.10 to 150.86 in the best game of the week. And <b>LoUdPaXx President</b> stays perfect: 5–0 on the most points in SnS (743.14).</p>
+    </section>
+
+    <section class="bw-section">
+      <h3 class="bw-h3">How the preview is holding up</h3>
+      <p class="bw-intro">The season preview projected a finish order five weeks ago. Against the actual standings it is off by an average of 3.2 places, and again not one team sits where it was projected.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Team</th><th class="num">Projected</th><th class="num">Standing</th><th class="num">W&#8211;L</th><th class="num">Move</th></tr></thead>
+          <tbody>
+            
+              <tr>
+                <td class="player-name">Buckeye Air Raid</td>
+                <td class="num">1</td>
+                <td class="num">3</td>
+                <td class="num">4&#8211;1</td>
+                <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">G.G.G</td>
+                <td class="num">2</td>
+                <td class="num">5</td>
+                <td class="num">3&#8211;2</td>
+                <td class="num"><span class="bw-mv bw-dn">&#9660; 3</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">aPukalypse Now</td>
+                <td class="num">3</td>
+                <td class="num">2</td>
+                <td class="num">4&#8211;1</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 1</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Emergency Room</td>
+                <td class="num">4</td>
+                <td class="num">12</td>
+                <td class="num">0&#8211;5</td>
+                <td class="num"><span class="bw-mv bw-dn">&#9660; 8</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Gronkamole and Chips</td>
+                <td class="num">5</td>
+                <td class="num">4</td>
+                <td class="num">3&#8211;2</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 1</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">The Goonies</td>
+                <td class="num">6</td>
+                <td class="num">8</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num"><span class="bw-mv bw-dn">&#9660; 2</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Dirty Shorts</td>
+                <td class="num">7</td>
+                <td class="num">11</td>
+                <td class="num">1&#8211;4</td>
+                <td class="num"><span class="bw-mv bw-dn">&#9660; 4</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Allen or Nothing</td>
+                <td class="num">8</td>
+                <td class="num">7</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 1</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">LoUdPaXx President</td>
+                <td class="num">9</td>
+                <td class="num">1</td>
+                <td class="num">5&#8211;0</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 8</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">OutForTheSeason</td>
+                <td class="num">10</td>
+                <td class="num">6</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 4</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Bo Knows Football</td>
+                <td class="num">11</td>
+                <td class="num">9</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 2</span></td>
+              </tr>
+            
+              <tr>
+                <td class="player-name">Extended Warranty</td>
+                <td class="num">12</td>
+                <td class="num">10</td>
+                <td class="num">2&#8211;3</td>
+                <td class="num"><span class="bw-mv bw-up">&#9650; 2</span></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <p class="bw-note"><b>Worst calls:</b> the same two as last week, eight places out in opposite directions. <b>Emergency Room</b>, projected fourth as The Jackson 10, is last at 0–5; <b>LoUdPaXx President</b>, projected ninth, leads at 5–0. <b>Dirty Shorts</b>, projected seventh, is eleventh. <b>Closest calls:</b> aPukalypse Now (projected third, now second), Gronkamole and Chips (fifth, now fourth) and Allen or Nothing (eighth, now seventh). Across twelve teams the projection is out by an average of 3.17 places, down from 3.33 a week ago.</p>
+    </section>
+
+    <p class="bw-colophon"><b>Written 2026-10-13.</b> Every KTC value on this page was pulled live on 13 October 2026. Standings come from the Yahoo league itself — wins first, ties broken on points for — and are stored with this edition so the table cannot drift from the paragraph discussing it. Keeper capital is the top fourteen by value on each roster; risers and fallers compare those same fourteen priced on 6 October, when the last edition went out, against today, so a waiver claim cannot masquerade as a gain. Power scores and positional ranks come from the league app&#39;s current-value view after Week 5, and league-wide points for and against reconcile to the cent. Present strength is read one week at a time and is not compared across editions. This edition comes one week after the last rather than two. The Jackson 10 renamed itself Emergency Room this week; earlier editions keep the old name. Both chart axes are min–max normalised within this league. Placement is arithmetic, not judgment; the commentary is not.</p>
+  </article>
+  
+  
+    <div class="wu-pager">
+      
+        <a class="wu-older" href="2026-week-05.html">
+          <small>&#8592; Older &#183; Week 5 2026</small>
+          Three teams and a crowd.
+        </a>
+      
+      
+    </div>
+  
+
+
+    </main>
+
+    
+  </body>
+</html>
