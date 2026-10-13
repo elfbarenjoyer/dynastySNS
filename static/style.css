@@ -2619,3 +2619,89 @@ details[open] > summary .hs-chevron {
   .bw .table-wrap table { min-width: 0; font-size: 11px; }
   .bw .table-wrap th, .bw .table-wrap td { padding: 8px 6px; }
 }
+
+/* ------------------------------------------------------------ trade pieces */
+
+/* Shared with the scatter partial: where a traded team stood before, the arrow
+   to where it stands now, and every team the trade did not touch, faded back. */
+.bw-ghost { fill: none; stroke: var(--faint); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.bw-move { stroke: var(--ink-2); stroke-width: 1.5; }
+.bw-arrowhead { fill: var(--ink-2); }
+.bw-faded { opacity: 0.32; }
+
+/* The two sides of the deal, side by side, then stacked on a phone. */
+.td-sides {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.td-side {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--ink);
+  min-width: 0;
+}
+
+.td-side h4 {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  font-size: 17px;
+  margin: 0;
+  padding: 10px 14px 8px;
+}
+
+.td-side h4 span {
+  font-family: var(--body);
+  text-transform: none;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--dim);
+  margin-left: 4px;
+}
+
+.td-side table { width: 100%; }
+.td-side tfoot td {
+  font-size: 12.5px;
+  color: var(--dim);
+  border-top: 2px solid var(--rule);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.td-side tfoot .ktc { color: var(--ink); }
+
+.td-sub {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--dim);
+}
+
+.td-table { margin-top: 18px; background: var(--card); border: 1px solid var(--rule); }
+.td-table b { font-weight: 700; }
+
+.td-keepers { padding-bottom: 12px; }
+.td-capital {
+  margin: 0;
+  padding: 0 14px 10px;
+  font-family: var(--num);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  color: var(--dim);
+}
+.td-capital b { color: var(--ink); }
+.td-keepers dl { margin: 0; padding: 0 14px; display: grid; gap: 8px; }
+.td-keepers dt {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--dim);
+}
+.td-keepers dd { margin: 2px 0 0; font-size: 14px; }
+
+@media (max-width: 640px) {
+  .td-sides { grid-template-columns: 1fr; }
+}
